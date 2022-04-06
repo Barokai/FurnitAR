@@ -988,6 +988,7 @@ IL2CPP_EXTERN_C RuntimeClass* NotUInt64_t19ED7B1BE96AA8DA6FEA211FD74B262A48B26A7
 IL2CPP_EXTERN_C RuntimeClass* NullCheckInstruction_tCB596858916377B13A48F7F81CA540E378FE1D07_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* NullReferenceException_tBDE63A6D24569B964908408389070C6A9F5005BB_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* NullableMethodCallInstruction_tD6CDA07B58E16C5AB3FD2C5421D6FD5C5DE17BA2_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* OrBoolean_t95780DA7516BB8BE2FC4149FCEECE09EB6395A15_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* OrByte_t5E9F95BF8DAD8E9785E461A5DB9663A8716ABC6D_il2cpp_TypeInfo_var;
@@ -20690,8 +20691,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NumericConvertInstruction_Run_mA2A671
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Nullable_1_get_Value_m0DF3B826A745419D26A168689AEB4BE6F8698ECA_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	void* L_5 = alloca(sizeof(Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28));
@@ -20726,7 +20727,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NumericConvertInstruction_Run_mA2A671
 IL_0016:
 	{
 		RuntimeObject* L_4 = V_0;
-		UnBoxNullable(L_4, Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, L_5);
+		UnBoxNullable(L_4, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28_il2cpp_TypeInfo_var, L_5);
 		V_2 = ((*(Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28*)((Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28*)(Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28*)L_5)));
 		int32_t L_6;
 		L_6 = Nullable_1_get_Value_m0DF3B826A745419D26A168689AEB4BE6F8698ECA((&V_2), Nullable_1_get_Value_m0DF3B826A745419D26A168689AEB4BE6F8698ECA_RuntimeMethod_var);

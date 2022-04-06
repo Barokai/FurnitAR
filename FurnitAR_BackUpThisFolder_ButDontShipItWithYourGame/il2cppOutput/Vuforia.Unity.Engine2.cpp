@@ -6936,8 +6936,8 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color_set_Item_mB7A7D9F6632C
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Color_get_Item_mF0272D1D468B77D590B0A763380CB3C17CA765BE_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* __this, int32_t ___index0, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Texture2D::SetPixels(UnityEngine.Color[])
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Texture2D_SetPixels_mAE0CDFA15FA96F840D7FFADC31405D8AF20D9073 (Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* __this, ColorU5BU5D_t612261CF293F6FFC3D80AB52259FF0DC2B2CC389* ___colors0, const RuntimeMethod* method) ;
-// System.Boolean UnityEngine.Texture2D::Resize(System.Int32,System.Int32,UnityEngine.TextureFormat,System.Boolean)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Texture2D_Resize_m80C2555F96D9952F9C3B57C53B231A64F3DBA605 (Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* __this, int32_t ___width0, int32_t ___height1, int32_t ___format2, bool ___hasMipMap3, const RuntimeMethod* method) ;
+// System.Boolean UnityEngine.Texture2D::Reinitialize(System.Int32,System.Int32,UnityEngine.TextureFormat,System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Texture2D_Reinitialize_mE7FBFD2EEF3BE3135269959DBBE253A2B79A82DF (Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* __this, int32_t ___width0, int32_t ___height1, int32_t ___format2, bool ___hasMipMap3, const RuntimeMethod* method) ;
 // System.Void Vuforia.ImageDescription::set_Width(System.Int32)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ImageDescription_set_Width_mE06D0268B354E04A5DA03A0E3254ED8F9AA80FCE_inline (ImageDescription_t7AD8291D09910BE56F4441B19AA77433CE010B3B* __this, int32_t ___value0, const RuntimeMethod* method) ;
 // System.Void Vuforia.ImageDescription::set_Height(System.Int32)
@@ -12226,7 +12226,7 @@ IL_001b:
 		int32_t L_12 = ___format3;
 		NullCheck(L_9);
 		bool L_13;
-		L_13 = Texture2D_Resize_m80C2555F96D9952F9C3B57C53B231A64F3DBA605(L_9, L_10, L_11, L_12, (bool)0, NULL);
+		L_13 = Texture2D_Reinitialize_mE7FBFD2EEF3BE3135269959DBBE253A2B79A82DF(L_9, L_10, L_11, L_12, (bool)0, NULL);
 	}
 
 IL_0026:
@@ -31841,14 +31841,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	void* L_1 = alloca(sizeof(Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28));
 	{
 		RuntimeObject* L_0;
 		L_0 = JsonTextReader_ReadNumberValue_m17C7220A5D5F434F55EC9100D5FCE021E4AEFA5A(__this, 1, NULL);
-		UnBoxNullable(L_0, Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, L_1);
+		UnBoxNullable(L_0, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28_il2cpp_TypeInfo_var, L_1);
 		return ((*(Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28*)((Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28*)(Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28*)L_1)));
 	}
 }
@@ -31858,14 +31858,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Nullable_1_tEADC262F7F8B8BC4CC0A003DBDD3CA7C1
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Nullable_1_tEADC262F7F8B8BC4CC0A003DBDD3CA7C1B63F9AC_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	void* L_1 = alloca(sizeof(Nullable_1_tEADC262F7F8B8BC4CC0A003DBDD3CA7C1B63F9AC));
 	{
 		RuntimeObject* L_0;
 		L_0 = JsonTextReader_ReadStringValue_m62029E1909302B311A77A89BE6430D3263CAB44E(__this, 5, NULL);
-		UnBoxNullable(L_0, DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D_il2cpp_TypeInfo_var, L_1);
+		UnBoxNullable(L_0, Nullable_1_tEADC262F7F8B8BC4CC0A003DBDD3CA7C1B63F9AC_il2cpp_TypeInfo_var, L_1);
 		return ((*(Nullable_1_tEADC262F7F8B8BC4CC0A003DBDD3CA7C1B63F9AC*)((Nullable_1_tEADC262F7F8B8BC4CC0A003DBDD3CA7C1B63F9AC*)(Nullable_1_tEADC262F7F8B8BC4CC0A003DBDD3CA7C1B63F9AC*)L_1)));
 	}
 }
@@ -34148,14 +34148,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Nullable_1_t5127ABE6809BA32727C69CB2E076B28D6
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DateTimeOffset_t4EE701FE2F386D6F932FAC9B11E4B74A5B30F0A4_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Nullable_1_t5127ABE6809BA32727C69CB2E076B28D676EB15B_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	void* L_1 = alloca(sizeof(Nullable_1_t5127ABE6809BA32727C69CB2E076B28D676EB15B));
 	{
 		RuntimeObject* L_0;
 		L_0 = JsonTextReader_ReadStringValue_m62029E1909302B311A77A89BE6430D3263CAB44E(__this, 6, NULL);
-		UnBoxNullable(L_0, DateTimeOffset_t4EE701FE2F386D6F932FAC9B11E4B74A5B30F0A4_il2cpp_TypeInfo_var, L_1);
+		UnBoxNullable(L_0, Nullable_1_t5127ABE6809BA32727C69CB2E076B28D676EB15B_il2cpp_TypeInfo_var, L_1);
 		return ((*(Nullable_1_t5127ABE6809BA32727C69CB2E076B28D676EB15B*)((Nullable_1_t5127ABE6809BA32727C69CB2E076B28D676EB15B*)(Nullable_1_t5127ABE6809BA32727C69CB2E076B28D676EB15B*)L_1)));
 	}
 }
@@ -34165,14 +34165,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Nullable_1_t072551AA1AA8366A46F232F8180C34AA0
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Decimal_tDA6C877282B2D789CF97C0949661CC11D643969F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Nullable_1_t072551AA1AA8366A46F232F8180C34AA0CFFACBB_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	void* L_1 = alloca(sizeof(Nullable_1_t072551AA1AA8366A46F232F8180C34AA0CFFACBB));
 	{
 		RuntimeObject* L_0;
 		L_0 = JsonTextReader_ReadNumberValue_m17C7220A5D5F434F55EC9100D5FCE021E4AEFA5A(__this, 4, NULL);
-		UnBoxNullable(L_0, Decimal_tDA6C877282B2D789CF97C0949661CC11D643969F_il2cpp_TypeInfo_var, L_1);
+		UnBoxNullable(L_0, Nullable_1_t072551AA1AA8366A46F232F8180C34AA0CFFACBB_il2cpp_TypeInfo_var, L_1);
 		return ((*(Nullable_1_t072551AA1AA8366A46F232F8180C34AA0CFFACBB*)((Nullable_1_t072551AA1AA8366A46F232F8180C34AA0CFFACBB*)(Nullable_1_t072551AA1AA8366A46F232F8180C34AA0CFFACBB*)L_1)));
 	}
 }
@@ -34182,14 +34182,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Nullable_1_t6E154519A812D040E3016229CD7638843
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Double_tE150EF3D1D43DEE85D533810AB4C742307EEDE5F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Nullable_1_t6E154519A812D040E3016229CD7638843A2CC165_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	void* L_1 = alloca(sizeof(Nullable_1_t6E154519A812D040E3016229CD7638843A2CC165));
 	{
 		RuntimeObject* L_0;
 		L_0 = JsonTextReader_ReadNumberValue_m17C7220A5D5F434F55EC9100D5FCE021E4AEFA5A(__this, 7, NULL);
-		UnBoxNullable(L_0, Double_tE150EF3D1D43DEE85D533810AB4C742307EEDE5F_il2cpp_TypeInfo_var, L_1);
+		UnBoxNullable(L_0, Nullable_1_t6E154519A812D040E3016229CD7638843A2CC165_il2cpp_TypeInfo_var, L_1);
 		return ((*(Nullable_1_t6E154519A812D040E3016229CD7638843A2CC165*)((Nullable_1_t6E154519A812D040E3016229CD7638843A2CC165*)(Nullable_1_t6E154519A812D040E3016229CD7638843A2CC165*)L_1)));
 	}
 }
