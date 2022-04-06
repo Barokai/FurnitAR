@@ -24,19 +24,21 @@
 # TODO
 
 1) katalog 3d modelle
-2) auswahl von modell
-3) platzierung (plane finder?)
-4) rotation?
-5) farbe?
-6) neues modell?
-7) speicher? screenshot? teilen?
-8) menü
+1) gui für auswahl von modell
+1) platzierung (plane finder?)
+1) rotation?
+1) farbe?
+1) neues modell?
+1) speicher? screenshot? teilen?
+1) menü
 
 ## notizen
 
-imagetarget erkennung und gui anzeigen: funktioniert noch nicht
-links oder rechts oben eine anzeige der gesamtkosten einfügen (3 möbel = 1200€ zB)
-  --> direkt auf AR camera geben das script?
-links oben im debug mode einen button zum platzieren eines sessels im Raum
-  --> direkt auf AR camera geben das script?
+- imagetarget erkennung und gui anzeigen: funktioniert noch nicht
+- links oder rechts oben eine anzeige der gesamtkosten einfügen (3 möbel = 1200€ zB)
+  - direkt auf AR camera geben das script?
+- links oben im debug mode einen button zum platzieren eines sessels im Raum
+  - direkt auf AR camera geben das script?
 Ground plane stage rausfinden wie die funktioniert.
+  - evtl abhängig je nach gerät ein marker nötig
+  - testen mit pixel6, sollte keinen benötigen
