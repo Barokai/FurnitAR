@@ -720,6 +720,7 @@ UnityEngine.Screen::SetOrientationEnabled
 UnityEngine.Screen::set_sleepTimeout
 UnityEngine.Screen::get_fullScreenMode
 UnityEngine.Screen::GetScreenOrientation
+UnityEngine.ScreenCapture::CaptureScreenshot
 UnityEngine.ScriptableObject::CreateScriptableObject
 UnityEngine.ScriptableObject::CreateScriptableObjectInstanceFromType
 UnityEngine.ScriptingRuntime::GetAllUserAssemblies

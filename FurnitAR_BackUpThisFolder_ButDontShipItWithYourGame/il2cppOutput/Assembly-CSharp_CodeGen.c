@@ -18,95 +18,110 @@ extern void AudioTest_Start_m9A708D63C8D4C69634E096CA25EDCDD381999CFB (void);
 extern void AudioTest_Update_mFAA4D571916322270AA025595E200066C1E37621 (void);
 // 0x00000003 System.Void AudioTest::.ctor()
 extern void AudioTest__ctor_mB4B73A665299542326E4C0A8B5684B35BAE482F1 (void);
-// 0x00000004 System.Void CollisionDetection::Start()
+// 0x00000004 System.Void ChairTargetGUI::Start()
+extern void ChairTargetGUI_Start_m4E4110AE5CB61D7369E5DEEFF5D9D1AC30988486 (void);
+// 0x00000005 System.Void ChairTargetGUI::Update()
+extern void ChairTargetGUI_Update_m9B8F13E7FDC76500FD45DCA57209412C7449C487 (void);
+// 0x00000006 System.Void ChairTargetGUI::.ctor()
+extern void ChairTargetGUI__ctor_m53734AF23B10330A1DB4E0C5BC99A1454836497F (void);
+// 0x00000007 System.Void CollisionDetection::Start()
 extern void CollisionDetection_Start_m262C6E1774F6E06458083856DC8610842333997E (void);
-// 0x00000005 System.Void CollisionDetection::Update()
+// 0x00000008 System.Void CollisionDetection::Update()
 extern void CollisionDetection_Update_mA5B41027B86E52D2C3A630FB914F5FC164F204E8 (void);
-// 0x00000006 System.Void CollisionDetection::OnCollisionEnter(UnityEngine.Collision)
+// 0x00000009 System.Void CollisionDetection::OnCollisionEnter(UnityEngine.Collision)
 extern void CollisionDetection_OnCollisionEnter_m15C24279D8FC0657B748F0DAEBAE3AB541BDCBA2 (void);
-// 0x00000007 System.Void CollisionDetection::OnTriggerEnter(UnityEngine.Collider)
+// 0x0000000A System.Void CollisionDetection::OnTriggerEnter(UnityEngine.Collider)
 extern void CollisionDetection_OnTriggerEnter_m135EE6900412C4BAF4A0BAC5E93684FA2DBCCEE7 (void);
-// 0x00000008 System.Void CollisionDetection::.ctor()
+// 0x0000000B System.Void CollisionDetection::.ctor()
 extern void CollisionDetection__ctor_m4DF62A245D00114DD95C513FFB32B31CBE7492BB (void);
-// 0x00000009 System.Void CreateBoxPile::Start()
+// 0x0000000C System.Void CreateBoxPile::Start()
 extern void CreateBoxPile_Start_mDEBB72D830ED21503312DBE4358E92B3FD68AB61 (void);
-// 0x0000000A System.Void CreateBoxPile::CreatorFunc(UnityEngine.Vector3,System.Int32)
+// 0x0000000D System.Void CreateBoxPile::CreatorFunc(UnityEngine.Vector3,System.Int32)
 extern void CreateBoxPile_CreatorFunc_m4849359201FFA8F972F254B00259A3F8664A8571 (void);
-// 0x0000000B System.Void CreateBoxPile::.ctor()
+// 0x0000000E System.Void CreateBoxPile::.ctor()
 extern void CreateBoxPile__ctor_mDD2FAE27E266DAF9F23A50BA5D91B7A9948AB4DD (void);
-// 0x0000000C System.Void Instantiate::Start()
+// 0x0000000F System.Void GroundPlaneGUI::Start()
+extern void GroundPlaneGUI_Start_m52AE3329920C0305B30A4960D9BB6019A3870756 (void);
+// 0x00000010 System.Void GroundPlaneGUI::OnTrackingFound()
+extern void GroundPlaneGUI_OnTrackingFound_m9598D70A5245B53CA015A9778297D92AAF9F9BCB (void);
+// 0x00000011 System.Void GroundPlaneGUI::OnTrackingLost()
+extern void GroundPlaneGUI_OnTrackingLost_m875ECB4FF18DD1F8237A0E24B82BDFE98FD3267F (void);
+// 0x00000012 System.Void GroundPlaneGUI::OnGUI()
+extern void GroundPlaneGUI_OnGUI_mA19BA82FFE9ED47C6F6B49BC71204FAE88411B51 (void);
+// 0x00000013 System.Void GroundPlaneGUI::ResetFurnitureList()
+extern void GroundPlaneGUI_ResetFurnitureList_m660551E75AE159211878A62FB56E78D480AFD62D (void);
+// 0x00000014 System.Void GroundPlaneGUI::CaptureScreenshot()
+extern void GroundPlaneGUI_CaptureScreenshot_mD4B03B52CCEEE116C45594B899B994A886DAC468 (void);
+// 0x00000015 System.Void GroundPlaneGUI::OpenVideoActivity()
+extern void GroundPlaneGUI_OpenVideoActivity_m93ECD7EA7C966881D236A349EBC002514229B4FA (void);
+// 0x00000016 System.Void GroundPlaneGUI::.ctor()
+extern void GroundPlaneGUI__ctor_m8331C5C445794538AAFC0BA9F037BC33D9F84ED0 (void);
+// 0x00000017 System.Void GroundPlaneGUI::.cctor()
+extern void GroundPlaneGUI__cctor_m2940E2BDA6401022127BB39920D92C9077E862AC (void);
+// 0x00000018 System.Void Instantiate::Start()
 extern void Instantiate_Start_mF77FFBF95C90733906B2D6DC9F8F771F61B21F15 (void);
-// 0x0000000D System.Void Instantiate::CreatorFunc(UnityEngine.Vector3,System.Int32)
+// 0x00000019 System.Void Instantiate::CreatorFunc(UnityEngine.Vector3,System.Int32)
 extern void Instantiate_CreatorFunc_m70D4F3B852787D9960639868D366DE3DB9BBB85B (void);
-// 0x0000000E System.Void Instantiate::Update()
+// 0x0000001A System.Void Instantiate::Update()
 extern void Instantiate_Update_m29691F1DF108C9E1F6F1163887B05BAA1DD3EE89 (void);
-// 0x0000000F System.Void Instantiate::.ctor()
+// 0x0000001B System.Void Instantiate::.ctor()
 extern void Instantiate__ctor_m123F39FBC29E6FB5FC839AEA2C5160F32CE754E8 (void);
-// 0x00000010 System.Void JumpingBall::Start()
+// 0x0000001C System.Void JumpingBall::Start()
 extern void JumpingBall_Start_m75E602D010CA0A4D48A8B741B743FC54435AF465 (void);
-// 0x00000011 System.Void JumpingBall::Update()
+// 0x0000001D System.Void JumpingBall::Update()
 extern void JumpingBall_Update_m902C0B4BD6EB2A791B90994BA91D001D19E26DCB (void);
-// 0x00000012 System.Single JumpingBall::GetY(System.Single)
+// 0x0000001E System.Single JumpingBall::GetY(System.Single)
 extern void JumpingBall_GetY_m996D63F01AFA93CDD950CA84D3EC6A0A3CBEFE33 (void);
-// 0x00000013 System.Void JumpingBall::.ctor()
+// 0x0000001F System.Void JumpingBall::.ctor()
 extern void JumpingBall__ctor_m1375E8E6D71F110E77D37C10E9F5D9CA541E19A7 (void);
-// 0x00000014 System.Void Menu::Start()
+// 0x00000020 System.Void Menu::Start()
 extern void Menu_Start_mC49986718939F87924A1391044721CAC6E28919D (void);
-// 0x00000015 System.Void Menu::Update()
+// 0x00000021 System.Void Menu::Update()
 extern void Menu_Update_m664984862D794DB3E17B79AFC35D12A9ED961B5D (void);
-// 0x00000016 System.Void Menu::.ctor()
+// 0x00000022 System.Void Menu::.ctor()
 extern void Menu__ctor_mBEF2B96BC9E3D64E020EBE40FEF9CF25E6C3ED00 (void);
-// 0x00000017 System.Void MoveBetweenTargets::Start()
+// 0x00000023 System.Void MoveBetweenTargets::Start()
 extern void MoveBetweenTargets_Start_m4B8E4736CCBF401A76A5AA9C3298DB4B72123C39 (void);
-// 0x00000018 System.Void MoveBetweenTargets::Update()
+// 0x00000024 System.Void MoveBetweenTargets::Update()
 extern void MoveBetweenTargets_Update_m82D5EF3CF3759A0B54DCD062E22234733BBD653C (void);
-// 0x00000019 System.Void MoveBetweenTargets::.ctor()
+// 0x00000025 System.Void MoveBetweenTargets::.ctor()
 extern void MoveBetweenTargets__ctor_m70E334C38E7CE1E4639342724A32ECEF81188CB6 (void);
-// 0x0000001A System.Void MyScript::Start()
+// 0x00000026 System.Void MyScript::Start()
 extern void MyScript_Start_m5084CF645349E5B6CA892563A8BEAD1B594218DD (void);
-// 0x0000001B System.Void MyScript::Update()
+// 0x00000027 System.Void MyScript::Update()
 extern void MyScript_Update_m6F09F5CB4E3CBA4D359F7EC6253BFEB6D385A68B (void);
-// 0x0000001C System.Void MyScript::.ctor()
+// 0x00000028 System.Void MyScript::.ctor()
 extern void MyScript__ctor_m4C585D44CBECF416DF49C346B5249DD656E56A2E (void);
-// 0x0000001D System.Void PopUpGUI::Start()
-extern void PopUpGUI_Start_m5420EFBD90C28BE8B7033A0739C1BFD5A69963B6 (void);
-// 0x0000001E System.Void PopUpGUI::OnTrackingFound()
-extern void PopUpGUI_OnTrackingFound_m03A2B78A243B094F15DA4F64E8C57F7083ED789A (void);
-// 0x0000001F System.Void PopUpGUI::OnTrackingLost()
-extern void PopUpGUI_OnTrackingLost_m6487AE12CE12B127A62736CBDAB981551590DF48 (void);
-// 0x00000020 System.Void PopUpGUI::OnGUI()
-extern void PopUpGUI_OnGUI_m2A27DF25DC19C7A7E72C91A6CEA42EBC354AD43F (void);
-// 0x00000021 System.Void PopUpGUI::OpenVideoActivity()
-extern void PopUpGUI_OpenVideoActivity_m02A990BA3EBA8BA7D9A5358B62F91EED7B38FCD9 (void);
-// 0x00000022 System.Void PopUpGUI::.ctor()
-extern void PopUpGUI__ctor_mF8630107BCC4A071F867C3385E18D8E9BD8A1EC4 (void);
-// 0x00000023 System.Void text::Start()
+// 0x00000029 System.Void text::Start()
 extern void text_Start_mF08026D5C3E87BE9DA2C0E01F28B93644C159C9C (void);
-// 0x00000024 System.Void text::Update()
+// 0x0000002A System.Void text::Update()
 extern void text_Update_mC0C3C3CA5BBCC449ADDD0076E23BC91884265964 (void);
-// 0x00000025 System.Void text::.ctor()
+// 0x0000002B System.Void text::.ctor()
 extern void text__ctor_m55D89EDCCBC889C7ABE541CFFBFF0DF2841671A3 (void);
-// 0x00000026 System.Void TouchTest::Start()
+// 0x0000002C System.Void TouchTest::Start()
 extern void TouchTest_Start_m8891C9E4B88F931628205616DA8899C02D3D027F (void);
-// 0x00000027 System.Void TouchTest::Update()
+// 0x0000002D System.Void TouchTest::Update()
 extern void TouchTest_Update_m6ED807E6EBAB7D1849732CFD875147481567E1A3 (void);
-// 0x00000028 System.Void TouchTest::.ctor()
+// 0x0000002E System.Void TouchTest::.ctor()
 extern void TouchTest__ctor_m09398C341BBCF3B9216A3CC4333F04CD2BB76A4E (void);
-// 0x00000029 System.Void VBAction2::Start()
+// 0x0000002F System.Void VBAction2::Start()
 extern void VBAction2_Start_m18E48F5D47253021810C71A43A085763D1A6E8B3 (void);
-// 0x0000002A System.Void VBAction2::Update()
+// 0x00000030 System.Void VBAction2::Update()
 extern void VBAction2_Update_mB0B8BC8EF4A64ABB9CCA196798C4CD384C8677AC (void);
-// 0x0000002B System.Void VBAction2::OnButtonPressed(Vuforia.VirtualButtonBehaviour)
+// 0x00000031 System.Void VBAction2::OnButtonPressed(Vuforia.VirtualButtonBehaviour)
 extern void VBAction2_OnButtonPressed_mF3439DB801E79C041E7A64EC92645ECF381037B1 (void);
-// 0x0000002C System.Void VBAction2::OnButtonReleased(Vuforia.VirtualButtonBehaviour)
+// 0x00000032 System.Void VBAction2::OnButtonReleased(Vuforia.VirtualButtonBehaviour)
 extern void VBAction2_OnButtonReleased_m489F3F3A7CBE22E3BADE39B1F1B3AF1A498B8DBA (void);
-// 0x0000002D System.Void VBAction2::.ctor()
+// 0x00000033 System.Void VBAction2::.ctor()
 extern void VBAction2__ctor_m9556968D7CA5D917073C88CD01FFF45167296429 (void);
-static Il2CppMethodPointer s_methodPointers[45] = 
+static Il2CppMethodPointer s_methodPointers[51] = 
 {
 	AudioTest_Start_m9A708D63C8D4C69634E096CA25EDCDD381999CFB,
 	AudioTest_Update_mFAA4D571916322270AA025595E200066C1E37621,
 	AudioTest__ctor_mB4B73A665299542326E4C0A8B5684B35BAE482F1,
+	ChairTargetGUI_Start_m4E4110AE5CB61D7369E5DEEFF5D9D1AC30988486,
+	ChairTargetGUI_Update_m9B8F13E7FDC76500FD45DCA57209412C7449C487,
+	ChairTargetGUI__ctor_m53734AF23B10330A1DB4E0C5BC99A1454836497F,
 	CollisionDetection_Start_m262C6E1774F6E06458083856DC8610842333997E,
 	CollisionDetection_Update_mA5B41027B86E52D2C3A630FB914F5FC164F204E8,
 	CollisionDetection_OnCollisionEnter_m15C24279D8FC0657B748F0DAEBAE3AB541BDCBA2,
@@ -115,6 +130,15 @@ static Il2CppMethodPointer s_methodPointers[45] =
 	CreateBoxPile_Start_mDEBB72D830ED21503312DBE4358E92B3FD68AB61,
 	CreateBoxPile_CreatorFunc_m4849359201FFA8F972F254B00259A3F8664A8571,
 	CreateBoxPile__ctor_mDD2FAE27E266DAF9F23A50BA5D91B7A9948AB4DD,
+	GroundPlaneGUI_Start_m52AE3329920C0305B30A4960D9BB6019A3870756,
+	GroundPlaneGUI_OnTrackingFound_m9598D70A5245B53CA015A9778297D92AAF9F9BCB,
+	GroundPlaneGUI_OnTrackingLost_m875ECB4FF18DD1F8237A0E24B82BDFE98FD3267F,
+	GroundPlaneGUI_OnGUI_mA19BA82FFE9ED47C6F6B49BC71204FAE88411B51,
+	GroundPlaneGUI_ResetFurnitureList_m660551E75AE159211878A62FB56E78D480AFD62D,
+	GroundPlaneGUI_CaptureScreenshot_mD4B03B52CCEEE116C45594B899B994A886DAC468,
+	GroundPlaneGUI_OpenVideoActivity_m93ECD7EA7C966881D236A349EBC002514229B4FA,
+	GroundPlaneGUI__ctor_m8331C5C445794538AAFC0BA9F037BC33D9F84ED0,
+	GroundPlaneGUI__cctor_m2940E2BDA6401022127BB39920D92C9077E862AC,
 	Instantiate_Start_mF77FFBF95C90733906B2D6DC9F8F771F61B21F15,
 	Instantiate_CreatorFunc_m70D4F3B852787D9960639868D366DE3DB9BBB85B,
 	Instantiate_Update_m29691F1DF108C9E1F6F1163887B05BAA1DD3EE89,
@@ -132,12 +156,6 @@ static Il2CppMethodPointer s_methodPointers[45] =
 	MyScript_Start_m5084CF645349E5B6CA892563A8BEAD1B594218DD,
 	MyScript_Update_m6F09F5CB4E3CBA4D359F7EC6253BFEB6D385A68B,
 	MyScript__ctor_m4C585D44CBECF416DF49C346B5249DD656E56A2E,
-	PopUpGUI_Start_m5420EFBD90C28BE8B7033A0739C1BFD5A69963B6,
-	PopUpGUI_OnTrackingFound_m03A2B78A243B094F15DA4F64E8C57F7083ED789A,
-	PopUpGUI_OnTrackingLost_m6487AE12CE12B127A62736CBDAB981551590DF48,
-	PopUpGUI_OnGUI_m2A27DF25DC19C7A7E72C91A6CEA42EBC354AD43F,
-	PopUpGUI_OpenVideoActivity_m02A990BA3EBA8BA7D9A5358B62F91EED7B38FCD9,
-	PopUpGUI__ctor_mF8630107BCC4A071F867C3385E18D8E9BD8A1EC4,
 	text_Start_mF08026D5C3E87BE9DA2C0E01F28B93644C159C9C,
 	text_Update_mC0C3C3CA5BBCC449ADDD0076E23BC91884265964,
 	text__ctor_m55D89EDCCBC889C7ABE541CFFBFF0DF2841671A3,
@@ -150,8 +168,11 @@ static Il2CppMethodPointer s_methodPointers[45] =
 	VBAction2_OnButtonReleased_m489F3F3A7CBE22E3BADE39B1F1B3AF1A498B8DBA,
 	VBAction2__ctor_m9556968D7CA5D917073C88CD01FFF45167296429,
 };
-static const int32_t s_InvokerIndices[45] = 
+static const int32_t s_InvokerIndices[51] = 
 {
+	4832,
+	4832,
+	4832,
 	4832,
 	4832,
 	4832,
@@ -163,6 +184,15 @@ static const int32_t s_InvokerIndices[45] =
 	4832,
 	2236,
 	4832,
+	4832,
+	4832,
+	4832,
+	4832,
+	4832,
+	4832,
+	4832,
+	4832,
+	7288,
 	4832,
 	2236,
 	4832,
@@ -170,12 +200,6 @@ static const int32_t s_InvokerIndices[45] =
 	4832,
 	4832,
 	3482,
-	4832,
-	4832,
-	4832,
-	4832,
-	4832,
-	4832,
 	4832,
 	4832,
 	4832,
@@ -202,7 +226,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	45,
+	51,
 	s_methodPointers,
 	0,
 	NULL,
