@@ -24,10 +24,13 @@
 # Setup
 
 Download vuforia packages and place it in /Packages/ folder
-https://1drv.ms/u/s!AufoJNRhqarVo8MesX2BMsDDa5nxmw?e=jxgBeO
-
+<https://1drv.ms/u/s!AufoJNRhqarVo8MesX2BMsDDa5nxmw?e=jxgBeO>
 
 # TODO
+
+1) statemachine für alle stati der app
+
+- clean state
 
 1) katalog 3d modelle
 1) gui für auswahl von modell

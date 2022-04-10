@@ -81,8 +81,8 @@ struct CollisionDetection_tC285F684743B092C09228441D8EC876B28E771ED;
 struct Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3;
 // CreateBoxPile
 struct CreateBoxPile_tCD45849A19AE032BF59440781716DD9E7AB36F63;
-// DefaultObserverEventHandler
-struct DefaultObserverEventHandler_t7CF27A0CC5B1FAEDDB5964C3A11F29C2A14E1FC0;
+// DefaultTrackableEventHandler
+struct DefaultTrackableEventHandler_t1C9237A6B9B06FF6B36BFBA0988DC08E38EED27F;
 // System.DelegateData
 struct DelegateData_t9B286B493293CD2D23A5B2B5EF0E5B1324C2B77E;
 // UnityEngine.Font
@@ -1034,20 +1034,20 @@ struct CreateBoxPile_tCD45849A19AE032BF59440781716DD9E7AB36F63  : public MonoBeh
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___InstantiatePrefab_4;
 };
 
-// DefaultObserverEventHandler
-struct DefaultObserverEventHandler_t7CF27A0CC5B1FAEDDB5964C3A11F29C2A14E1FC0  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+// DefaultTrackableEventHandler
+struct DefaultTrackableEventHandler_t1C9237A6B9B06FF6B36BFBA0988DC08E38EED27F  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
-	// DefaultObserverEventHandler/TrackingStatusFilter DefaultObserverEventHandler::StatusFilter
+	// DefaultTrackableEventHandler/TrackingStatusFilter DefaultTrackableEventHandler::StatusFilter
 	int32_t ___StatusFilter_4;
-	// UnityEngine.Events.UnityEvent DefaultObserverEventHandler::OnTargetFound
+	// UnityEngine.Events.UnityEvent DefaultTrackableEventHandler::OnTargetFound
 	UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* ___OnTargetFound_5;
-	// UnityEngine.Events.UnityEvent DefaultObserverEventHandler::OnTargetLost
+	// UnityEngine.Events.UnityEvent DefaultTrackableEventHandler::OnTargetLost
 	UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* ___OnTargetLost_6;
-	// Vuforia.ObserverBehaviour DefaultObserverEventHandler::mObserverBehaviour
-	ObserverBehaviour_t5523404662BA53BE6118C49F6FFA9E19719115DB* ___mObserverBehaviour_7;
-	// Vuforia.TargetStatus DefaultObserverEventHandler::mPreviousTargetStatus
+	// Vuforia.ObserverBehaviour DefaultTrackableEventHandler::mTrackableBehaviour
+	ObserverBehaviour_t5523404662BA53BE6118C49F6FFA9E19719115DB* ___mTrackableBehaviour_7;
+	// Vuforia.TargetStatus DefaultTrackableEventHandler::mPreviousTargetStatus
 	TargetStatus_t5D866F1CAA9D70E5B66D532E69B190EA3BAAC4B0 ___mPreviousTargetStatus_8;
-	// System.Boolean DefaultObserverEventHandler::mCallbackReceivedOnce
+	// System.Boolean DefaultTrackableEventHandler::mCallbackReceivedOnce
 	bool ___mCallbackReceivedOnce_9;
 };
 
@@ -1216,7 +1216,7 @@ struct ObserverBehaviour_t5523404662BA53BE6118C49F6FFA9E19719115DB  : public Vuf
 };
 
 // PopUpGUI
-struct PopUpGUI_t91D5198C2AF5E5821FF09CE90D1B41EFBA7AA7AA  : public DefaultObserverEventHandler_t7CF27A0CC5B1FAEDDB5964C3A11F29C2A14E1FC0
+struct PopUpGUI_t91D5198C2AF5E5821FF09CE90D1B41EFBA7AA7AA  : public DefaultTrackableEventHandler_t1C9237A6B9B06FF6B36BFBA0988DC08E38EED27F
 {
 	// System.Single PopUpGUI::native_width
 	float ___native_width_10;
@@ -1507,12 +1507,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Input_get_touchCount_m7B8EAAB3449A6DC
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object_Destroy_m0E1B4CF8C29EB7FC8658C2C84C57F49C0DD12C91 (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___obj0, float ___t1, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Object::Destroy(UnityEngine.Object)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object_Destroy_mFCDAE6333522488F60597AF019EA90BB1207A5AA (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___obj0, const RuntimeMethod* method) ;
+// System.Void DefaultTrackableEventHandler::Start()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DefaultTrackableEventHandler_Start_mC52B76B7C3086B8D19B6691FD5FF8D0C104D734D (DefaultTrackableEventHandler_t1C9237A6B9B06FF6B36BFBA0988DC08E38EED27F* __this, const RuntimeMethod* method) ;
 // System.Void PopUpGUI::OnGUI()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PopUpGUI_OnGUI_m2A27DF25DC19C7A7E72C91A6CEA42EBC354AD43F (PopUpGUI_t91D5198C2AF5E5821FF09CE90D1B41EFBA7AA7AA* __this, const RuntimeMethod* method) ;
-// System.Void DefaultObserverEventHandler::OnTrackingFound()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DefaultObserverEventHandler_OnTrackingFound_mB6D67A89BFABE789AED4BBB9298D9DA6BBD14DFA (DefaultObserverEventHandler_t7CF27A0CC5B1FAEDDB5964C3A11F29C2A14E1FC0* __this, const RuntimeMethod* method) ;
-// System.Void DefaultObserverEventHandler::OnTrackingLost()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DefaultObserverEventHandler_OnTrackingLost_mC3798191D134AA29054393974F5A07A43B1BF5E8 (DefaultObserverEventHandler_t7CF27A0CC5B1FAEDDB5964C3A11F29C2A14E1FC0* __this, const RuntimeMethod* method) ;
+// System.Void DefaultTrackableEventHandler::OnTrackingFound()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DefaultTrackableEventHandler_OnTrackingFound_mD550B178B0DF4DAD849E8C7C1F652115D35FBBBC (DefaultTrackableEventHandler_t1C9237A6B9B06FF6B36BFBA0988DC08E38EED27F* __this, const RuntimeMethod* method) ;
+// System.Void DefaultTrackableEventHandler::OnTrackingLost()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DefaultTrackableEventHandler_OnTrackingLost_m73508DD2355F186ED2D7CCE4A2016F2381B35271 (DefaultTrackableEventHandler_t1C9237A6B9B06FF6B36BFBA0988DC08E38EED27F* __this, const RuntimeMethod* method) ;
 // System.Int32 UnityEngine.Screen::get_width()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Screen_get_width_mCA5D955A53CF6D29C8C7118D517D0FC84AE8056C (const RuntimeMethod* method) ;
 // System.Int32 UnityEngine.Screen::get_height()
@@ -1554,8 +1556,8 @@ inline AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* AndroidJavaO
 }
 // System.Void UnityEngine.AndroidJavaObject::CallStatic(System.String,System.Object[])
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidJavaObject_CallStatic_mB677DE04369EDD8E6DECAF2F233116EE1F06555C (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, String_t* ___methodName0, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___args1, const RuntimeMethod* method) ;
-// System.Void DefaultObserverEventHandler::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DefaultObserverEventHandler__ctor_mE40FCAD19043225054C315C22018F5780217E9DC (DefaultObserverEventHandler_t7CF27A0CC5B1FAEDDB5964C3A11F29C2A14E1FC0* __this, const RuntimeMethod* method) ;
+// System.Void DefaultTrackableEventHandler::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DefaultTrackableEventHandler__ctor_mEC836A090DA326BEF2920A883DCB7AFC71C0BE59 (DefaultTrackableEventHandler_t1C9237A6B9B06FF6B36BFBA0988DC08E38EED27F* __this, const RuntimeMethod* method) ;
 // UnityEngine.Touch[] UnityEngine.Input::get_touches()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TouchU5BU5D_t242545870BFCA81F368CCF82E00F9E2A7FB523B3* Input_get_touches_m884B92DD9A389F7985AB275A9717AC629C258B6B (const RuntimeMethod* method) ;
 // UnityEngine.TouchPhase UnityEngine.Touch::get_phase()
@@ -3039,6 +3041,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MyScript__ctor_m4C585D44CBECF416DF49C346
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PopUpGUI_Start_m5420EFBD90C28BE8B7033A0739C1BFD5A69963B6 (PopUpGUI_t91D5198C2AF5E5821FF09CE90D1B41EFBA7AA7AA* __this, const RuntimeMethod* method) 
 {
 	{
+		// mShowGUIButton = true;
+		__this->___mShowGUIButton_15 = (bool)1;
+		// base.Start();
+		DefaultTrackableEventHandler_Start_mC52B76B7C3086B8D19B6691FD5FF8D0C104D734D(__this, NULL);
 		// }
 		return;
 	}
@@ -3062,7 +3068,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PopUpGUI_OnTrackingFound_m03A2B78A243B09
 		// OnGUI();
 		PopUpGUI_OnGUI_m2A27DF25DC19C7A7E72C91A6CEA42EBC354AD43F(__this, NULL);
 		// base.OnTrackingFound();
-		DefaultObserverEventHandler_OnTrackingFound_mB6D67A89BFABE789AED4BBB9298D9DA6BBD14DFA(__this, NULL);
+		DefaultTrackableEventHandler_OnTrackingFound_mD550B178B0DF4DAD849E8C7C1F652115D35FBBBC(__this, NULL);
 		// }
 		return;
 	}
@@ -3086,7 +3092,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PopUpGUI_OnTrackingLost_m6487AE12CE12B12
 		// OnGUI();
 		PopUpGUI_OnGUI_m2A27DF25DC19C7A7E72C91A6CEA42EBC354AD43F(__this, NULL);
 		// base.OnTrackingLost();
-		DefaultObserverEventHandler_OnTrackingLost_mC3798191D134AA29054393974F5A07A43B1BF5E8(__this, NULL);
+		DefaultTrackableEventHandler_OnTrackingLost_m73508DD2355F186ED2D7CCE4A2016F2381B35271(__this, NULL);
 		// }
 		return;
 	}
@@ -3275,7 +3281,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PopUpGUI__ctor_mF8630107BCC4A071F867C338
 		__this->___native_width_10 = (1920.0f);
 		// float native_height = 1080f;
 		__this->___native_height_11 = (1080.0f);
-		DefaultObserverEventHandler__ctor_mE40FCAD19043225054C315C22018F5780217E9DC(__this, NULL);
+		DefaultTrackableEventHandler__ctor_mEC836A090DA326BEF2920A883DCB7AFC71C0BE59(__this, NULL);
 		return;
 	}
 }
