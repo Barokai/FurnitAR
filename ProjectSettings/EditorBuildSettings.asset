@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/VuforiaTest.unity
     guid: 0af179939ee6d57409c46b79ff8a7d91
   - enabled: 1
-    path: Assets/FurnitAR.unity
+    path: Assets/Scenes/FurnitAR.unity
     guid: c600863abfb6c3442bc7dc4a2abf6399
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 6652eedfbcdce8a4f8c4385f1ac3412c,

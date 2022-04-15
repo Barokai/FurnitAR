@@ -24,7 +24,11 @@
 # Setup
 
 Download vuforia packages and place it in /Packages/ folder
-<https://1drv.ms/u/s!AufoJNRhqarVo8MesX2BMsDDa5nxmw?e=jxgBeO>
+
+- vuforia 10.5.5 <https://1drv.ms/u/s!AufoJNRhqarVo8MesX2BMsDDa5nxmw?e=jxgBeO>
+
+- vuforia 10.6.3
+<https://1drv.ms/u/s!AufoJNRhqarVo_ZK56pDWrkrjs9q2g?e=bc7O3B>
 
 # TODO
 

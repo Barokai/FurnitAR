@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "com.ptc.vuforia.engine": {
-      "version": "file:com.ptc.vuforia.engine-10.5.5.tgz",
+      "version": "file:com.ptc.vuforia.engine-10.6.3.tgz",
       "depth": 0,
       "source": "local-tarball",
       "dependencies": {
