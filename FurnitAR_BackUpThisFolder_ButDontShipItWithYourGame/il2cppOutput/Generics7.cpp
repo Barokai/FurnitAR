@@ -254,6 +254,8 @@ struct CreateStructDelegate_1_tF45AB3692FE6F8A4415AC89848A892F3A031A879;
 struct CreateStructDelegate_1_t240D566F743F448A1A6AA369E7E016B4EEA0C03D;
 // Vuforia.VuObservation/CreateStructDelegate`1<Vuforia.VuMeshObservationInfo>
 struct CreateStructDelegate_1_t3EDAA16AD9DD5B771784752145396A9B804BDBD7;
+// Vuforia.VuObservation/CreateStructDelegate`1<Vuforia.VuModelTargetObservationStateInfo>
+struct CreateStructDelegate_1_t740074CFC233D096F98BA627F6C40488DFCC4FD2;
 // Vuforia.VuObservation/CreateStructDelegate`1<Vuforia.VuModelTargetObservationTargetInfo>
 struct CreateStructDelegate_1_t464A4064C663996E35CDD4FE99394922891E8737;
 // Vuforia.VuObservation/CreateStructDelegate`1<Vuforia.VuMultiTargetObservationTargetInfo>
@@ -2085,6 +2087,23 @@ struct VuMeshObservationInfo_t17B8971862B18EE83FE90575CDD2B841B7F21863_marshaled
 	RuntimeObject* ___meshes_0;
 };
 
+// Vuforia.VuModelTargetObservationStateInfo
+struct VuModelTargetObservationStateInfo_t666552B708DC28D2B4403221691C349801D49539 
+{
+	// System.String Vuforia.VuModelTargetObservationStateInfo::stateName
+	String_t* ___stateName_0;
+};
+// Native definition for P/Invoke marshalling of Vuforia.VuModelTargetObservationStateInfo
+struct VuModelTargetObservationStateInfo_t666552B708DC28D2B4403221691C349801D49539_marshaled_pinvoke
+{
+	char* ___stateName_0;
+};
+// Native definition for COM marshalling of Vuforia.VuModelTargetObservationStateInfo
+struct VuModelTargetObservationStateInfo_t666552B708DC28D2B4403221691C349801D49539_marshaled_com
+{
+	Il2CppChar* ___stateName_0;
+};
+
 // Vuforia.VuValidationAreaObservationTrainingInfo
 struct VuValidationAreaObservationTrainingInfo_t5375FAD9710D495F771AB3AD59B4EDB800C086ED 
 {
@@ -3273,8 +3292,8 @@ struct VuModelTargetObservationTargetInfo_tD46229257539FC5D4D8C13E82B31A2F6E2C1B
 	int32_t ___motionHint_6;
 	// Vuforia.VuMatrix44F Vuforia.VuModelTargetObservationTargetInfo::poseOffset
 	VuMatrix44F_tC75A0AF8524BED265F800A953806F30FA28B8DE6 ___poseOffset_7;
-	// System.String Vuforia.VuModelTargetObservationTargetInfo::activeState
-	String_t* ___activeState_8;
+	// System.String Vuforia.VuModelTargetObservationTargetInfo::activeStateName
+	String_t* ___activeStateName_8;
 };
 // Native definition for P/Invoke marshalling of Vuforia.VuModelTargetObservationTargetInfo
 struct VuModelTargetObservationTargetInfo_tD46229257539FC5D4D8C13E82B31A2F6E2C1BA0D_marshaled_pinvoke
@@ -3287,7 +3306,7 @@ struct VuModelTargetObservationTargetInfo_tD46229257539FC5D4D8C13E82B31A2F6E2C1B
 	int32_t ___trackingMode_5;
 	int32_t ___motionHint_6;
 	VuMatrix44F_tC75A0AF8524BED265F800A953806F30FA28B8DE6 ___poseOffset_7;
-	char* ___activeState_8;
+	char* ___activeStateName_8;
 };
 // Native definition for COM marshalling of Vuforia.VuModelTargetObservationTargetInfo
 struct VuModelTargetObservationTargetInfo_tD46229257539FC5D4D8C13E82B31A2F6E2C1BA0D_marshaled_com
@@ -3300,7 +3319,7 @@ struct VuModelTargetObservationTargetInfo_tD46229257539FC5D4D8C13E82B31A2F6E2C1B
 	int32_t ___trackingMode_5;
 	int32_t ___motionHint_6;
 	VuMatrix44F_tC75A0AF8524BED265F800A953806F30FA28B8DE6 ___poseOffset_7;
-	Il2CppChar* ___activeState_8;
+	Il2CppChar* ___activeStateName_8;
 };
 
 // Vuforia.VuMultiTargetObservationTargetInfo
@@ -3563,6 +3582,11 @@ struct CreateStructDelegate_1_t240D566F743F448A1A6AA369E7E016B4EEA0C03D  : publi
 
 // Vuforia.VuObservation/CreateStructDelegate`1<Vuforia.VuMeshObservationInfo>
 struct CreateStructDelegate_1_t3EDAA16AD9DD5B771784752145396A9B804BDBD7  : public MulticastDelegate_t
+{
+};
+
+// Vuforia.VuObservation/CreateStructDelegate`1<Vuforia.VuModelTargetObservationStateInfo>
+struct CreateStructDelegate_1_t740074CFC233D096F98BA627F6C40488DFCC4FD2  : public MulticastDelegate_t
 {
 };
 
@@ -10150,6 +10174,99 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR VuMeshObservationInfo_t17B8971862B18EE83FE905
 {
 	RuntimeObject *__result = il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___result0, 0);
 	return *(VuMeshObservationInfo_t17B8971862B18EE83FE90575CDD2B841B7F21863*)UnBox ((RuntimeObject*)__result);
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+VuModelTargetObservationStateInfo_t666552B708DC28D2B4403221691C349801D49539 CreateStructDelegate_1_Invoke_m4A11BDB1F72A31DCC154379E7314AD4560869E8F_Multicast(CreateStructDelegate_1_t740074CFC233D096F98BA627F6C40488DFCC4FD2* __this, intptr_t ___nativeHandle0, const RuntimeMethod* method)
+{
+	il2cpp_array_size_t length = __this->___delegates_13->max_length;
+	Delegate_t** delegatesToInvoke = reinterpret_cast<Delegate_t**>(__this->___delegates_13->GetAddressAtUnchecked(0));
+	VuModelTargetObservationStateInfo_t666552B708DC28D2B4403221691C349801D49539 retVal;
+	memset((&retVal), 0, sizeof(retVal));
+	for (il2cpp_array_size_t i = 0; i < length; i++)
+	{
+		CreateStructDelegate_1_t740074CFC233D096F98BA627F6C40488DFCC4FD2* currentDelegate = reinterpret_cast<CreateStructDelegate_1_t740074CFC233D096F98BA627F6C40488DFCC4FD2*>(delegatesToInvoke[i]);
+		typedef VuModelTargetObservationStateInfo_t666552B708DC28D2B4403221691C349801D49539 (*FunctionPointerType) (RuntimeObject*, intptr_t, const RuntimeMethod*);
+		retVal = ((FunctionPointerType)currentDelegate->___invoke_impl_1)((Il2CppObject*)currentDelegate->___method_code_6, ___nativeHandle0, reinterpret_cast<RuntimeMethod*>(currentDelegate->___method_3));
+	}
+	return retVal;
+}
+VuModelTargetObservationStateInfo_t666552B708DC28D2B4403221691C349801D49539 CreateStructDelegate_1_Invoke_m4A11BDB1F72A31DCC154379E7314AD4560869E8F_Open(CreateStructDelegate_1_t740074CFC233D096F98BA627F6C40488DFCC4FD2* __this, intptr_t ___nativeHandle0, const RuntimeMethod* method)
+{
+	typedef VuModelTargetObservationStateInfo_t666552B708DC28D2B4403221691C349801D49539 (*FunctionPointerType) (intptr_t, const RuntimeMethod*);
+	return ((FunctionPointerType)__this->___method_ptr_0)(___nativeHandle0, method);
+}
+VuModelTargetObservationStateInfo_t666552B708DC28D2B4403221691C349801D49539 CreateStructDelegate_1_Invoke_m4A11BDB1F72A31DCC154379E7314AD4560869E8F_OpenStaticInvoker(CreateStructDelegate_1_t740074CFC233D096F98BA627F6C40488DFCC4FD2* __this, intptr_t ___nativeHandle0, const RuntimeMethod* method)
+{
+	return InvokerFuncInvoker1< VuModelTargetObservationStateInfo_t666552B708DC28D2B4403221691C349801D49539, intptr_t >::Invoke(__this->___method_ptr_0, method, NULL, ___nativeHandle0);
+}
+VuModelTargetObservationStateInfo_t666552B708DC28D2B4403221691C349801D49539 CreateStructDelegate_1_Invoke_m4A11BDB1F72A31DCC154379E7314AD4560869E8F_ClosedStaticInvoker(CreateStructDelegate_1_t740074CFC233D096F98BA627F6C40488DFCC4FD2* __this, intptr_t ___nativeHandle0, const RuntimeMethod* method)
+{
+	return InvokerFuncInvoker2< VuModelTargetObservationStateInfo_t666552B708DC28D2B4403221691C349801D49539, RuntimeObject*, intptr_t >::Invoke(__this->___method_ptr_0, method, NULL, __this->___m_target_2, ___nativeHandle0);
+}
+// System.Void Vuforia.VuObservation/CreateStructDelegate`1<Vuforia.VuModelTargetObservationStateInfo>::.ctor(System.Object,System.IntPtr)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CreateStructDelegate_1__ctor_mED282C4D6F45798F520BEB381731BD030DDB4D0A_gshared (CreateStructDelegate_1_t740074CFC233D096F98BA627F6C40488DFCC4FD2* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) 
+{
+	__this->___method_ptr_0 = il2cpp_codegen_get_virtual_call_method_pointer((RuntimeMethod*)___method1);
+	__this->___method_3 = ___method1;
+	__this->___m_target_2 = ___object0;
+	Il2CppCodeGenWriteBarrier((void**)(&__this->___m_target_2), (void*)___object0);
+	int parameterCount = il2cpp_codegen_method_parameter_count((RuntimeMethod*)___method1);
+	__this->___method_code_6 = (intptr_t)__this;
+	if (MethodIsStatic((RuntimeMethod*)___method1))
+	{
+		bool isOpen = parameterCount == 1;
+		if (il2cpp_codegen_call_method_via_invoker((RuntimeMethod*)___method1))
+			if (isOpen)
+				__this->___invoke_impl_1 = (intptr_t)&CreateStructDelegate_1_Invoke_m4A11BDB1F72A31DCC154379E7314AD4560869E8F_OpenStaticInvoker;
+			else
+				__this->___invoke_impl_1 = (intptr_t)&CreateStructDelegate_1_Invoke_m4A11BDB1F72A31DCC154379E7314AD4560869E8F_ClosedStaticInvoker;
+		else
+			if (isOpen)
+				__this->___invoke_impl_1 = (intptr_t)&CreateStructDelegate_1_Invoke_m4A11BDB1F72A31DCC154379E7314AD4560869E8F_Open;
+			else
+				{
+					__this->___invoke_impl_1 = (intptr_t)__this->___method_ptr_0;
+					__this->___method_code_6 = (intptr_t)__this->___m_target_2;
+				}
+	}
+	else
+	{
+		__this->___invoke_impl_1 = (intptr_t)__this->___method_ptr_0;
+		__this->___method_code_6 = (intptr_t)__this->___m_target_2;
+	}
+	__this->___extra_arg_5 = (intptr_t)&CreateStructDelegate_1_Invoke_m4A11BDB1F72A31DCC154379E7314AD4560869E8F_Multicast;
+}
+// T Vuforia.VuObservation/CreateStructDelegate`1<Vuforia.VuModelTargetObservationStateInfo>::Invoke(System.IntPtr)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR VuModelTargetObservationStateInfo_t666552B708DC28D2B4403221691C349801D49539 CreateStructDelegate_1_Invoke_m4A11BDB1F72A31DCC154379E7314AD4560869E8F_gshared (CreateStructDelegate_1_t740074CFC233D096F98BA627F6C40488DFCC4FD2* __this, intptr_t ___nativeHandle0, const RuntimeMethod* method) 
+{
+	typedef VuModelTargetObservationStateInfo_t666552B708DC28D2B4403221691C349801D49539 (*FunctionPointerType) (RuntimeObject*, intptr_t, const RuntimeMethod*);
+	return ((FunctionPointerType)__this->___invoke_impl_1)((Il2CppObject*)__this->___method_code_6, ___nativeHandle0, reinterpret_cast<RuntimeMethod*>(__this->___method_3));
+}
+// System.IAsyncResult Vuforia.VuObservation/CreateStructDelegate`1<Vuforia.VuModelTargetObservationStateInfo>::BeginInvoke(System.IntPtr,System.AsyncCallback,System.Object)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* CreateStructDelegate_1_BeginInvoke_m6B49291818D2C99F2ADC6582AB0330AFBC58B705_gshared (CreateStructDelegate_1_t740074CFC233D096F98BA627F6C40488DFCC4FD2* __this, intptr_t ___nativeHandle0, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___callback1, RuntimeObject* ___object2, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IntPtr_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	void *__d_args[2] = {0};
+	__d_args[0] = Box(IntPtr_t_il2cpp_TypeInfo_var, &___nativeHandle0);
+	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___callback1, (RuntimeObject*)___object2);
+}
+// T Vuforia.VuObservation/CreateStructDelegate`1<Vuforia.VuModelTargetObservationStateInfo>::EndInvoke(System.IAsyncResult)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR VuModelTargetObservationStateInfo_t666552B708DC28D2B4403221691C349801D49539 CreateStructDelegate_1_EndInvoke_mC22AE2F311BEB093A6E7FABA07FBA9DEA5188A86_gshared (CreateStructDelegate_1_t740074CFC233D096F98BA627F6C40488DFCC4FD2* __this, RuntimeObject* ___result0, const RuntimeMethod* method) 
+{
+	RuntimeObject *__result = il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___result0, 0);
+	return *(VuModelTargetObservationStateInfo_t666552B708DC28D2B4403221691C349801D49539*)UnBox ((RuntimeObject*)__result);
 }
 #ifdef __clang__
 #pragma clang diagnostic pop

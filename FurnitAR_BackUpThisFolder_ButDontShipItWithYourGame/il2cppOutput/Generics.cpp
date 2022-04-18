@@ -1123,6 +1123,8 @@ struct U3CU3Ec_t674923ACD65EF9BC9808C5D718A0E4FB60B42EA8;
 struct U3CU3Ec_t24CE44E972541D9A99CA8CBCD6E7778828C2D9BC;
 // Vuforia.Newtonsoft.Json.Linq.Extensions/<>c__0`1<System.Object>
 struct U3CU3Ec__0_1_t0A72FDE81C619C96C2B6E24F9ACAC1BE4911EB8E;
+// Vuforia.Internal.Core.InternalEngineHintSetter/<>c__12`1<System.Object>
+struct U3CU3Ec__12_1_tDBF8078AF075572A71C24F7F4D35E649130F4C4D;
 // Vuforia.Newtonsoft.Json.Linq.Extensions/<>c__13`2<System.Object,System.Object>
 struct U3CU3Ec__13_2_t2F9DD626843D4D48F548A7CCC1FE39B256B3F1E0;
 // Vuforia.Newtonsoft.Json.Linq.Extensions/<>c__1`1<System.Object>
@@ -1601,6 +1603,8 @@ struct Func_2_t0D0687635BAF9EA3FF389149941C5473EC0CD2D4;
 struct Func_2_tB94FD0871A189804122B115BF7F49B3F0B035706;
 // System.Func`2<Vuforia.Internal.Observers.IObserverComponent,System.Boolean>
 struct Func_2_t68004C4A343E738A4B7915B1D519E41CC121B4D5;
+// System.Func`2<Vuforia.IVuEngineConfig,System.Boolean>
+struct Func_2_tF04C73DEB833BEDDC6EE039ABCE81CEADF2F3B48;
 // System.Func`2<System.Int32Enum,System.Boolean>
 struct Func_2_t1C8F983F9A1AA802D45E89037E2AA7ACD1094821;
 // System.Func`2<System.Object,System.Collections.Generic.IEnumerable`1<Vuforia.Newtonsoft.Json.Linq.JToken>>
@@ -1935,6 +1939,8 @@ struct IObserver_tF96DF70DC62190F4AAF66B7DA6053BB7C714503C;
 struct IObserverComponent_tCB18F55F5F8C2E20BC52CF7C9540D9BC843F9BFF;
 // UnityEngine.UIElements.ITreeViewItem
 struct ITreeViewItem_t0C5908872EA2842688BFFB2055D5096EC1EA9EFC;
+// Vuforia.IVuEngineConfig
+struct IVuEngineConfig_t75FFA722E8BEBF4BBD155E6B477B127B1D42F5C0;
 // UnityEngine.UIElements.InlineStyleAccess
 struct InlineStyleAccess_t5CA7877999C9442491A220AE50D605C84D09A165;
 // System.Linq.Expressions.Interpreter.Instruction
@@ -2511,6 +2517,19 @@ struct U3CU3Ec__0_1_t0A72FDE81C619C96C2B6E24F9ACAC1BE4911EB8E_StaticFields
 	U3CU3Ec__0_1_t0A72FDE81C619C96C2B6E24F9ACAC1BE4911EB8E* ___U3CU3E9_0;
 	// System.Func`2<T,System.Collections.Generic.IEnumerable`1<Vuforia.Newtonsoft.Json.Linq.JToken>> Vuforia.Newtonsoft.Json.Linq.Extensions/<>c__0`1::<>9__0_0
 	Func_2_tDA761E28BE59BA5AC79F07094119D69DA5834DC0* ___U3CU3E9__0_0_1;
+};
+
+// Vuforia.Internal.Core.InternalEngineHintSetter/<>c__12`1<System.Object>
+struct U3CU3Ec__12_1_tDBF8078AF075572A71C24F7F4D35E649130F4C4D  : public RuntimeObject
+{
+};
+
+struct U3CU3Ec__12_1_tDBF8078AF075572A71C24F7F4D35E649130F4C4D_StaticFields
+{
+	// Vuforia.Internal.Core.InternalEngineHintSetter/<>c__12`1<T> Vuforia.Internal.Core.InternalEngineHintSetter/<>c__12`1::<>9
+	U3CU3Ec__12_1_tDBF8078AF075572A71C24F7F4D35E649130F4C4D* ___U3CU3E9_0;
+	// System.Func`2<Vuforia.IVuEngineConfig,System.Boolean> Vuforia.Internal.Core.InternalEngineHintSetter/<>c__12`1::<>9__12_0
+	Func_2_tF04C73DEB833BEDDC6EE039ABCE81CEADF2F3B48* ___U3CU3E9__12_0_1;
 };
 
 // Vuforia.Newtonsoft.Json.Linq.Extensions/<>c__13`2<System.Object,System.Object>
@@ -12193,6 +12212,42 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CU3Ec__0_1_U3CAncestorsU3Eb_
 		RuntimeObject* L_1;
 		L_1 = JToken_Ancestors_m1D1567840BFD519F25E2D00AF2DA5417B6E08E53((JToken_t034BD5C010BDF99670727D17139F467527005F66*)L_0, NULL);
 		return L_1;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void Vuforia.Internal.Core.InternalEngineHintSetter/<>c__12`1<System.Object>::.cctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__12_1__cctor_m79E19E8D6186D02E4F7DB73D708691ECAB2BB00E_gshared (const RuntimeMethod* method) 
+{
+	{
+		U3CU3Ec__12_1_tDBF8078AF075572A71C24F7F4D35E649130F4C4D* L_0 = (U3CU3Ec__12_1_tDBF8078AF075572A71C24F7F4D35E649130F4C4D*)il2cpp_codegen_object_new(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 0));
+		NullCheck(L_0);
+		((  void (*) (U3CU3Ec__12_1_tDBF8078AF075572A71C24F7F4D35E649130F4C4D*, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 1)))(L_0, il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 1));
+		((U3CU3Ec__12_1_tDBF8078AF075572A71C24F7F4D35E649130F4C4D_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2)))->___U3CU3E9_0 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&((U3CU3Ec__12_1_tDBF8078AF075572A71C24F7F4D35E649130F4C4D_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2)))->___U3CU3E9_0), (void*)L_0);
+		return;
+	}
+}
+// System.Void Vuforia.Internal.Core.InternalEngineHintSetter/<>c__12`1<System.Object>::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__12_1__ctor_mB51BB6B23D456A2D83A9E5A9A25C2B6D06EECB2D_gshared (U3CU3Ec__12_1_tDBF8078AF075572A71C24F7F4D35E649130F4C4D* __this, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2((RuntimeObject*)__this, NULL);
+		return;
+	}
+}
+// System.Boolean Vuforia.Internal.Core.InternalEngineHintSetter/<>c__12`1<System.Object>::<GetEngineConfigOfType>b__12_0(Vuforia.IVuEngineConfig)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec__12_1_U3CGetEngineConfigOfTypeU3Eb__12_0_m6E5E84690A27324D6EB6D06806E2BA9468646E7E_gshared (U3CU3Ec__12_1_tDBF8078AF075572A71C24F7F4D35E649130F4C4D* __this, RuntimeObject* ___c0, const RuntimeMethod* method) 
+{
+	{
+		RuntimeObject* L_0 = ___c0;
+		return (bool)((!(((RuntimeObject*)(RuntimeObject*)((RuntimeObject*)IsInst((RuntimeObject*)L_0, il2cpp_rgctx_data(method->klass->rgctx_data, 3)))) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
 	}
 }
 #ifdef __clang__

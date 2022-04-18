@@ -104,12 +104,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScreenCapture_CaptureScreenshot_mD9416E8
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// System.Void UnityEngine.ScreenCapture::CaptureScreenshot(System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScreenCapture_CaptureScreenshot_m1FAFDB15448C41E697212E54F852DDD196E15CFF (String_t* ___filename0, const RuntimeMethod* method) 
+// System.Void UnityEngine.ScreenCapture::CaptureScreenshot(System.String,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScreenCapture_CaptureScreenshot_m6E774804276C74577E82CD2200A4FC9972CA0505 (String_t* ___filename0, int32_t ___superSize1, const RuntimeMethod* method) 
 {
 	{
 		String_t* L_0 = ___filename0;
-		ScreenCapture_CaptureScreenshot_mD9416E855CC184119DB9BE11CFA0787F49C7F608(L_0, 1, 1, NULL);
+		int32_t L_1 = ___superSize1;
+		ScreenCapture_CaptureScreenshot_mD9416E855CC184119DB9BE11CFA0787F49C7F608(L_0, L_1, 1, NULL);
 		return;
 	}
 }

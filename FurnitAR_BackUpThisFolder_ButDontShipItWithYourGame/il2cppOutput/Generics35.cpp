@@ -1727,39 +1727,39 @@ struct ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F_marshaled_com
 struct GenericVuforiaConfiguration_t10EDE5A6E35CF893071DDF204C6936DADB6ED8AF  : public RuntimeObject
 {
 	// System.String Vuforia.VuforiaConfiguration/GenericVuforiaConfiguration::vuforiaLicenseKey
-	String_t* ___vuforiaLicenseKey_2;
+	String_t* ___vuforiaLicenseKey_3;
 	// System.String Vuforia.VuforiaConfiguration/GenericVuforiaConfiguration::ufoLicenseKey
-	String_t* ___ufoLicenseKey_3;
+	String_t* ___ufoLicenseKey_4;
 	// System.Boolean Vuforia.VuforiaConfiguration/GenericVuforiaConfiguration::delayedInitialization
-	bool ___delayedInitialization_4;
+	bool ___delayedInitialization_5;
 	// Vuforia.FocusMode Vuforia.VuforiaConfiguration/GenericVuforiaConfiguration::cameraFocusModeSetting
-	int32_t ___cameraFocusModeSetting_5;
+	int32_t ___cameraFocusModeSetting_6;
 	// Vuforia.CameraMode Vuforia.VuforiaConfiguration/GenericVuforiaConfiguration::cameraDeviceModeSetting
-	int32_t ___cameraDeviceModeSetting_6;
+	int32_t ___cameraDeviceModeSetting_7;
 	// System.Int32 Vuforia.VuforiaConfiguration/GenericVuforiaConfiguration::maxSimultaneousImageTargets
-	int32_t ___maxSimultaneousImageTargets_7;
+	int32_t ___maxSimultaneousImageTargets_8;
 	// System.Int32 Vuforia.VuforiaConfiguration/GenericVuforiaConfiguration::maxSimultaneousObjectTargets
-	int32_t ___maxSimultaneousObjectTargets_8;
+	int32_t ___maxSimultaneousObjectTargets_9;
 	// System.Single Vuforia.VuforiaConfiguration/GenericVuforiaConfiguration::previousVirtualSceneScaleFactor
-	float ___previousVirtualSceneScaleFactor_9;
+	float ___previousVirtualSceneScaleFactor_10;
 	// System.Single Vuforia.VuforiaConfiguration/GenericVuforiaConfiguration::virtualSceneScaleFactor
-	float ___virtualSceneScaleFactor_10;
+	float ___virtualSceneScaleFactor_11;
 	// System.Boolean Vuforia.VuforiaConfiguration/GenericVuforiaConfiguration::useDelayedLoadingObjectTargets
-	bool ___useDelayedLoadingObjectTargets_11;
+	bool ___useDelayedLoadingObjectTargets_12;
 	// System.Boolean Vuforia.VuforiaConfiguration/GenericVuforiaConfiguration::modelTargetRecoWhileExtendedTracked
-	bool ___modelTargetRecoWhileExtendedTracked_12;
+	bool ___modelTargetRecoWhileExtendedTracked_13;
 	// System.Boolean Vuforia.VuforiaConfiguration/GenericVuforiaConfiguration::shareRecordingsInITunes
-	bool ___shareRecordingsInITunes_13;
+	bool ___shareRecordingsInITunes_14;
 	// System.String Vuforia.VuforiaConfiguration/GenericVuforiaConfiguration::version
-	String_t* ___version_14;
+	String_t* ___version_15;
 	// System.String Vuforia.VuforiaConfiguration/GenericVuforiaConfiguration::eulaAcceptedVersions
-	String_t* ___eulaAcceptedVersions_15;
+	String_t* ___eulaAcceptedVersions_16;
 };
 
 struct GenericVuforiaConfiguration_t10EDE5A6E35CF893071DDF204C6936DADB6ED8AF_StaticFields
 {
 	// System.Action`2<System.Single,System.Single> Vuforia.VuforiaConfiguration/GenericVuforiaConfiguration::VirtualSceneScaleFactorUpdated
-	Action_2_t4195ED8D681728C29103F36BCD591C0F089C9132* ___VirtualSceneScaleFactorUpdated_1;
+	Action_2_t4195ED8D681728C29103F36BCD591C0F089C9132* ___VirtualSceneScaleFactorUpdated_2;
 };
 
 // System.Linq.Buffer`1<Vuforia.DriverCameraMode>

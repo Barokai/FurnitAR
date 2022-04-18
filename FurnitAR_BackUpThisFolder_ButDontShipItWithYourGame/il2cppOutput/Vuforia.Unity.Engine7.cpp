@@ -587,6 +587,8 @@ struct Exception_t;
 struct ExclusiveReference_t411F04D4CC440EB7399290027E1BBABEF4C28837;
 // Vuforia.Newtonsoft.Json.Utilities.FSharpFunction
 struct FSharpFunction_t4ED2AADFCA2D6CF63CCC7A92633C7C0A8BCCE622;
+// Vuforia.Internal.VuforiaDriver.FileDriver
+struct FileDriver_t964F4798195E01168BF51CF14F19BA458814A55B;
 // UnityEngine.UI.FontData
 struct FontData_tB8E562846C6CB59C43260F69AE346B9BF3157224;
 // Vuforia.Internal.Utility.GLTFLoading.GLTFExtractorUtility
@@ -633,6 +635,8 @@ struct IEngine_t1840136F87C8826E605686CEB7FDA35D257A8C0C;
 struct IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA;
 // System.Collections.IEqualityComparer
 struct IEqualityComparer_tEF8F1EC76B9C8E76695BE848D41E6B147928D1C1;
+// Vuforia.Internal.VuforiaDriver.IFileDriver
+struct IFileDriver_tA636E4321E9D9773609FFFB00EBB8D84B98B6067;
 // System.IFormatProvider
 struct IFormatProvider_tC202922D43BFF3525109ABF3FB79625F5646AB52;
 // Vuforia.Internal.Utility.ILogger
@@ -727,6 +731,8 @@ struct MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71;
 struct NativeUnityDriver_t494F78513A722B81168E344732CB01E42C05EE82;
 // System.NotSupportedException
 struct NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A;
+// Vuforia.Internal.VuforiaDriver.NullFileDriver
+struct NullFileDriver_t618CD096EC517A519656A6AE3DB718789B4BA39E;
 // Vuforia.Internal.Utility.NullLogger
 struct NullLogger_tE2942EA18EAE55AB2B6058DE9B93C6954E3937B9;
 // Vuforia.Internal.VuforiaDriver.NullUnityDriver
@@ -972,6 +978,7 @@ IL2CPP_EXTERN_C RuntimeClass* Enumerator_tDBB27CEE5F26B91F33E910799D329231A97AAD
 IL2CPP_EXTERN_C RuntimeClass* Exception_t_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* FSharpFunction_t4ED2AADFCA2D6CF63CCC7A92633C7C0A8BCCE622_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* FSharpUtils_t6A68667417C94C7BE5694B6ADC4FD3352AD1964D_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* FileDriver_t964F4798195E01168BF51CF14F19BA458814A55B_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* FocusMode_t686853CE6C038BD138FFBC78CBCD3BF114F91D57_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Func_2_t6ED229D835934A2FEC54B05723067BBB9769FCDE_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Func_2_tB4C12A642E5C8663EED54D63BFEB8B330AE9F2E5_il2cpp_TypeInfo_var;
@@ -1047,6 +1054,7 @@ IL2CPP_EXTERN_C RuntimeClass* Mesh_t6D9C539763A09BC2B12AEAEF36F6DFFC98AE63D4_il2
 IL2CPP_EXTERN_C RuntimeClass* ModelTargetTrackingMode_t8ABCC869A5190C6F8BDD9923EC56AAD1532DB52B_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* NativeUnityDriver_t494F78513A722B81168E344732CB01E42C05EE82_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* NullFileDriver_t618CD096EC517A519656A6AE3DB718789B4BA39E_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Path_t8A38A801D0219E8209C1B1D90D82D4D755D998BC_il2cpp_TypeInfo_var;
@@ -2321,6 +2329,17 @@ struct FSharpUtils_t6A68667417C94C7BE5694B6ADC4FD3352AD1964D_StaticFields
 	MethodCall_2_t21F35BA1A94A802BB27E478D4FB03AD486AD9E36* ___U3CGetUnionCaseInfoFieldsU3Ek__BackingField_13;
 };
 
+// Vuforia.Internal.VuforiaDriver.FileDriver
+struct FileDriver_t964F4798195E01168BF51CF14F19BA458814A55B  : public RuntimeObject
+{
+};
+
+struct FileDriver_t964F4798195E01168BF51CF14F19BA458814A55B_StaticFields
+{
+	// Vuforia.Internal.VuforiaDriver.IFileDriver Vuforia.Internal.VuforiaDriver.FileDriver::sInstance
+	RuntimeObject* ___sInstance_0;
+};
+
 // Vuforia.Newtonsoft.Json.Linq.JToken
 struct JToken_t034BD5C010BDF99670727D17139F467527005F66  : public RuntimeObject
 {
@@ -2398,6 +2417,11 @@ struct MatrixUtil_t9A107BA17A248C4854079D02E69918BAAF7FF93E  : public RuntimeObj
 
 // System.Reflection.MemberInfo
 struct MemberInfo_t  : public RuntimeObject
+{
+};
+
+// Vuforia.Internal.VuforiaDriver.NullFileDriver
+struct NullFileDriver_t618CD096EC517A519656A6AE3DB718789B4BA39E  : public RuntimeObject
 {
 };
 
@@ -3029,6 +3053,15 @@ struct Nullable_1_tE6B561AD4C1DA4FF3513EAA98B99453254CC98EC
 	int32_t ___value_1;
 };
 
+// System.ValueTuple`2<System.String,System.Single>
+struct ValueTuple_2_t07DDAD74EE305111D8FABD66611ABC4F5296511A 
+{
+	// T1 System.ValueTuple`2::Item1
+	String_t* ___Item1_0;
+	// T2 System.ValueTuple`2::Item2
+	float ___Item2_1;
+};
+
 // Vuforia.Internal.Observers.ANativeObserver
 struct ANativeObserver_t2CAB5C757A45AED4942F0FD9F32FC7919F0B68FD  : public AObserver_t2FE41896EDC843041A2E52E4AFAE89FE5F867979
 {
@@ -3634,18 +3667,22 @@ struct RecordingSources_t903EEC394D3346D87D69DCF91B63E6660B5479D3
 	bool ___Camera_0;
 	// System.Boolean Vuforia.RecordingSources::Sensors
 	bool ___Sensors_1;
+	// System.Boolean Vuforia.RecordingSources::Audio
+	bool ___Audio_2;
 };
 // Native definition for P/Invoke marshalling of Vuforia.RecordingSources
 struct RecordingSources_t903EEC394D3346D87D69DCF91B63E6660B5479D3_marshaled_pinvoke
 {
 	int32_t ___Camera_0;
 	int32_t ___Sensors_1;
+	int32_t ___Audio_2;
 };
 // Native definition for COM marshalling of Vuforia.RecordingSources
 struct RecordingSources_t903EEC394D3346D87D69DCF91B63E6660B5479D3_marshaled_com
 {
 	int32_t ___Camera_0;
 	int32_t ___Sensors_1;
+	int32_t ___Audio_2;
 };
 
 // Vuforia.Newtonsoft.Json.Converters.RegexConverter
@@ -4035,6 +4072,8 @@ struct VuRecordingSources_t93AB3C25FF4694A7E20E6B4E61B2184F303B1596
 	int32_t ___camera_0;
 	// Vuforia.VuBool Vuforia.VuRecordingSources::sensors
 	int32_t ___sensors_1;
+	// Vuforia.VuBool Vuforia.VuRecordingSources::audio
+	int32_t ___audio_2;
 };
 
 // Vuforia.VuValidationAreaCaptureUploadProgressInfo
@@ -4137,6 +4176,15 @@ struct FileStatus_tCB96EDE0D0F945F685B9BBED6DBF0731207458C2
 	int64_t ___Ino_14;
 	// System.UInt32 Interop/Sys/FileStatus::UserFlags
 	uint32_t ___UserFlags_15;
+};
+
+// System.Nullable`1<System.ValueTuple`2<System.String,System.Single>>
+struct Nullable_1_tFB8A376062A5585CFBC537815ABB7D2A3D859645 
+{
+	// System.Boolean System.Nullable`1::hasValue
+	bool ___hasValue_0;
+	// T System.Nullable`1::value
+	ValueTuple_2_t07DDAD74EE305111D8FABD66611ABC4F5296511A ___value_1;
 };
 
 // UnityEngine.AsyncOperation
@@ -5519,6 +5567,8 @@ struct InfoPopup_t2DFEBF4895FC29797EDE4E4791853910CB5322B4  : public MonoBehavio
 	CanvasGroup_t048C1461B14628CFAEBE6E7353093ADB04EBC094* ___mInfoPopup_6;
 	// UnityEngine.UI.Text Vuforia.InfoPopup::mInfoText
 	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___mInfoText_7;
+	// System.Nullable`1<System.ValueTuple`2<System.String,System.Single>> Vuforia.InfoPopup::mMessage
+	Nullable_1_tFB8A376062A5585CFBC537815ABB7D2A3D859645 ___mMessage_8;
 };
 
 // UnityEngine.EventSystems.UIBehaviour
@@ -7560,6 +7610,10 @@ inline void NativeEngineDriverUserData_1__ctor_m1C67F717B87C21C78489D4474D688EBA
 {
 	((  void (*) (NativeEngineDriverUserData_1_t0448A9AFE6AB3A2C12C335F5E1DE7FADF06968DB*, DriverData_t76C1F3DBBF156D32BA906F2D172A20A1304ACB6E, const RuntimeMethod*))NativeEngineDriverUserData_1__ctor_m1C67F717B87C21C78489D4474D688EBA30E63E75_gshared)(__this, ___value0, method);
 }
+// Vuforia.Internal.VuforiaDriver.IFileDriver Vuforia.Internal.VuforiaDriver.FileDriver::CreateInstance()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* FileDriver_CreateInstance_m89686BE72051A0552D059DD1A87F75A3B3D49BC4 (const RuntimeMethod* method) ;
+// System.Void Vuforia.Internal.VuforiaDriver.NullFileDriver::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NullFileDriver__ctor_m510B216F8C09888170E20162B3347386EA3425A0 (NullFileDriver_t618CD096EC517A519656A6AE3DB718789B4BA39E* __this, const RuntimeMethod* method) ;
 // System.Void Vuforia.Internal.VuforiaDriver.NativeUnityDriver::OnDriverCreated(System.IntPtr)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void NativeUnityDriver_OnDriverCreated_mEACED50297228E2FA467C8BB61F0A807CCC5CA64_inline (intptr_t ___driverPtr0, const RuntimeMethod* method) ;
 // System.Void Vuforia.Internal.VuforiaDriver.NativeUnityDriver::GetDriverConfig(System.IntPtr)
@@ -7617,6 +7671,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Application_get_isPlaying_m0B3B501E10937
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool RuntimeEnvironment_IsPlayMode_mF86281B872F5FC73651FB0CAD561B32F2D2B64EC (RuntimeEnvironment_t230F46CBC2BA663FD14E110FD17E8DB9FA45BB1B* __this, const RuntimeMethod* method) ;
 // Vuforia.ARFoundation.IARFoundationFacade Vuforia.ARFoundation.ARFoundationFacade::get_Instance()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ARFoundationFacade_get_Instance_mBDD578260831DA1E5902FC675F5F06B6CE3160D7 (const RuntimeMethod* method) ;
+// UnityEngine.ScreenOrientation UnityEngine.Screen::get_orientation()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Screen_get_orientation_m7B47A2719DDE296357BB3199AB3BECC49F9F4A6D (const RuntimeMethod* method) ;
 // System.Collections.IEnumerator Vuforia.Internal.Utility.VuforiaCoroutineUtility::RunCoroutineWithTimeout(System.Collections.IEnumerator,System.Single,System.Action`1<System.Boolean>)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* VuforiaCoroutineUtility_RunCoroutineWithTimeout_m51E73A8A2A76A35854A36C8052831B08B84D9814 (RuntimeObject* ___routine0, float ___timeout1, Action_1_t10DCB0C07D0D3C565CEACADC80D1152B35A45F6C* ___onComplete2, const RuntimeMethod* method) ;
 // UnityEngine.Coroutine UnityEngine.MonoBehaviour::StartCoroutine(System.Collections.IEnumerator)
@@ -22742,8 +22798,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RecordingSources_t903EEC394D3346D87D69DCF91B6
 		bool L_5;
 		L_5 = ConversionUtils_ToBool_mA5335FBF730B5196210019545A7C6B6EE71F1377(L_4, NULL);
 		(&V_0)->___Sensors_1 = L_5;
-		RecordingSources_t903EEC394D3346D87D69DCF91B63E6660B5479D3 L_6 = V_0;
-		return L_6;
+		VuRecordingSources_t93AB3C25FF4694A7E20E6B4E61B2184F303B1596 L_6 = ___sources0;
+		int32_t L_7 = L_6.___audio_2;
+		bool L_8;
+		L_8 = ConversionUtils_ToBool_mA5335FBF730B5196210019545A7C6B6EE71F1377(L_7, NULL);
+		(&V_0)->___Audio_2 = L_8;
+		RecordingSources_t903EEC394D3346D87D69DCF91B63E6660B5479D3 L_9 = V_0;
+		return L_9;
 	}
 }
 // Vuforia.VuRecordingSources Vuforia.Utility.ExtensionMethods.WrapperExtensionMethods::ToVuRecordingSources(Vuforia.RecordingSources)
@@ -22763,8 +22824,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR VuRecordingSources_t93AB3C25FF4694A7E20E6B4E6
 		int32_t L_5;
 		L_5 = ConversionUtils_ToVuBool_m951EAB7D5979F907EA9575BF407A6024E0242D59(L_4, NULL);
 		(&V_0)->___sensors_1 = L_5;
-		VuRecordingSources_t93AB3C25FF4694A7E20E6B4E61B2184F303B1596 L_6 = V_0;
-		return L_6;
+		RecordingSources_t903EEC394D3346D87D69DCF91B63E6660B5479D3 L_6 = ___sources0;
+		bool L_7 = L_6.___Audio_2;
+		int32_t L_8;
+		L_8 = ConversionUtils_ToVuBool_m951EAB7D5979F907EA9575BF407A6024E0242D59(L_7, NULL);
+		(&V_0)->___audio_2 = L_8;
+		VuRecordingSources_t93AB3C25FF4694A7E20E6B4E61B2184F303B1596 L_9 = V_0;
+		return L_9;
 	}
 }
 // Vuforia.Internal.Core.IlluminationInfo Vuforia.Utility.ExtensionMethods.WrapperExtensionMethods::ToIlluminationInfo(Vuforia.VuIlluminationObservationInfo)
@@ -26247,6 +26313,89 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityDriverUserData__ctor_m52EAC64B77FDF
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// Vuforia.Internal.VuforiaDriver.IFileDriver Vuforia.Internal.VuforiaDriver.FileDriver::get_Instance()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* FileDriver_get_Instance_mAC183BF1D5E727C16149313C8072E9EC30EDBBC0 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FileDriver_t964F4798195E01168BF51CF14F19BA458814A55B_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	RuntimeObject* G_B2_0 = NULL;
+	RuntimeObject* G_B1_0 = NULL;
+	{
+		RuntimeObject* L_0 = ((FileDriver_t964F4798195E01168BF51CF14F19BA458814A55B_StaticFields*)il2cpp_codegen_static_fields_for(FileDriver_t964F4798195E01168BF51CF14F19BA458814A55B_il2cpp_TypeInfo_var))->___sInstance_0;
+		RuntimeObject* L_1 = L_0;
+		G_B1_0 = L_1;
+		if (L_1)
+		{
+			G_B2_0 = L_1;
+			goto IL_0014;
+		}
+	}
+	{
+		RuntimeObject* L_2;
+		L_2 = FileDriver_CreateInstance_m89686BE72051A0552D059DD1A87F75A3B3D49BC4(NULL);
+		RuntimeObject* L_3 = L_2;
+		((FileDriver_t964F4798195E01168BF51CF14F19BA458814A55B_StaticFields*)il2cpp_codegen_static_fields_for(FileDriver_t964F4798195E01168BF51CF14F19BA458814A55B_il2cpp_TypeInfo_var))->___sInstance_0 = L_3;
+		Il2CppCodeGenWriteBarrier((void**)(&((FileDriver_t964F4798195E01168BF51CF14F19BA458814A55B_StaticFields*)il2cpp_codegen_static_fields_for(FileDriver_t964F4798195E01168BF51CF14F19BA458814A55B_il2cpp_TypeInfo_var))->___sInstance_0), (void*)L_3);
+		G_B2_0 = L_3;
+	}
+
+IL_0014:
+	{
+		return G_B2_0;
+	}
+}
+// System.Void Vuforia.Internal.VuforiaDriver.FileDriver::set_Instance(Vuforia.Internal.VuforiaDriver.IFileDriver)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FileDriver_set_Instance_mBE9048339AE96D15F96A6C6600F69A7322756E61 (RuntimeObject* ___value0, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FileDriver_t964F4798195E01168BF51CF14F19BA458814A55B_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		RuntimeObject* L_0 = ___value0;
+		((FileDriver_t964F4798195E01168BF51CF14F19BA458814A55B_StaticFields*)il2cpp_codegen_static_fields_for(FileDriver_t964F4798195E01168BF51CF14F19BA458814A55B_il2cpp_TypeInfo_var))->___sInstance_0 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&((FileDriver_t964F4798195E01168BF51CF14F19BA458814A55B_StaticFields*)il2cpp_codegen_static_fields_for(FileDriver_t964F4798195E01168BF51CF14F19BA458814A55B_il2cpp_TypeInfo_var))->___sInstance_0), (void*)L_0);
+		return;
+	}
+}
+// Vuforia.Internal.VuforiaDriver.IFileDriver Vuforia.Internal.VuforiaDriver.FileDriver::CreateInstance()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* FileDriver_CreateInstance_m89686BE72051A0552D059DD1A87F75A3B3D49BC4 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NullFileDriver_t618CD096EC517A519656A6AE3DB718789B4BA39E_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		NullFileDriver_t618CD096EC517A519656A6AE3DB718789B4BA39E* L_0 = (NullFileDriver_t618CD096EC517A519656A6AE3DB718789B4BA39E*)il2cpp_codegen_object_new(NullFileDriver_t618CD096EC517A519656A6AE3DB718789B4BA39E_il2cpp_TypeInfo_var);
+		NullCheck(L_0);
+		NullFileDriver__ctor_m510B216F8C09888170E20162B3347386EA3425A0(L_0, NULL);
+		return L_0;
+	}
+}
+// System.Void Vuforia.Internal.VuforiaDriver.FileDriver::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FileDriver__ctor_m1469E49D92ED5240E0D41D434D900508CFD7CE1C (FileDriver_t964F4798195E01168BF51CF14F19BA458814A55B* __this, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
 extern "C" void CDECL ReversePInvokeWrapper_NativeUnityDriver_OnDriverCreated_mEACED50297228E2FA467C8BB61F0A807CCC5CA64(intptr_t ___driverPtr0)
 {
 	il2cpp::vm::ScopedThreadAttacher _vmThreadHelper;
@@ -26613,6 +26762,64 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeUnityDriver_unityDriverUpdateAncho
 }
 // System.Void Vuforia.Internal.VuforiaDriver.NativeUnityDriver::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeUnityDriver__ctor_m446F0B349BB821C0063BD5594A755594B0F1B7EF (NativeUnityDriver_t494F78513A722B81168E344732CB01E42C05EE82* __this, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.UInt64 Vuforia.Internal.VuforiaDriver.NullFileDriver::GetPlaybackPosition()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint64_t NullFileDriver_GetPlaybackPosition_m3DA47F7F92B77D6E6EDDD7479BBB2002CD81E4DA (NullFileDriver_t618CD096EC517A519656A6AE3DB718789B4BA39E* __this, const RuntimeMethod* method) 
+{
+	{
+		return ((int64_t)0);
+	}
+}
+// System.UInt64 Vuforia.Internal.VuforiaDriver.NullFileDriver::GetSequenceDuration()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint64_t NullFileDriver_GetSequenceDuration_m2FEA28C03A53F70A43EE5F9A237C5E23FB946599 (NullFileDriver_t618CD096EC517A519656A6AE3DB718789B4BA39E* __this, const RuntimeMethod* method) 
+{
+	{
+		return ((int64_t)0);
+	}
+}
+// System.Void Vuforia.Internal.VuforiaDriver.NullFileDriver::SetPlaybackStartTime(System.UInt64)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NullFileDriver_SetPlaybackStartTime_m26017520E56E352B382A0EBD6A6FEE8C678F0D96 (NullFileDriver_t618CD096EC517A519656A6AE3DB718789B4BA39E* __this, uint64_t ___startTime0, const RuntimeMethod* method) 
+{
+	{
+		return;
+	}
+}
+// System.Void Vuforia.Internal.VuforiaDriver.NullFileDriver::SetPlaybackEndTime(System.UInt64)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NullFileDriver_SetPlaybackEndTime_m5BCF44AD26EDD3DAE59645C722296412A4F1E228 (NullFileDriver_t618CD096EC517A519656A6AE3DB718789B4BA39E* __this, uint64_t ___endTime0, const RuntimeMethod* method) 
+{
+	{
+		return;
+	}
+}
+// System.Void Vuforia.Internal.VuforiaDriver.NullFileDriver::SetPlaybackLoop(System.UInt32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NullFileDriver_SetPlaybackLoop_m4144728B529E65493828099B277479256117D1C9 (NullFileDriver_t618CD096EC517A519656A6AE3DB718789B4BA39E* __this, uint32_t ___loopCount0, const RuntimeMethod* method) 
+{
+	{
+		return;
+	}
+}
+// System.Void Vuforia.Internal.VuforiaDriver.NullFileDriver::SetPlaybackMode(Vuforia.Internal.VuforiaDriver.FileDriverPlaybackMode)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NullFileDriver_SetPlaybackMode_m6AFA50CE491A556739244F847F69321AAB6A8C13 (NullFileDriver_t618CD096EC517A519656A6AE3DB718789B4BA39E* __this, int32_t ___mode0, const RuntimeMethod* method) 
+{
+	{
+		return;
+	}
+}
+// System.Void Vuforia.Internal.VuforiaDriver.NullFileDriver::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NullFileDriver__ctor_m510B216F8C09888170E20162B3347386EA3425A0 (NullFileDriver_t618CD096EC517A519656A6AE3DB718789B4BA39E* __this, const RuntimeMethod* method) 
 {
 	{
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
@@ -27657,6 +27864,28 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool RuntimeEnvironment_IsARFoundation_mD5BAD
 IL_0013:
 	{
 		return (bool)0;
+	}
+}
+// UnityEngine.ScreenOrientation Vuforia.Internal.Utility.RuntimeEnvironment::ScreenOrientation()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RuntimeEnvironment_ScreenOrientation_m6013C0A0F19DF22282A628B5E11019B7937ACBAF (RuntimeEnvironment_t230F46CBC2BA663FD14E110FD17E8DB9FA45BB1B* __this, const RuntimeMethod* method) 
+{
+	{
+		bool L_0;
+		L_0 = Application_get_isEditor_m0377DB707B566C8E21DA3CD99963210F6D57D234(NULL);
+		if (L_0)
+		{
+			goto IL_000d;
+		}
+	}
+	{
+		int32_t L_1;
+		L_1 = Screen_get_orientation_m7B47A2719DDE296357BB3199AB3BECC49F9F4A6D(NULL);
+		return L_1;
+	}
+
+IL_000d:
+	{
+		return (int32_t)(3);
 	}
 }
 // System.Void Vuforia.Internal.Utility.RuntimeEnvironment::.ctor()

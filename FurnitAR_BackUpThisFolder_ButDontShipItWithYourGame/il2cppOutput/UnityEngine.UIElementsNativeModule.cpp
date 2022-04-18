@@ -1775,8 +1775,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t Utility_CreateStencilState_Injected_
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Utility_GetActiveViewport_Injected_m60650AF751F179D62E35B34CCC6E2068291F0CB0 (RectInt_t1744D10E1063135DA9D574F95205B98DAC600CB8* ___ret0, const RuntimeMethod* method) ;
 // System.Void UnityEngine.UIElements.UIR.Utility::GetUnityProjectionMatrix_Injected(UnityEngine.Matrix4x4&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Utility_GetUnityProjectionMatrix_Injected_m8DE89F47F848B2071774E05D2F23DA10435E643D (Matrix4x4_tDB70CF134A14BA38190C59AA700BCE10E2AED3E6* ___ret0, const RuntimeMethod* method) ;
-// System.Void UnityEngine.UIElements.UIR.Utility::GetDeviceProjectionMatrix_Injected(UnityEngine.Matrix4x4&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Utility_GetDeviceProjectionMatrix_Injected_m845DA86D311A546A1F3F25FC375F2EA1FAD25623 (Matrix4x4_tDB70CF134A14BA38190C59AA700BCE10E2AED3E6* ___ret0, const RuntimeMethod* method) ;
 // System.Void Unity.Profiling.ProfilerMarker::.ctor(System.String)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ProfilerMarker__ctor_mDD68B0A8B71E0301F592AF8891560150E55699C8_inline (ProfilerMarker_tA256E18DA86EDBC5528CE066FC91C96EE86501AD* __this, String_t* ___name0, const RuntimeMethod* method) ;
 // System.Int32 System.BitConverter::SingleToInt32Bits(System.Single)
@@ -6857,24 +6855,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Matrix4x4_tDB70CF134A14BA38190C59AA700BCE10E2
 		return L_0;
 	}
 }
-// UnityEngine.Matrix4x4 UnityEngine.UIElements.UIR.Utility::GetDeviceProjectionMatrix()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Matrix4x4_tDB70CF134A14BA38190C59AA700BCE10E2AED3E6 Utility_GetDeviceProjectionMatrix_m0D326C837AF17F03F4789B44616B9F126B356C75 (const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Utility_t8BCC393462C6270211734BE47CF5350F05EC97AD_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	Matrix4x4_tDB70CF134A14BA38190C59AA700BCE10E2AED3E6 V_0;
-	memset((&V_0), 0, sizeof(V_0));
-	{
-		il2cpp_codegen_runtime_class_init_inline(Utility_t8BCC393462C6270211734BE47CF5350F05EC97AD_il2cpp_TypeInfo_var);
-		Utility_GetDeviceProjectionMatrix_Injected_m845DA86D311A546A1F3F25FC375F2EA1FAD25623((&V_0), NULL);
-		Matrix4x4_tDB70CF134A14BA38190C59AA700BCE10E2AED3E6 L_0 = V_0;
-		return L_0;
-	}
-}
 // System.Void UnityEngine.UIElements.UIR.Utility::.cctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Utility__cctor_mCB0529D224E4D67079BC12BA37789C20EE0D5980 (const RuntimeMethod* method) 
 {
@@ -6937,15 +6917,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Utility_GetUnityProjectionMatrix_Injecte
 	static Utility_GetUnityProjectionMatrix_Injected_m8DE89F47F848B2071774E05D2F23DA10435E643D_ftn _il2cpp_icall_func;
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (Utility_GetUnityProjectionMatrix_Injected_m8DE89F47F848B2071774E05D2F23DA10435E643D_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.UIElements.UIR.Utility::GetUnityProjectionMatrix_Injected(UnityEngine.Matrix4x4&)");
-	_il2cpp_icall_func(___ret0);
-}
-// System.Void UnityEngine.UIElements.UIR.Utility::GetDeviceProjectionMatrix_Injected(UnityEngine.Matrix4x4&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Utility_GetDeviceProjectionMatrix_Injected_m845DA86D311A546A1F3F25FC375F2EA1FAD25623 (Matrix4x4_tDB70CF134A14BA38190C59AA700BCE10E2AED3E6* ___ret0, const RuntimeMethod* method) 
-{
-	typedef void (*Utility_GetDeviceProjectionMatrix_Injected_m845DA86D311A546A1F3F25FC375F2EA1FAD25623_ftn) (Matrix4x4_tDB70CF134A14BA38190C59AA700BCE10E2AED3E6*);
-	static Utility_GetDeviceProjectionMatrix_Injected_m845DA86D311A546A1F3F25FC375F2EA1FAD25623_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (Utility_GetDeviceProjectionMatrix_Injected_m845DA86D311A546A1F3F25FC375F2EA1FAD25623_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.UIElements.UIR.Utility::GetDeviceProjectionMatrix_Injected(UnityEngine.Matrix4x4&)");
 	_il2cpp_icall_func(___ret0);
 }
 #ifdef __clang__
