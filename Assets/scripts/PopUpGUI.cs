@@ -10,7 +10,7 @@ public class PopUpGUI : DefaultObserverEventHandler
 
 	//private TrackableBehaviour mTrackableBehaviour;
 
-	private bool mShowGUIButton = false;
+	private bool showGuiButton = false;
 
 
 	void Start()
@@ -26,7 +26,7 @@ public class PopUpGUI : DefaultObserverEventHandler
 	protected override void OnTrackingFound()
 	{
 		Debug.Log("Target Found - mShowGUIButton true");
-		mShowGUIButton = true;
+		showGuiButton = true;
 		OnGUI();
 		base.OnTrackingFound();
 	}
@@ -34,7 +34,7 @@ public class PopUpGUI : DefaultObserverEventHandler
 	protected override void OnTrackingLost()
 	{
 		Debug.Log("Target Lost - mShowGUIButton false");
-		mShowGUIButton = false;
+		showGuiButton = false;
 		OnGUI();
 		base.OnTrackingLost();
 	}
@@ -62,7 +62,7 @@ public class PopUpGUI : DefaultObserverEventHandler
 			return;
 		}
 
-		if (mShowGUIButton)
+		if (showGuiButton)
 		{
 
 			GUI.Label(new Rect(40, 25, 350, 70), "<b> G E 9 1 0 0 C </b>", myTextStyle);
