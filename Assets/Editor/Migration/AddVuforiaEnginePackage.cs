@@ -28,46 +28,46 @@ public class AddVuforiaEnginePackage
     {
         if (Application.isBatchMode)
             return;
-        
+
         var manifest = Manifest.JsonDeserialize(sManifestJsonPath);
 
         var packages = GetPackageDescriptions();
-            
+
         if (!packages.All(p => IsVuforiaUpToDate(manifest, p.BundleId)))
             DisplayAddPackageDialogue(manifest, packages);
-        
+
         ResolveDependencies(manifest);
     }
 
     public static void ResolveDependenciesSilent()
     {
         var manifest = Manifest.JsonDeserialize(sManifestJsonPath);
-        
+
         var packages = GetDependencyDescriptions();
         if (packages != null && packages.Count > 0)
             MoveDependencies(manifest, packages);
-        
+
         CleanupDependenciesFolder();
     }
-    
+
     static void ResolveDependencies(Manifest manifest)
     {
         var packages = GetDependencyDescriptions();
         if (packages != null && packages.Count > 0)
             DisplayDependenciesDialogue(manifest, packages);
     }
-    
+
     static bool IsVuforiaUpToDate(Manifest manifest, string bundleId)
     {
         var dependencies = manifest.Dependencies.Split(',').ToList();
         var upToDate = false;
 
-        if(dependencies.Any(d => d.Contains(bundleId) && d.Contains("file:")))
+        if (dependencies.Any(d => d.Contains(bundleId) && d.Contains("file:")))
             upToDate = IsUsingRightFileVersion(manifest, bundleId);
 
         return upToDate;
     }
-    
+
     static bool IsUsingRightFileVersion(Manifest manifest, string bundleId)
     {
         var dependencies = manifest.Dependencies.Split(',').ToList();
@@ -93,7 +93,7 @@ public class AddVuforiaEnginePackage
 
         var currentVersion = TryConvertStringToVersion(currentVersionString);
         var updatingVersion = TryConvertStringToVersion(VUFORIA_VERSION);
-        
+
         if (currentVersion >= updatingVersion)
             return true;
 
@@ -129,7 +129,7 @@ public class AddVuforiaEnginePackage
             }
         }
     }
-    
+
     static void DisplayDependenciesDialogue(Manifest manifest, IEnumerable<PackageDescription> packages)
     {
         if (EditorUtility.DisplayDialog("Add Sample Dependencies",
@@ -141,7 +141,7 @@ public class AddVuforiaEnginePackage
             CleanupDependenciesFolder();
         }
     }
-    
+
     static List<PackageDescription> GetPackageDescriptions()
     {
         var tarFilePaths = Directory.GetFiles(Path.Combine(Directory.GetCurrentDirectory(), VUFORIA_TAR_FILE_DIR)).Where(f => f.EndsWith(".tgz"));
@@ -177,7 +177,7 @@ public class AddVuforiaEnginePackage
 
         return packageDescriptions;
     }
-    
+
     static List<PackageDescription> GetDependencyDescriptions()
     {
         var dependencyDirectory = Path.Combine(Directory.GetCurrentDirectory(), DEPENDENCIES_DIR);
@@ -204,10 +204,10 @@ public class AddVuforiaEnginePackage
                 bundleId = bundleId.Replace(".tgz", "");
 
                 packageDescriptions.Add(new PackageDescription
-                                        {
-                                            BundleId = bundleId,
-                                            FileName = fileName
-                                        });
+                {
+                    BundleId = bundleId,
+                    FileName = fileName
+                });
             }
         }
 
@@ -223,7 +223,7 @@ public class AddVuforiaEnginePackage
             UpdateManifest(manifest, package.BundleId, package.FileName);
         }
     }
-    
+
     static void MovePackageFile(string folder, string fileName)
     {
         var sourceFile = Path.Combine(Directory.GetCurrentDirectory(), folder, fileName);
@@ -256,7 +256,7 @@ public class AddVuforiaEnginePackage
         var destFile = Path.Combine(Directory.GetCurrentDirectory(), PACKAGES_RELATIVE_PATH, fileName);
         if (File.Exists(destFile))
             File.Delete(destFile);
-        
+
         // remove existing
         var dependencies = manifest.Dependencies.Split(',').ToList();
         for (var i = 0; i < dependencies.Count; i++)
@@ -277,9 +277,9 @@ public class AddVuforiaEnginePackage
 
     static void CleanupDependenciesFolder()
     {
-        if (!Directory.Exists(DEPENDENCIES_DIR)) 
+        if (!Directory.Exists(DEPENDENCIES_DIR))
             return;
-        
+
         Directory.Delete(DEPENDENCIES_DIR);
         File.Delete(DEPENDENCIES_DIR + ".meta");
         AssetDatabase.Refresh();
@@ -444,7 +444,7 @@ public class AddVuforiaEnginePackage
 
     [Serializable]
     struct DependencyPlaceholder { }
-    
+
     struct PackageDescription
     {
         public string BundleId;

@@ -15,7 +15,7 @@ public class FurnitureTargetGUI : MonoBehaviour
     private Material currentMaterial;
     private int FurnitureIndex = 0;
     private readonly List<GameObject> furnitureList = new();
-    readonly float rotationSpeed = 2500f; //45
+    readonly float rotationSpeed = 2500f;
 
     // Start is called before the first frame update
     void Start()
@@ -38,25 +38,23 @@ public class FurnitureTargetGUI : MonoBehaviour
         Destroy(currentModel);
         var model = furnitureList[FurnitureIndex];
         var FurnitureTarget = GameObject.Find("FurnitureTarget");
-        currentModel = Instantiate(model, FurnitureTarget.transform);
+        currentModel = Instantiate(model, FurnitureTarget.transform, true);
         currentModel.transform.position = spawnPosition;
         currentModel.transform.localScale = localScale;
-
-        // http://answers.unity.com/answers/882050/view.html - code below was used for testing
-        // Material mat = Resources.Load("Material/wood_3", typeof(Material)) as Material;
+        currentModel.name = "CurrentModel";
 
         var meshRenderers = currentModel.GetComponentsInChildren<MeshRenderer>();
-        if (Globals.ChosenMaterial != null)
+        if (GameManager.ChosenMaterial != null)
         {
             Material[] materials = new Material[1];
             //materials[0] = mat;
-            materials[0] = Globals.ChosenMaterial;
+            materials[0] = GameManager.ChosenMaterial;
             foreach (var renderer in meshRenderers)
             {
                 renderer.materials = materials;
             }
 
-            currentMaterial = Globals.ChosenMaterial;
+            currentMaterial = GameManager.ChosenMaterial;
         }
 
         GameObject chairRotateLeftAction = GameObject.Find("chairRotateLeftAction");
@@ -79,16 +77,16 @@ public class FurnitureTargetGUI : MonoBehaviour
     void Update()
     {
         var meshRenderers = currentModel.GetComponentsInChildren<MeshRenderer>();
-        if (Globals.ChosenMaterial != currentMaterial)
+        if (GameManager.ChosenMaterial != currentMaterial && GameManager.ChosenMaterial != null)
         {
             Material[] materials = new Material[1];
-            materials[0] = Globals.ChosenMaterial;
+            materials[0] = GameManager.ChosenMaterial;
             foreach (var renderer in meshRenderers)
             {
                 renderer.materials = materials;
             }
 
-            currentMaterial = Globals.ChosenMaterial;
+            currentMaterial = GameManager.ChosenMaterial;
         }
     }
 
@@ -104,7 +102,6 @@ public class FurnitureTargetGUI : MonoBehaviour
         Debug.Log("OnRotateRightAction");
 
         currentModel.transform.Rotate(Vector3.forward * rotationSpeed * Time.deltaTime);
-        //currentModel.transform.position += Vector3.right * Time.deltaTime;
     }
 
     private void OnNextAction(VirtualButtonBehaviour vb)
@@ -125,14 +122,14 @@ public class FurnitureTargetGUI : MonoBehaviour
         Debug.Log($"next chair index = {nextModel}");
         GameObject model = furnitureList[FurnitureIndex];
 
-        //currentModel = Instantiate(chair, groundPlane.transform); // did work, but why on groundplane instead of FurnitureTarget?
         var FurnitureTarget = GameObject.Find("FurnitureTarget");
         currentModel = Instantiate(model, FurnitureTarget.transform);
         currentModel.transform.position = spawnPosition;
         currentModel.transform.localScale = localScale;
-        
+        currentModel.name = "CurrentModel";
+
         var meshRenderers = currentModel.GetComponentsInChildren<MeshRenderer>();
-        if (currentMaterial != null || Globals.ChosenMaterial != null)
+        if (currentMaterial != null || GameManager.ChosenMaterial != null)
         {
             Material[] materials = new Material[1];
             if (currentMaterial != null)
@@ -140,10 +137,10 @@ public class FurnitureTargetGUI : MonoBehaviour
                 materials[0] = currentMaterial;
             }
 
-            if (Globals.ChosenMaterial != currentMaterial)
+            if (GameManager.ChosenMaterial != currentMaterial)
             {
-                materials[0] = Globals.ChosenMaterial;
-                currentMaterial = Globals.ChosenMaterial;
+                materials[0] = GameManager.ChosenMaterial;
+                currentMaterial = GameManager.ChosenMaterial;
             }
 
             foreach (var renderer in meshRenderers)
@@ -171,25 +168,25 @@ public class FurnitureTargetGUI : MonoBehaviour
         Debug.Log($"next chair index = {previousModel}");
         GameObject model = furnitureList[FurnitureIndex];
 
-        //currentModel = Instantiate(chair, groundPlane.transform); // did work, but why on groundplane instead of FurnitureTarget?
         var FurnitureTarget = GameObject.Find("FurnitureTarget");
         currentModel = Instantiate(model, FurnitureTarget.transform);
         currentModel.transform.position = spawnPosition;
         currentModel.transform.localScale = localScale;
+        currentModel.name = "CurrentModel";
 
         var meshRenderers = currentModel.GetComponentsInChildren<MeshRenderer>();
-        if (currentMaterial != null || Globals.ChosenMaterial != null)
+        if (currentMaterial != null || GameManager.ChosenMaterial != null)
         {
             Material[] materials = new Material[1];
-            if(currentMaterial != null)
+            if (currentMaterial != null)
             {
                 materials[0] = currentMaterial;
             }
-            
-            if (Globals.ChosenMaterial != currentMaterial)
+
+            if (GameManager.ChosenMaterial != currentMaterial)
             {
-                materials[0] = Globals.ChosenMaterial;
-                currentMaterial = Globals.ChosenMaterial;
+                materials[0] = GameManager.ChosenMaterial;
+                currentMaterial = GameManager.ChosenMaterial;
             }
 
             foreach (var renderer in meshRenderers)
@@ -201,31 +198,24 @@ public class FurnitureTargetGUI : MonoBehaviour
 
     private void OnChooseAction(VirtualButtonBehaviour vb)
     {
-        Debug.Log("OnChooseAction");
+        Debug.Log("OnChooseAction - Furniture");
 
         // set chosen model in groundplane
         var groundPlane = GameObject.Find("GroundPlaneStage");
         var currentGroundPlaneModel = GameObject.Find("groundPlaneModel");
-        Vector3 spawnPosition = currentGroundPlaneModel.transform.position;
+        // TODO (Frage an Hr. Anthes) - objekt hängt in der luft --> scale des groundPlaneModel auf 1,1,1 und y 0.5 !Unbedingt testen! 
+        //Vector3 spawnPosition = currentGroundPlaneModel.transform.position;
         Vector3 localScale = currentGroundPlaneModel.transform.localScale;
         Destroy(currentGroundPlaneModel);
         var newGroundPlaneModel = Instantiate(currentModel, groundPlane.transform);
         newGroundPlaneModel.name = "groundPlaneModel";
-        newGroundPlaneModel.transform.position = spawnPosition;
         newGroundPlaneModel.transform.localScale = localScale;
-
-
-        // TODO (Frage an Hr. Anthes) rotation?
         newGroundPlaneModel.transform.rotation = currentModel.transform.rotation;
 
-        // TODO groundplane should show choosen model in a small 2d view as preview
-
-        // TODO texture --> should then be moved to texturegui
-        // https://stackoverflow.com/a/53420494
-
-        // TODO set ModelToPlace in groundplaneGUI
-
-        Globals.ChosenFurniture = currentModel;
-        Globals.ChosenFurnitureCost = (FurnitureIndex + 1) * 10;
+        GameManager.ChosenFurniture = currentModel;
+        GameManager.ChosenFurnitureCost = (FurnitureIndex + 1) * 100;
+        GameManager.ModelToPlaceRotation = currentModel.transform.rotation;
+        Debug.Log($"Chosen Furniture       = {GameManager.ChosenFurniture}");
+        Debug.Log($"Chosen Furniture Price = {GameManager.ChosenFurnitureCost}");
     }
 }

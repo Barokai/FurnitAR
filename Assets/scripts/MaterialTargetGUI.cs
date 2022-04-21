@@ -15,18 +15,17 @@ public class MaterialTargetGUI : MonoBehaviour
     public Material wood_1;
     public Material wood_2;
     public Material wood_3;
-    public Material wood_4;
+    public Material riffelblech;
 
     private Material currentMaterial;
     private int materialIndex = 3; // old school cloth
-    private readonly List<Material> materialList = new(); 
+    private readonly List<Material> materialList = new();
 
     // Start is called before the first frame update
     void Start()
     {
-        // TODO prices for material?
-        base_material = Resources.Load($"Material/{nameof(base_material)}", typeof(Material)) as Material;
-        base_material2 = Resources.Load($"Material/{nameof(base_material2)}", typeof(Material)) as Material;
+        //base_material = Resources.Load($"Material/{nameof(base_material)}", typeof(Material)) as Material;
+        //base_material2 = Resources.Load($"Material/{nameof(base_material2)}", typeof(Material)) as Material;
         cloth_1 = Resources.Load($"Material/{nameof(cloth_1)}", typeof(Material)) as Material;
         cloth_2 = Resources.Load($"Material/{nameof(cloth_2)}", typeof(Material)) as Material;
         cloth_3 = Resources.Load($"Material/{nameof(cloth_3)}", typeof(Material)) as Material;
@@ -35,10 +34,10 @@ public class MaterialTargetGUI : MonoBehaviour
         wood_1 = Resources.Load($"Material/{nameof(wood_1)}", typeof(Material)) as Material;
         wood_2 = Resources.Load($"Material/{nameof(wood_2)}", typeof(Material)) as Material;
         wood_3 = Resources.Load($"Material/{nameof(wood_3)}", typeof(Material)) as Material;
-        wood_4 = Resources.Load($"Material/{nameof(wood_4)}", typeof(Material)) as Material;
+        riffelblech = Resources.Load($"Material/{nameof(riffelblech)}", typeof(Material)) as Material;
 
-        materialList.Add(base_material);
-        materialList.Add(base_material2);
+        //materialList.Add(base_material);
+        //materialList.Add(base_material2);
         materialList.Add(cloth_1);
         materialList.Add(cloth_2);
         materialList.Add(cloth_3);
@@ -47,29 +46,25 @@ public class MaterialTargetGUI : MonoBehaviour
         materialList.Add(wood_1);
         materialList.Add(wood_2);
         materialList.Add(wood_3);
-        materialList.Add(wood_4);
+        materialList.Add(riffelblech);
 
-        // http://answers.unity.com/answers/882050/view.html
+        // http://answers.unity.com/answers/882050/view.html - code below was used for testing
+        // Material mat = Resources.Load("Material/wood_3", typeof(Material)) as Material;
         Material[] materials = new Material[1];
-        materials[0] = materialList[0];
+        currentMaterial = materialList[materialIndex];
+        materials[0] = currentMaterial;
         var meshRenderer = GameObject.Find("MaterialPreviewQuad").GetComponent<MeshRenderer>();
         meshRenderer.materials = materials;
         currentMaterial = GameObject.Find("MaterialPreviewQuad").GetComponent<MeshRenderer>().material;
 
         GameObject materialNextAction = GameObject.Find("materialNextAction");
         materialNextAction.GetComponent<VirtualButtonBehaviour>().RegisterOnButtonPressed(OnNextAction);
-        //gameObject2.GetComponent<VirtualButtonBehaviour>().RegisterOnButtonReleased(OnButtonReleased);
 
         GameObject materialPreviousAction = GameObject.Find("materialPreviousAction");
         materialPreviousAction.GetComponent<VirtualButtonBehaviour>().RegisterOnButtonPressed(OnPreviousAction);
-        //gameObject2.GetComponent<VirtualButtonBehaviour>().RegisterOnButtonReleased(OnButtonReleased);
 
         GameObject materialChooseAction = GameObject.Find("materialChooseAction");
         materialChooseAction.GetComponent<VirtualButtonBehaviour>().RegisterOnButtonPressed(OnChooseAction);
-        //gameObject2.GetComponent<VirtualButtonBehaviour>().RegisterOnButtonReleased(OnButtonReleased);
-
-        // TODO add flag if a button is currently pressed in "on..actions"
-        // TODO released methods to unset in "on...releasedactions"
     }
 
     // Update is called once per frame
@@ -116,7 +111,7 @@ public class MaterialTargetGUI : MonoBehaviour
         var previousMaterial = materialIndex - 1;
         if (previousMaterial < 0)
         {
-            previousMaterial = materialCount-1;
+            previousMaterial = materialCount - 1;
         }
         materialIndex = previousMaterial;
         Debug.Log($"previous material index = {previousMaterial}");
@@ -130,7 +125,7 @@ public class MaterialTargetGUI : MonoBehaviour
 
     private void OnChooseAction(VirtualButtonBehaviour vb)
     {
-        Debug.Log("OnChooseAction");
+        Debug.Log("OnChooseAction - Material");
 
         // TODO set in groundplan as choosen model
         //var groundPlane = GameObject.Find("GroundPlaneStage");
@@ -150,12 +145,12 @@ public class MaterialTargetGUI : MonoBehaviour
 
         // TODO groundplane should show choosen model in a small 2d view as preview
 
-        // TODO texture --> should then be moved to texturegui
-        // https://stackoverflow.com/a/53420494
 
         // TODO set ModelToPlace in groundplaneGUI
 
-        Globals.ChosenMaterial = currentMaterial;
-        Globals.ChosenMaterialCost = (materialIndex + 1) * 10;
+        GameManager.ChosenMaterial = currentMaterial;
+        GameManager.ChosenMaterialCost = (materialIndex + 1) * 10;
+        Debug.Log($"Chosen Material       = {GameManager.ChosenMaterial}");
+        Debug.Log($"Chosen Material Price = {GameManager.ChosenMaterialCost}");
     }
 }

@@ -1,18 +1,20 @@
 using Assets.scripts;
 using System;
 using System.Collections;
+using System.Linq;
 using UnityEngine;
-using Vuforia.UnityRuntimeCompiled;
+using UnityEngine.UI;
 
 // public class GroundPlaneGUI :  DefaultTrackableEventHandler (obsolete) 
+// DefaultObserverEventHandler needed for OnTracking events
 public class GroundPlaneGUI : DefaultObserverEventHandler // MonoBehaviour
 {
-    private readonly float native_width = 1920f;
-    private readonly float native_height = 1080f;
+    private readonly float nativeWidth = 1920f;
+    private readonly float nativeHeight = 1080f;
     //public Texture btntexture;
     public Texture LogoTexture;
     public Texture RightButtonTexture;
-    public decimal totalAmount = Globals.TotalAmount;
+    public decimal totalAmount = GameManager.TotalAmount;
     public string topLeftButtonText = "Please choose and place";
 
     //private readonly float btnHeight = 110;
@@ -25,9 +27,8 @@ public class GroundPlaneGUI : DefaultObserverEventHandler // MonoBehaviour
 
     private static readonly Color textColor = new Color(26, 26, 26); // #1a1a1a = LALALA
 
-
-    private GameObject ModelToPlace;
-    public Vector3 ModelToPlaceRotation;
+    //private GameObject ModelToPlace;
+    //public Vector3 ModelToPlaceRotation;
 
     // screenshot fucntionality https://agrawalsuneet.github.io/blogs/native-android-image-sharing-in-unity/
     private bool isFocus = false;
@@ -36,17 +37,26 @@ public class GroundPlaneGUI : DefaultObserverEventHandler // MonoBehaviour
     private string shareSubject, shareMessage;
 
     // https://medium.com/@emrahhozcann/how-to-create-an-ar-augmented-reality-android-app-with-dynamic-target-image-and-3d-model-unity-8f525898da3f
-
-    void Start()
+    private void Start()
     {
         base.Start();
     }
 
     private void Update()
     {
-        if (Globals.TotalAmount > 0)
+        if (GameManager.TotalAmount > 0)
         {
-            totalAmount = Globals.TotalAmount;
+            totalAmount = GameManager.TotalAmount;
+        }
+
+        if (!isScreenshotProcessing && !String.IsNullOrEmpty(GameManager.ChooseFurnitureHint + GameManager.ChooseMaterialHint))
+        {
+            var choose = new[] { GameManager.ChooseMaterialHint, GameManager.ChooseFurnitureHint };
+            GameObject.Find("TopText").GetComponent<Text>().text = $"Please {String.Join(" & ", choose.Where(s => !String.IsNullOrEmpty(s)))}";
+        }
+        else
+        {
+            GameObject.Find("TopText").GetComponent<Text>().text = String.Empty;
         }
     }
 
@@ -60,18 +70,32 @@ public class GroundPlaneGUI : DefaultObserverEventHandler // MonoBehaviour
 
         // TODO (Frage an Hr. Anthes) find current model (or the just placed event?) 
         // and rotate it in the same way it was rotated in FurnitureTargetUI
+        // use GameManager.ModelToPlaceRotation??
+        var currentGroundPlaneModel = GameObject.Find("groundPlaneModel");
+        currentGroundPlaneModel.transform.rotation = GameManager.ModelToPlaceRotation;
 
-
-        // mIsPlaced = true;
-        if (Globals.ChosenFurnitureCost > 0)
+        decimal price = 0m;
+        if (GameManager.ChosenFurnitureCost > 0)
         {
-            Globals.TotalAmount += Globals.ChosenFurnitureCost;
+            GameManager.TotalAmount += GameManager.ChosenFurnitureCost;
+            price += GameManager.ChosenFurnitureCost;
         }
 
-        if (Globals.ChosenMaterialCost > 0)
+        if (GameManager.ChosenMaterialCost > 0)
         {
-            Globals.TotalAmount += Globals.ChosenFurnitureCost;
+            GameManager.TotalAmount += GameManager.ChosenMaterialCost;
+            price += GameManager.ChosenMaterialCost;
         }
+
+        if (GameManager.ChosenFurniture && GameManager.ChosenMaterial)
+        {
+            GameManager.FunitureWithPrices.Add(
+                new Tuple<string, decimal>(
+                    $"{GameManager.ChosenFurniture.name} {GameManager.ChosenMaterial.name}",
+                    price));
+        }
+
+        Debug.Log(string.Join(", ", GameManager.FunitureWithPrices.Select(t => $"['{t.Item1}', '{t.Item2}']")));
     }
 
     protected override void OnTrackingFound()
@@ -103,8 +127,8 @@ public class GroundPlaneGUI : DefaultObserverEventHandler // MonoBehaviour
     void OnGUI()
     {
         //set up scaling
-        float rx = Screen.width / native_width;
-        float ry = Screen.height / native_height;
+        float rx = Screen.width / nativeWidth;
+        float ry = Screen.height / nativeHeight;
 
         GUI.matrix = Matrix4x4.TRS(new Vector3(0, 0, 0), Quaternion.identity, new Vector3(rx, ry, 1));
 
@@ -129,14 +153,14 @@ public class GroundPlaneGUI : DefaultObserverEventHandler // MonoBehaviour
         }
         GUI.DrawTexture(
             new Rect(
-                btnPadding, native_height - btnLogoHeight - btnPadding,
+                btnPadding, nativeHeight - btnLogoHeight - btnPadding,
                 btnLogoWidth,
                 btnLogoHeight),
             LogoTexture);
 
         // Screenshot button, right upper corner
         Rect captureScreenshotBtnRect = new Rect(
-            native_width - btnWidth - btnPadding,
+            nativeWidth - btnWidth - btnPadding,
             btnPadding,
             btnWidth,
             btnTextHeight);
@@ -144,57 +168,65 @@ public class GroundPlaneGUI : DefaultObserverEventHandler // MonoBehaviour
         if (!isScreenshotProcessing)
         {
             var text = "Screenshot";
-#if UNITY_ANDROID
+            //#if UNITY_ANDROID
             if (Application.platform == RuntimePlatform.Android)
             {
                 text = "Share";
             }
-#endif
+            //#endif
             var captureScreenshot = GUI.Button(captureScreenshotBtnRect, $"<b>{text}</b>", myTextStyle);
 
             if (captureScreenshot)
             {
-                CaptureScreenshot();
+                OnCaptureScreenshot();
             }
         }
 
         // reset button, middle lower
         Rect resetFurnitureListBtnRect = new Rect(
-            native_width / 2 - btnWidth / 2,
-            native_height - btnTextHeight - btnPadding,
+            nativeWidth / 2 - btnWidth / 2,
+            nativeHeight - btnTextHeight - btnPadding,
             btnWidth,
             btnTextHeight);
 
-        if (!isScreenshotProcessing)
+        if (!isScreenshotProcessing &&
+            !(Application.platform == RuntimePlatform.Android))
         {
             // draw the reset  button
             var resetFurnitureList = GUI.Button(resetFurnitureListBtnRect, "reset", myTextStyle);
             if (resetFurnitureList)
             {
-                ResetFurnitureList();
+                OnResetFurnitureList();
             }
         }
 
         // TODO (Frage an Hr. Anthes) this should be a 2d preview of the furniture place to be set
-        if (!RightButtonTexture)
+        if (GameManager.ChosenMaterial)
+        {
+            // TODO test this.
+            var test = GameManager.ChosenMaterial.mainTexture; //.GetTexture(GameManager.ChosenMaterial.ToString());
+            RightButtonTexture = test;
+        }
+        else if (!RightButtonTexture)
         {
             Debug.LogError("Please assign a texture on the inspector");
             return;
         }
 
-        if (!isScreenshotProcessing)
+        // always draw button if material was chosen
+        if (GameManager.ChosenMaterial || !isScreenshotProcessing)
         {
             GUI.DrawTexture(
             new Rect(
-                native_width - btnLogoWidth - btnPadding,
-                native_height - btnLogoHeight - btnPadding,
+                nativeWidth - btnLogoWidth - btnPadding,
+                nativeHeight - btnLogoHeight - btnPadding,
                 btnLogoWidth, btnLogoHeight),
             RightButtonTexture);
         }
 
         if (!isScreenshotProcessing)
         {
-            if (Globals.TotalAmount > 0m)
+            if (GameManager.TotalAmount > 0m)
             {
                 topLeftButtonText = $"{totalAmount} €";
             }
@@ -215,30 +247,42 @@ public class GroundPlaneGUI : DefaultObserverEventHandler // MonoBehaviour
         }
     }
 
-    private void ResetFurnitureList()
+    public void OnResetFurnitureList()
     {
+        // TODO Hr. Anthes fragen: reset von bisher platzieren objekten?
+        // ground plane wird duplicated, alles bis auf die erste instanz destroyen?
         Debug.Log("ResetFurnitureList fired");
-        var groundPlane = GameObject.Find("GroundPlaneStage");
-        foreach (Transform child in groundPlane.transform)
-        {
-            if (child.gameObject.name != "groundPlaneModel")
-            {
-                GameObject.Destroy(child.gameObject);
-            }
+        //var groundPlane = GameObject.Find("GroundPlaneStage");
+        //foreach (Transform child in groundPlane.transform)
+        //{
+        //    // TODO skip default model "groundPlaneModel";
+        //    if (child.gameObject.name != "groundPlaneModel")
+        //    {
+        //        GameObject.Destroy(child.gameObject);
+        //    }
+        //}
 
-            // TODO skip default model "groundPlaneModel";
+        var tags = GameObject.FindGameObjectsWithTag("GroundPlaneTag");
+        // TEST find all gameobjects with tag "GroundPlaneTag" and delete all but first 
+        if (tags.Length > 0)
+        {
+            foreach (var gameobject in tags[1..])
+            {
+                GameObject.Destroy(gameobject);
+            }
         }
 
-        Globals.ChosenMaterial = null;
-        Globals.ChosenMaterialCost = 0m;
-        Globals.ChosenFurniture = null;
-        Globals.ChosenFurnitureCost = 0m;
-        Globals.TotalAmount = 0m;
+        GameManager.ChosenMaterial = null;
+        GameManager.ChosenMaterialCost = 0m;
+        GameManager.ChosenFurniture = null;
+        GameManager.ChosenFurnitureCost = 0m;
+        GameManager.TotalAmount = 0m;
+        GameManager.FunitureWithPrices.Clear();
     }
 
-    private void CaptureScreenshot()
+    public void OnCaptureScreenshot()
     {
-        Debug.Log("CaptureScreenshot fired");
+        Debug.Log("OnCaptureScreenshot fired");
         OnShareButtonClick();
     }
 
@@ -311,7 +355,7 @@ public class GroundPlaneGUI : DefaultObserverEventHandler // MonoBehaviour
 
             AndroidJavaClass unity = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
             AndroidJavaObject currentActivity = unity.GetStatic<AndroidJavaObject>("currentActivity");
-            AndroidJavaObject chooser = intentClass.CallStatic<AndroidJavaObject>("createChooser", intentObject, "Share your high score");
+            AndroidJavaObject chooser = intentClass.CallStatic<AndroidJavaObject>("createChooser", intentObject, "Share your screenshot");
             currentActivity.Call("startActivity", chooser);
         }
 
