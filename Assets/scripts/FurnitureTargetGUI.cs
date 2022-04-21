@@ -15,9 +15,12 @@ public class FurnitureTargetGUI : MonoBehaviour
     private Material currentMaterial;
     private int FurnitureIndex = 0;
     private readonly List<GameObject> furnitureList = new();
-    readonly float rotationSpeed = 2500f;
+    private const float rotationSpeed = 2500f;
 
-    // Start is called before the first frame update
+    /// <summary>
+    /// Start is called before the first frame update
+    /// Initializing models, materials and actions
+    /// </summary>
     void Start()
     {
         toilet = Resources.Load($"Prefabs/Bathroom/{nameof(toilet)}", typeof(GameObject)) as GameObject;
@@ -47,7 +50,6 @@ public class FurnitureTargetGUI : MonoBehaviour
         if (GameManager.ChosenMaterial != null)
         {
             Material[] materials = new Material[1];
-            //materials[0] = mat;
             materials[0] = GameManager.ChosenMaterial;
             foreach (var renderer in meshRenderers)
             {
@@ -73,7 +75,9 @@ public class FurnitureTargetGUI : MonoBehaviour
         chairChooseAction.GetComponent<VirtualButtonBehaviour>().RegisterOnButtonPressed(OnChooseAction);
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// Updating the models materials if they have changed in MaterialTargetGUI
+    /// </summary>
     void Update()
     {
         var meshRenderers = currentModel.GetComponentsInChildren<MeshRenderer>();
@@ -106,7 +110,7 @@ public class FurnitureTargetGUI : MonoBehaviour
 
     private void OnNextAction(VirtualButtonBehaviour vb)
     {
-        Debug.Log("OnNextAction");
+        Debug.Log("OnNextAction - Furniture");
         Vector3 spawnPosition = currentModel.transform.position;
         Vector3 localScale = currentModel.transform.localScale;
         Destroy(currentModel);
@@ -119,9 +123,10 @@ public class FurnitureTargetGUI : MonoBehaviour
         }
 
         FurnitureIndex = nextModel;
-        Debug.Log($"next chair index = {nextModel}");
-        GameObject model = furnitureList[FurnitureIndex];
+        Debug.Log($"next model index = {nextModel}");
+        Debug.Log($"next model       = {furnitureList[FurnitureIndex]}");
 
+        GameObject model = furnitureList[FurnitureIndex];
         var FurnitureTarget = GameObject.Find("FurnitureTarget");
         currentModel = Instantiate(model, FurnitureTarget.transform);
         currentModel.transform.position = spawnPosition;
@@ -165,9 +170,10 @@ public class FurnitureTargetGUI : MonoBehaviour
             previousModel = modelCount - 1;
         }
         FurnitureIndex = previousModel;
-        Debug.Log($"next chair index = {previousModel}");
-        GameObject model = furnitureList[FurnitureIndex];
+        Debug.Log($"previous model index = {previousModel}");
+        Debug.Log($"previous model       = {furnitureList[FurnitureIndex]}");
 
+        GameObject model = furnitureList[FurnitureIndex];
         var FurnitureTarget = GameObject.Find("FurnitureTarget");
         currentModel = Instantiate(model, FurnitureTarget.transform);
         currentModel.transform.position = spawnPosition;
@@ -196,14 +202,17 @@ public class FurnitureTargetGUI : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Set chosen model in groundplane
+    /// </summary>
+    /// <param name="vb"></param>
     private void OnChooseAction(VirtualButtonBehaviour vb)
     {
-        Debug.Log("OnChooseAction - Furniture");
+        Debug.Log($"OnChooseAction - Furniture - chosen {currentModel}");
 
-        // set chosen model in groundplane
         var groundPlane = GameObject.Find("GroundPlaneStage");
         var currentGroundPlaneModel = GameObject.Find("groundPlaneModel");
-        // TODO (Frage an Hr. Anthes) - objekt hängt in der luft --> scale des groundPlaneModel auf 1,1,1 und y 0.5 !Unbedingt testen! 
+        // TEST (ehem. TODO) (Frage an Hr. Anthes) - objekt hängt in der luft --> scale des groundPlaneModel auf 1,1,1 und y 0.5 !Unbedingt testen! 
         //Vector3 spawnPosition = currentGroundPlaneModel.transform.position;
         Vector3 localScale = currentGroundPlaneModel.transform.localScale;
         Destroy(currentGroundPlaneModel);
@@ -217,5 +226,8 @@ public class FurnitureTargetGUI : MonoBehaviour
         GameManager.ModelToPlaceRotation = currentModel.transform.rotation;
         Debug.Log($"Chosen Furniture       = {GameManager.ChosenFurniture}");
         Debug.Log($"Chosen Furniture Price = {GameManager.ChosenFurnitureCost}");
+
+        // TODO groundplane could show choosen model in a small 2d view as preview
+
     }
 }

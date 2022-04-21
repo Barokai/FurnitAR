@@ -18,10 +18,13 @@ public class MaterialTargetGUI : MonoBehaviour
     public Material riffelblech;
 
     private Material currentMaterial;
-    private int materialIndex = 3; // old school cloth
+    private int materialIndex = 1; // old school cloth - was 3 with the base materials
     private readonly List<Material> materialList = new();
 
-    // Start is called before the first frame update
+    /// <summary>
+    /// Start is called before the first frame update
+    /// Initializing materials and actions
+    /// </summary>
     void Start()
     {
         //base_material = Resources.Load($"Material/{nameof(base_material)}", typeof(Material)) as Material;
@@ -70,21 +73,11 @@ public class MaterialTargetGUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // TODO show selector when target was scanned
-        // preview of material, price, rotate symbols
-        // when selected, set in groundview
-        // place button?
-
-        //astronaut.transform.parent = groundPlane;
-
-        // do this only once per 3 sec?
-        //var groundPlane = GameObject.Find("GroundPlaneStage");
-        //Instantiate(currentModel, groundPlane.transform);
     }
 
     private void OnNextAction(VirtualButtonBehaviour vb)
     {
-        Debug.Log("OnNextAction");
+        Debug.Log("OnNextAction - Material");
 
         var materialCount = materialList.Count;
         var nextmaterial = materialIndex + 1;
@@ -95,18 +88,18 @@ public class MaterialTargetGUI : MonoBehaviour
 
         materialIndex = nextmaterial;
         Debug.Log($"next material index = {nextmaterial}");
-        //Material material = materialList[materialIndex];
+        Debug.Log($"next material       = {materialList[materialIndex]}");
 
         Material[] mats = new Material[1];
         mats[0] = materialList[materialIndex];
         var meshRenderer = GameObject.Find("MaterialPreviewQuad").GetComponent<MeshRenderer>();
         meshRenderer.materials = mats;
-        currentMaterial = materialList[materialIndex]; //GameObject.Find("MaterialPreviewQuad").GetComponent<MeshRenderer>().material;
+        currentMaterial = materialList[materialIndex];
     }
 
     private void OnPreviousAction(VirtualButtonBehaviour vb)
     {
-        Debug.Log("OnPreviousAction");
+        Debug.Log("OnPreviousAction - Material");
         var materialCount = materialList.Count;
         var previousMaterial = materialIndex - 1;
         if (previousMaterial < 0)
@@ -115,39 +108,18 @@ public class MaterialTargetGUI : MonoBehaviour
         }
         materialIndex = previousMaterial;
         Debug.Log($"previous material index = {previousMaterial}");
+        Debug.Log($"previous material       = {materialList[materialIndex]}");
 
         Material[] mats = new Material[1];
         mats[0] = materialList[materialIndex];
         var meshRenderer = GameObject.Find("MaterialPreviewQuad").GetComponent<MeshRenderer>();
         meshRenderer.materials = mats;
-        currentMaterial = materialList[materialIndex];//GameObject.Find("MaterialPreviewQuad").GetComponent<MeshRenderer>().material;
+        currentMaterial = materialList[materialIndex];
     }
 
     private void OnChooseAction(VirtualButtonBehaviour vb)
     {
-        Debug.Log("OnChooseAction - Material");
-
-        // TODO set in groundplan as choosen model
-        //var groundPlane = GameObject.Find("GroundPlaneStage");
-        //var currentGroundPlaneModel = GameObject.Find("groundPlaneModel");
-        //Vector3 spawnPosition = currentGroundPlaneModel.transform.position;
-        //Vector3 localScale = currentGroundPlaneModel.transform.localScale;
-
-        //Destroy(currentGroundPlaneModel);
-        ////currentModel.name = "groundPlaneModel";
-        //var newGroundPlaneModel = Instantiate(currentModel, groundPlane.transform);
-        //newGroundPlaneModel.name = "groundPlaneModel";
-        ////newGroundPlaneModel.transform.position = spawnPosition;
-        //newGroundPlaneModel.transform.localScale = localScale;
-
-        //// TODO rotation?
-        //newGroundPlaneModel.transform.rotation = currentModel.transform.rotation;
-
-        // TODO groundplane should show choosen model in a small 2d view as preview
-
-
-        // TODO set ModelToPlace in groundplaneGUI
-
+        Debug.Log($"OnChooseAction - Material - chosen {currentMaterial}");
         GameManager.ChosenMaterial = currentMaterial;
         GameManager.ChosenMaterialCost = (materialIndex + 1) * 10;
         Debug.Log($"Chosen Material       = {GameManager.ChosenMaterial}");

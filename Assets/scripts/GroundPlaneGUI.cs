@@ -44,6 +44,7 @@ public class GroundPlaneGUI : DefaultObserverEventHandler // MonoBehaviour
 
     private void Update()
     {
+        // TODO could show preview (transparent) of the model before placement (+ price? +name of model/material?)
         if (GameManager.TotalAmount > 0)
         {
             totalAmount = GameManager.TotalAmount;
@@ -63,10 +64,6 @@ public class GroundPlaneGUI : DefaultObserverEventHandler // MonoBehaviour
     public void OnContentPlaced()
     {
         Debug.Log("OnContentPlaced() called.");
-
-        // Align content to the anchor
-        //ModelToPlace.transform.localPosition = Vector3.zero;
-        //RotateTowardsCamera(Chair);
 
         // TODO (Frage an Hr. Anthes) find current model (or the just placed event?) 
         // and rotate it in the same way it was rotated in FurnitureTargetUI
@@ -110,19 +107,7 @@ public class GroundPlaneGUI : DefaultObserverEventHandler // MonoBehaviour
         base.OnTrackingLost();
     }
 
-    //https://forum.unity.com/threads/change-gui-box-color.174609/#post-1194616
-    //private Texture2D MakeTex(int width, int height, Color col)
-    //{
-    //    Color[] pix = new Color[width * height];
-    //    for (int i = 0; i < pix.Length; ++i)
-    //    {
-    //        pix[i] = col;
-    //    }
-    //    Texture2D result = new Texture2D(width, height);
-    //    result.SetPixels(pix);
-    //    result.Apply();
-    //    return result;
-    //}
+
 
     void OnGUI()
     {
@@ -133,18 +118,17 @@ public class GroundPlaneGUI : DefaultObserverEventHandler // MonoBehaviour
         GUI.matrix = Matrix4x4.TRS(new Vector3(0, 0, 0), Quaternion.identity, new Vector3(rx, ry, 1));
 
         GUIStyle myTextStyle = new GUIStyle(GUI.skin.textField);
-        // not working - needed for custom border
+        
+        // https://forum.unity.com/threads/change-gui-box-color.174609/#post-1194616
+        // NOTE not working - needed for custom border
         //GUIStyle myTextStyle = new GUIStyle(GUI.skin.box);
-
+        //myTextStyle.normal.background = MakeTex(2, 2, new Color(186, 218, 85)); // #bada55, BADASS!
+        //myTextStyle.border = new RectOffset(2, 2, 2, 2);
         myTextStyle.fontSize = 50;
         myTextStyle.richText = true;
         myTextStyle.alignment = TextAnchor.MiddleCenter;
         myTextStyle.normal.textColor = textColor;
-        //myTextStyle.border = new RectOffset(2, 2, 2, 2);
-
-        // not working
-        //myTextStyle.normal.background = MakeTex(2, 2, new Color(186, 218, 85)); // #bada55, BADASS!
-
+        
         // Logo, left lower corner
         if (!LogoTexture)
         {
@@ -200,11 +184,10 @@ public class GroundPlaneGUI : DefaultObserverEventHandler // MonoBehaviour
             }
         }
 
-        // TODO (Frage an Hr. Anthes) this should be a 2d preview of the furniture place to be set
+        // setting the right texture to the currently chosen material, if not fallback to default behaviour
         if (GameManager.ChosenMaterial)
         {
-            // TODO test this.
-            var test = GameManager.ChosenMaterial.mainTexture; //.GetTexture(GameManager.ChosenMaterial.ToString());
+            var test = GameManager.ChosenMaterial.mainTexture;
             RightButtonTexture = test;
         }
         else if (!RightButtonTexture)
@@ -213,7 +196,7 @@ public class GroundPlaneGUI : DefaultObserverEventHandler // MonoBehaviour
             return;
         }
 
-        // always draw button if material was chosen
+        // always draw button if material was chosen, hide when processing screenshot
         if (GameManager.ChosenMaterial || !isScreenshotProcessing)
         {
             GUI.DrawTexture(
@@ -239,12 +222,14 @@ public class GroundPlaneGUI : DefaultObserverEventHandler // MonoBehaviour
                     btnTextHeight),
                 $"<b>{topLeftButtonText}</b>",
                 myTextStyle);
-
-            //GUI.Box (new Rect (0,0,100,50), "Top-left");
-            //GUI.Box (new Rect (1920 - 100,0,100,50), "Top-right");
-            //GUI.Box (new Rect (0,1080- 50,100,50), "Bottom-left");
-            //GUI.Box (new Rect (Screen.width - 100,Screen.height - 50,100,50), "Bottom right");
         }
+
+        #region unused placement examples
+        //GUI.Box (new Rect (0,0,100,50), "Top-left");
+        //GUI.Box (new Rect (1920 - 100,0,100,50), "Top-right");
+        //GUI.Box (new Rect (0,1080- 50,100,50), "Bottom-left");
+        //GUI.Box (new Rect (Screen.width - 100,Screen.height - 50,100,50), "Bottom right");
+        #endregion
     }
 
     public void OnResetFurnitureList()
@@ -263,7 +248,7 @@ public class GroundPlaneGUI : DefaultObserverEventHandler // MonoBehaviour
         //}
 
         var tags = GameObject.FindGameObjectsWithTag("GroundPlaneTag");
-        // TEST find all gameobjects with tag "GroundPlaneTag" and delete all but first 
+        // TODO TEST find all gameobjects with tag "GroundPlaneTag" and delete all but first 
         if (tags.Length > 0)
         {
             foreach (var gameobject in tags[1..])

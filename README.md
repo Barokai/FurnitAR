@@ -30,11 +30,11 @@ Download vuforia packages and place it in /Packages/ folder
 - vuforia 10.6.3
 <https://1drv.ms/u/s!AufoJNRhqarVo_ZK56pDWrkrjs9q2g?e=bc7O3B>
 
-# TODO
+# thanks
 
-1) statemachine für alle stati der app
+to <https://assetstore.unity.com/packages/3d/props/furniture/big-furniture-pack-7717>
 
-- clean state
+# Feature list
 
 1) katalog 3d modelle
 1) gui für auswahl von modell
@@ -43,15 +43,10 @@ Download vuforia packages and place it in /Packages/ folder
 1) farbe?
 1) neues modell?
 1) speicher? screenshot? teilen?
-1) menü
 
-## notizen
+## TODO new
 
-- imagetarget erkennung und gui anzeigen: funktioniert noch nicht
-- links oder rechts oben eine anzeige der gesamtkosten einfügen (3 möbel = 1200€ zB)
-  - direkt auf AR camera geben das script?
-- links oben im debug mode einen button zum platzieren eines sessels im Raum
-  - direkt auf AR camera geben das script?
-Ground plane stage rausfinden wie die funktioniert.
-  - evtl abhängig je nach gerät ein marker nötig
-  - testen mit pixel6, sollte keinen benötigen
+- groundplane placement zum laufen bringen
+- doku
+- präsentation
+- editorconfig? <https://github.com/zaikman/unity-editorconfig>
