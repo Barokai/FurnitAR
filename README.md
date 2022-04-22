@@ -45,15 +45,16 @@ to <https://assetstore.unity.com/packages/3d/props/furniture/big-furniture-pack-
 
 ## TODO new
 
-- groundplane placement zum laufen bringen
-- doku
+- documentation (overleaf, latex template)
 - presenation (reveal.js?)
-- editorconfig? <https://github.com/zaikman/unity-editorconfig>
 
 - github page for the project <https://barokai.github.io/FurnitAR/>
   - <https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll>
   - minimal theme (to be styled with LALALA and BADA55) <https://github.com/pages-themes/minimal>
   - provide download of doku, presentation, imagetargets and apk - that's it.
+  - add darkmode as mentioned here <https://github.com/pages-themes/minimal/issues/101#issuecomment-901217627>
   - add favicon <https://ptc-it.de/add-favicon-to-mm-jekyll-site/>
 - add hr. anthes to github collaborators <https://github.com/Barokai/FurnitAR/settings/access> (not needed if page with download links works)
+- probably not
   - setup github actions to build project automatically <https://game.ci/docs/github/getting-started>
+  - editorconfig? <https://github.com/zaikman/unity-editorconfig>
