@@ -41,6 +41,8 @@ _Projektidee_
 
 to <https://assetstore.unity.com/packages/3d/props/furniture/big-furniture-pack-7717>
 
+& <https://agrawalsuneet.github.io/blogs/native-android-image-sharing-in-unity-using-fileprovider/>
+
 ## TODO new
 
 - groundplane placement zum laufen bringen
