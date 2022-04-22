@@ -30,6 +30,9 @@ domain: "barokai.github.io"
 twitter_username: barokai
 github_username:  barokai
 
+logo: /assets/img/logo.png
+show_downloads: true
+
 # Build settings
 # theme: minima
 # plugins:
@@ -59,4 +62,4 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 
-theme: jekyll-theme-minimal
+# theme: jekyll-theme-minimal
