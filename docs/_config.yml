@@ -33,6 +33,9 @@ github_username:  barokai
 logo: /assets/img/logo.png
 show_downloads: true
 
+# custom settings (for cloudflare build)
+repository: Barokai/FurnitAR
+
 # Build settings
 # theme: minima
 # plugins:
