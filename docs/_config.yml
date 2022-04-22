@@ -52,7 +52,10 @@ github:
 # plugins:
 #   - jekyll-feed
 
-remote_theme: pages-themes/minimal@v0.2.0
+#remote_theme: pages-themes/minimal@v0.2.0
+
+color-scheme: "auto-default-dark"
+remote_theme: "godalming123/minimal"
 plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
 
