@@ -146,11 +146,16 @@ public class GroundPlaneGUI : DefaultObserverEventHandler
             {
                 text = "Share";
             }
-            var captureScreenshot = GUI.Button(captureScreenshotBtnRect, $"<b>{text}</b>", myTextStyle);
 
-            if (captureScreenshot)
+            // android has another screenshot button, only render for editor
+            if (Application.platform != RuntimePlatform.Android)
             {
-                OnShareButtonClick();
+                var captureScreenshot = GUI.Button(captureScreenshotBtnRect, $"<b>{text}</b>", myTextStyle);
+
+                if (captureScreenshot)
+                {
+                    OnShareButtonClick();
+                }
             }
         }
 
@@ -161,9 +166,9 @@ public class GroundPlaneGUI : DefaultObserverEventHandler
             btnWidth,
             btnTextHeight);
 
-        // android has another screenshot button, only render for editor
+        // android has another reset button, only render for editor
         if (!isScreenshotProcessing &&
-            !(Application.platform == RuntimePlatform.Android))
+            (Application.platform != RuntimePlatform.Android))
         {
             // draw the reset  button
             var resetFurnitureList = GUI.Button(resetFurnitureListBtnRect, "reset", myTextStyle);

@@ -12467,7 +12467,7 @@ struct FurnitureTargetGUI_t59A80598025C069E26E1AFCB5C25AB83AB917A9F  : public Mo
 	// System.Int32 FurnitureTargetGUI::FurnitureIndex
 	int32_t ___FurnitureIndex_11;
 	// System.Collections.Generic.List`1<UnityEngine.GameObject> FurnitureTargetGUI::furnitureList
-	List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* ___furnitureList_12;
+	List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* ___furnitureList_13;
 };
 
 // MaterialTargetGUI

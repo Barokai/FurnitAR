@@ -4301,7 +4301,7 @@ struct FurnitureTargetGUI_t59A80598025C069E26E1AFCB5C25AB83AB917A9F  : public Mo
 	// System.Int32 FurnitureTargetGUI::FurnitureIndex
 	int32_t ___FurnitureIndex_11;
 	// System.Collections.Generic.List`1<UnityEngine.GameObject> FurnitureTargetGUI::furnitureList
-	List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* ___furnitureList_12;
+	List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* ___furnitureList_13;
 };
 
 // MaterialTargetGUI
@@ -4853,7 +4853,7 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6203[1] =
 	static_cast<int32_t>(offsetof(PhysicsScene_t55222DD37072E8560EE054A07C0E3FE391D9D9DE, ___m_Handle_0)) + static_cast<int32_t>(sizeof(RuntimeObject)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6205[10] = 
 {
-	static_cast<int32_t>(offsetof(FurnitureTargetGUI_t59A80598025C069E26E1AFCB5C25AB83AB917A9F, ___toilet_4)),static_cast<int32_t>(offsetof(FurnitureTargetGUI_t59A80598025C069E26E1AFCB5C25AB83AB917A9F, ___chair_1_5)),static_cast<int32_t>(offsetof(FurnitureTargetGUI_t59A80598025C069E26E1AFCB5C25AB83AB917A9F, ___chair_2_6)),static_cast<int32_t>(offsetof(FurnitureTargetGUI_t59A80598025C069E26E1AFCB5C25AB83AB917A9F, ___chair_3_7)),static_cast<int32_t>(offsetof(FurnitureTargetGUI_t59A80598025C069E26E1AFCB5C25AB83AB917A9F, ___chair_4_8)),static_cast<int32_t>(offsetof(FurnitureTargetGUI_t59A80598025C069E26E1AFCB5C25AB83AB917A9F, ___currentModel_9)),static_cast<int32_t>(offsetof(FurnitureTargetGUI_t59A80598025C069E26E1AFCB5C25AB83AB917A9F, ___currentMaterial_10)),static_cast<int32_t>(offsetof(FurnitureTargetGUI_t59A80598025C069E26E1AFCB5C25AB83AB917A9F, ___FurnitureIndex_11)),static_cast<int32_t>(offsetof(FurnitureTargetGUI_t59A80598025C069E26E1AFCB5C25AB83AB917A9F, ___furnitureList_12)),0,};
+	static_cast<int32_t>(offsetof(FurnitureTargetGUI_t59A80598025C069E26E1AFCB5C25AB83AB917A9F, ___toilet_4)),static_cast<int32_t>(offsetof(FurnitureTargetGUI_t59A80598025C069E26E1AFCB5C25AB83AB917A9F, ___chair_1_5)),static_cast<int32_t>(offsetof(FurnitureTargetGUI_t59A80598025C069E26E1AFCB5C25AB83AB917A9F, ___chair_2_6)),static_cast<int32_t>(offsetof(FurnitureTargetGUI_t59A80598025C069E26E1AFCB5C25AB83AB917A9F, ___chair_3_7)),static_cast<int32_t>(offsetof(FurnitureTargetGUI_t59A80598025C069E26E1AFCB5C25AB83AB917A9F, ___chair_4_8)),static_cast<int32_t>(offsetof(FurnitureTargetGUI_t59A80598025C069E26E1AFCB5C25AB83AB917A9F, ___currentModel_9)),static_cast<int32_t>(offsetof(FurnitureTargetGUI_t59A80598025C069E26E1AFCB5C25AB83AB917A9F, ___currentMaterial_10)),static_cast<int32_t>(offsetof(FurnitureTargetGUI_t59A80598025C069E26E1AFCB5C25AB83AB917A9F, ___FurnitureIndex_11)),0,static_cast<int32_t>(offsetof(FurnitureTargetGUI_t59A80598025C069E26E1AFCB5C25AB83AB917A9F, ___furnitureList_13)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6206[3] = 
 {
 	static_cast<int32_t>(offsetof(U3CU3Ec_t75339C2C4313B1573D9EFC29A872F8E3578739F5_StaticFields, ___U3CU3E9_0)),static_cast<int32_t>(offsetof(U3CU3Ec_t75339C2C4313B1573D9EFC29A872F8E3578739F5_StaticFields, ___U3CU3E9__18_0_1)),static_cast<int32_t>(offsetof(U3CU3Ec_t75339C2C4313B1573D9EFC29A872F8E3578739F5_StaticFields, ___U3CU3E9__19_0_2)),};
