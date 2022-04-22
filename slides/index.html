@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>reveal.js</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				Slide 1
+				<h1>FurnitAR</h1>
+				<!-- <img src="https://barokai.github.io/FurnitAR/assets/images/logo.png" /> -->
+				<img class="r-stretch" src="assets/images/ImageTargets-Furniture-24bit-rgb.png" />
+			</section>
+
+			<section>Slide 2
+				<section data-markdown>
+					<textarea data-template>
+							```c# [1-2|3|4-6]
+							var modelCount = furnitureList.Count;
+							var nextModel = FurnitureIndex + 1;
+							if (nextModel == modelCount)
+							{
+									nextModel = nextModel % modelCount;
+							}
+							```
+						</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+							```js [1-2|3|4]
+							let a = 1;
+							let b = 2;
+							let c = x => 1 + 2 + x;
+							c(3);
+							```
+						</textarea>
+				</section>
+			</section>
+
+			<section>
+				<section data-background="https://media.giphy.com/media/3oKIPmDhXaieiJE3Sg/giphy.gif">
+					<h2>Full Screen Background</h2>
+				</section>
+			</section>
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script src="plugin/zoom/zoom.js"></script>
+	<!-- https://github.com/denehyg/reveal.js-menu -->
+	<script src="node_modules/reveal.js-menu/menu.js"></script>
+
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom, RevealMenu],
+
+			slideNumber: 'c/t'
+		});
+	</script>
+</body>
+
+</html>

@@ -58,8 +58,10 @@ public class GroundPlaneGUI : DefaultObserverEventHandler
     {
         Debug.Log("OnContentPlaced() called.");
 
-        var currentGroundPlaneModel = GameObject.Find("groundPlaneModel");
+        var currentGroundPlaneModel = GameObject.Find("GroundPlaneModel");
         currentGroundPlaneModel.transform.rotation = GameManager.ModelToPlaceRotation;
+        
+        // TODO: check placement, sometimes in-air
 
         decimal price = 0m;
         if (GameManager.ChosenFurnitureCost > 0)
@@ -108,10 +110,12 @@ public class GroundPlaneGUI : DefaultObserverEventHandler
             Quaternion.identity,
             new Vector3(rx, ry, 1));
 
-        GUIStyle myTextStyle = new GUIStyle(GUI.skin.textField);
-        myTextStyle.fontSize = 50;
-        myTextStyle.richText = true;
-        myTextStyle.alignment = TextAnchor.MiddleCenter;
+        GUIStyle myTextStyle = new GUIStyle(GUI.skin.textField)
+        {
+            fontSize = 50,
+            richText = true,
+            alignment = TextAnchor.MiddleCenter
+        };
         myTextStyle.normal.textColor = textColor;
 
         // Logo, left lower corner
@@ -157,6 +161,7 @@ public class GroundPlaneGUI : DefaultObserverEventHandler
             btnWidth,
             btnTextHeight);
 
+        // android has another screenshot button, only render for editor
         if (!isScreenshotProcessing &&
             !(Application.platform == RuntimePlatform.Android))
         {

@@ -14,8 +14,8 @@ public class FurnitureTargetGUI : MonoBehaviour
     private GameObject currentModel;
     private Material currentMaterial;
     private int FurnitureIndex = 0;
-    private readonly List<GameObject> furnitureList = new();
     private const float rotationSpeed = 2500f;
+    private readonly List<GameObject> furnitureList = new();
 
     /// <summary>
     /// Start is called before the first frame update
@@ -41,7 +41,7 @@ public class FurnitureTargetGUI : MonoBehaviour
         Destroy(currentModel);
         var model = furnitureList[FurnitureIndex];
         var FurnitureTarget = GameObject.Find("FurnitureTarget");
-        currentModel = Instantiate(model, FurnitureTarget.transform, true);
+        currentModel = Instantiate(model, FurnitureTarget.transform); //, true);
         currentModel.transform.position = spawnPosition;
         currentModel.transform.localScale = localScale;
         currentModel.name = "CurrentModel";
@@ -211,13 +211,13 @@ public class FurnitureTargetGUI : MonoBehaviour
         Debug.Log($"OnChooseAction - Furniture - chosen {currentModel}");
 
         var groundPlane = GameObject.Find("GroundPlaneStage");
-        var currentGroundPlaneModel = GameObject.Find("groundPlaneModel");
-        // TEST (ehem. TODO) (Frage an Hr. Anthes) - objekt hängt in der luft --> scale des groundPlaneModel auf 1,1,1 und y 0.5 !Unbedingt testen! 
+        var currentGroundPlaneModel = GameObject.Find("GroundPlaneModel");
+        // TEST (ehem. TODO) (Frage an Hr. Anthes) - objekt hängt in der luft --> scale des GroundPlaneModel auf 1,1,1 und y 0.5 !Unbedingt testen! 
         //Vector3 spawnPosition = currentGroundPlaneModel.transform.position;
         Vector3 localScale = currentGroundPlaneModel.transform.localScale;
         Destroy(currentGroundPlaneModel);
         var newGroundPlaneModel = Instantiate(currentModel, groundPlane.transform);
-        newGroundPlaneModel.name = "groundPlaneModel";
+        newGroundPlaneModel.name = "GroundPlaneModel";
         newGroundPlaneModel.transform.localScale = localScale;
         newGroundPlaneModel.transform.rotation = currentModel.transform.rotation;
 
@@ -227,7 +227,6 @@ public class FurnitureTargetGUI : MonoBehaviour
         Debug.Log($"Chosen Furniture       = {GameManager.ChosenFurniture}");
         Debug.Log($"Chosen Furniture Price = {GameManager.ChosenFurnitureCost}");
 
-        // TODO groundplane could show choosen model in a small 2d view as preview
-
+        // TODO (future feature) groundplane could show choosen model in a small 2d view as preview
     }
 }

@@ -36,6 +36,13 @@ show_downloads: true
 # custom settings (for cloudflare build)
 repository: Barokai/FurnitAR
 
+
+github:
+  zip_url: /assets/images/logo.png
+  docu: /assets/images/logo.png
+  targets: /assets/images/logo.png
+  apk: /assets/images/logo.png
+
 # Build settings
 # theme: minima
 # plugins:
