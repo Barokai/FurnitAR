@@ -30,7 +30,7 @@ domain: "barokai.github.io"
 twitter_username: barokai
 github_username:  barokai
 
-logo: /assets/imgages/logo.png
+logo: /assets/images/logo.png
 show_downloads: true
 
 # custom settings (for cloudflare build)
