@@ -72,3 +72,5 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 /Packages/com.ptc.vuforia.engine-*.tgz
+
+!FurnitAR.apk

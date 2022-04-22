@@ -107,8 +107,6 @@ public class GroundPlaneGUI : DefaultObserverEventHandler // MonoBehaviour
         base.OnTrackingLost();
     }
 
-
-
     void OnGUI()
     {
         //set up scaling
@@ -118,7 +116,7 @@ public class GroundPlaneGUI : DefaultObserverEventHandler // MonoBehaviour
         GUI.matrix = Matrix4x4.TRS(new Vector3(0, 0, 0), Quaternion.identity, new Vector3(rx, ry, 1));
 
         GUIStyle myTextStyle = new GUIStyle(GUI.skin.textField);
-        
+
         // https://forum.unity.com/threads/change-gui-box-color.174609/#post-1194616
         // NOTE not working - needed for custom border
         //GUIStyle myTextStyle = new GUIStyle(GUI.skin.box);
@@ -128,7 +126,7 @@ public class GroundPlaneGUI : DefaultObserverEventHandler // MonoBehaviour
         myTextStyle.richText = true;
         myTextStyle.alignment = TextAnchor.MiddleCenter;
         myTextStyle.normal.textColor = textColor;
-        
+
         // Logo, left lower corner
         if (!LogoTexture)
         {
@@ -142,29 +140,33 @@ public class GroundPlaneGUI : DefaultObserverEventHandler // MonoBehaviour
                 btnLogoHeight),
             LogoTexture);
 
-        // Screenshot button, right upper corner
-        Rect captureScreenshotBtnRect = new Rect(
-            nativeWidth - btnWidth - btnPadding,
-            btnPadding,
-            btnWidth,
-            btnTextHeight);
+        // skipped screenshot functionality for now on android
+        //if (Application.platform != RuntimePlatform.Android)
+        //{
+            // Screenshot button, right upper corner
+            Rect captureScreenshotBtnRect = new Rect(
+                nativeWidth - btnWidth - btnPadding,
+                btnPadding,
+                btnWidth,
+                btnTextHeight);
 
-        if (!isScreenshotProcessing)
-        {
-            var text = "Screenshot";
-            //#if UNITY_ANDROID
-            if (Application.platform == RuntimePlatform.Android)
+            if (!isScreenshotProcessing)
             {
-                text = "Share";
-            }
-            //#endif
-            var captureScreenshot = GUI.Button(captureScreenshotBtnRect, $"<b>{text}</b>", myTextStyle);
+                var text = "Screenshot";
+                //#if UNITY_ANDROID
+                if (Application.platform == RuntimePlatform.Android)
+                {
+                    text = "Share";
+                }
+                //#endif
+                var captureScreenshot = GUI.Button(captureScreenshotBtnRect, $"<b>{text}</b>", myTextStyle);
 
-            if (captureScreenshot)
-            {
-                OnCaptureScreenshot();
+                if (captureScreenshot)
+                {
+                    OnShareButtonClick();
+                }
             }
-        }
+        //}
 
         // reset button, middle lower
         Rect resetFurnitureListBtnRect = new Rect(
@@ -265,12 +267,6 @@ public class GroundPlaneGUI : DefaultObserverEventHandler // MonoBehaviour
         GameManager.FunitureWithPrices.Clear();
     }
 
-    public void OnCaptureScreenshot()
-    {
-        Debug.Log("OnCaptureScreenshot fired");
-        OnShareButtonClick();
-    }
-
     void OnApplicationFocus(bool focus)
     {
         isFocus = focus;
@@ -288,6 +284,7 @@ public class GroundPlaneGUI : DefaultObserverEventHandler // MonoBehaviour
 
     public void OnShareButtonClick()
     {
+        Debug.Log("OnShareButtonClick");
         screenshotName = "FurnitAR.png";
         shareSubject = "i planned something....";
         shareMessage = "Check it out. \nCheers\n" +
@@ -311,6 +308,12 @@ public class GroundPlaneGUI : DefaultObserverEventHandler // MonoBehaviour
     }
 
 #if UNITY_ANDROID
+    /// <summary>
+    /// Great documentation by https://agrawalsuneet.github.io/blogs/native-android-image-sharing-in-unity-using-fileprovider/
+    /// (also custom android plugin provided)
+    /// Android 8+ had problems https://gist.github.com/agrawalsuneet/a39cdbee9fa093a16b817742b602f9e7?permalink_comment_id=3053882#gistcomment-3053882
+    /// </summary>
+    /// <returns></returns>
     public IEnumerator ShareScreenshotInAnroid()
     {
         isScreenshotProcessing = true;
@@ -323,14 +326,33 @@ public class GroundPlaneGUI : DefaultObserverEventHandler // MonoBehaviour
 
         if (!Application.isEditor)
         {
+            //current activity context
+            AndroidJavaClass unity = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+            AndroidJavaObject currentActivity = unity.GetStatic<AndroidJavaObject>("currentActivity");
+
             //Create intent for action send
             AndroidJavaClass intentClass = new AndroidJavaClass("android.content.Intent");
             AndroidJavaObject intentObject = new AndroidJavaObject("android.content.Intent");
             intentObject.Call<AndroidJavaObject>("setAction", intentClass.GetStatic<string>("ACTION_SEND"));
 
+            //old code which is not allowed in Android 8 or above
             //create image URI to add it to the intent
-            AndroidJavaClass uriClass = new AndroidJavaClass("android.net.Uri");
-            AndroidJavaObject uriObject = uriClass.CallStatic<AndroidJavaObject>("parse", "file://" + screenShotPath);
+            //AndroidJavaClass uriClass = new AndroidJavaClass ("android.net.Uri");
+            //AndroidJavaObject uriObject = uriClass.CallStatic<AndroidJavaObject> ("parse", "file://" + screenShotPath);
+
+            //create file object of the screenshot captured
+            AndroidJavaObject fileObject = new AndroidJavaObject("java.io.File", screenShotPath);
+
+            //create FileProvider class object
+            AndroidJavaClass fileProviderClass = new AndroidJavaClass("android.support.v4.content.FileProvider");
+
+            object[] providerParams = new object[3];
+            providerParams[0] = currentActivity;
+            providerParams[1] = "com.agrawalsuneet.unityclient.provider";
+            providerParams[2] = fileObject;
+
+            //instead of parsing the uri, will get the uri from file using FileProvider
+            AndroidJavaObject uriObject = fileProviderClass.CallStatic<AndroidJavaObject>("getUriForFile", providerParams);
 
             //put image and string extra
             intentObject.Call<AndroidJavaObject>("putExtra", intentClass.GetStatic<string>("EXTRA_STREAM"), uriObject);
@@ -338,9 +360,10 @@ public class GroundPlaneGUI : DefaultObserverEventHandler // MonoBehaviour
             intentObject.Call<AndroidJavaObject>("putExtra", intentClass.GetStatic<string>("EXTRA_SUBJECT"), shareSubject);
             intentObject.Call<AndroidJavaObject>("putExtra", intentClass.GetStatic<string>("EXTRA_TEXT"), shareMessage);
 
-            AndroidJavaClass unity = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
-            AndroidJavaObject currentActivity = unity.GetStatic<AndroidJavaObject>("currentActivity");
-            AndroidJavaObject chooser = intentClass.CallStatic<AndroidJavaObject>("createChooser", intentObject, "Share your screenshot");
+            //additionally grant permission to read the uri
+            intentObject.Call<AndroidJavaObject>("addFlags", intentClass.GetStatic<int>("FLAG_GRANT_READ_URI_PERMISSION"));
+
+            AndroidJavaObject chooser = intentClass.CallStatic<AndroidJavaObject>("createChooser", intentObject, "Share your high score");
             currentActivity.Call("startActivity", chooser);
         }
 

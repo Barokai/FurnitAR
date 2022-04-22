@@ -50,3 +50,9 @@ to <https://assetstore.unity.com/packages/3d/props/furniture/big-furniture-pack-
 - doku
 - präsentation
 - editorconfig? <https://github.com/zaikman/unity-editorconfig>
+
+- github pages simple --> furnitAR.lab404.xyz <https://dash.cloudflare.com/dde661167d68b748d15431f23fd7a090/pages/new/provider/github>
+  - <https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll>
+  - minimal theme (to be styled with LALALA and BADA55) <https://github.com/pages-themes/minimal>
+  - download of imagetargets and apk - that's it.
+- add hr. anthes to github collaborators <https://github.com/Barokai/FurnitAR/settings/access>
