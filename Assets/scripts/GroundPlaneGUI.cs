@@ -5,38 +5,29 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
-// public class GroundPlaneGUI :  DefaultTrackableEventHandler (obsolete) 
-// DefaultObserverEventHandler needed for OnTracking events
-public class GroundPlaneGUI : DefaultObserverEventHandler // MonoBehaviour
+public class GroundPlaneGUI : DefaultObserverEventHandler
 {
     private readonly float nativeWidth = 1920f;
     private readonly float nativeHeight = 1080f;
-    //public Texture btntexture;
-    public Texture LogoTexture;
-    public Texture RightButtonTexture;
-    public decimal totalAmount = GameManager.TotalAmount;
-    public string topLeftButtonText = "Please choose and place";
-
-    //private readonly float btnHeight = 110;
     private readonly float btnWidth = 350;
     private readonly float btnTextHeight = 70;
     private readonly float btnPadding = 5;
 
     private static readonly float btnLogoHeight = 100;
     private static readonly float btnLogoWidth = btnLogoHeight;
-
     private static readonly Color textColor = new Color(26, 26, 26); // #1a1a1a = LALALA
 
-    //private GameObject ModelToPlace;
-    //public Vector3 ModelToPlaceRotation;
+    public Texture LogoTexture;
+    public Texture RightButtonTexture;
+    public decimal totalAmount = GameManager.TotalAmount;
+    public string topLeftButtonText = "Please choose and place";
 
-    // screenshot fucntionality https://agrawalsuneet.github.io/blogs/native-android-image-sharing-in-unity/
+    // screenshot fucntionality
     private bool isFocus = false;
     private bool isScreenshotProcessing = false;
     private string screenshotName;
     private string shareSubject, shareMessage;
 
-    // https://medium.com/@emrahhozcann/how-to-create-an-ar-augmented-reality-android-app-with-dynamic-target-image-and-3d-model-unity-8f525898da3f
     private void Start()
     {
         base.Start();
@@ -44,7 +35,7 @@ public class GroundPlaneGUI : DefaultObserverEventHandler // MonoBehaviour
 
     private void Update()
     {
-        // TODO could show preview (transparent) of the model before placement (+ price? +name of model/material?)
+        // TODO (future feature) could show preview (transparent) of the model before placement (+ price? +name of model/material?)
         if (GameManager.TotalAmount > 0)
         {
             totalAmount = GameManager.TotalAmount;
@@ -67,9 +58,6 @@ public class GroundPlaneGUI : DefaultObserverEventHandler // MonoBehaviour
     {
         Debug.Log("OnContentPlaced() called.");
 
-        // TODO (Frage an Hr. Anthes) find current model (or the just placed event?) 
-        // and rotate it in the same way it was rotated in FurnitureTargetUI
-        // use GameManager.ModelToPlaceRotation??
         var currentGroundPlaneModel = GameObject.Find("groundPlaneModel");
         currentGroundPlaneModel.transform.rotation = GameManager.ModelToPlaceRotation;
 
@@ -121,12 +109,6 @@ public class GroundPlaneGUI : DefaultObserverEventHandler // MonoBehaviour
             new Vector3(rx, ry, 1));
 
         GUIStyle myTextStyle = new GUIStyle(GUI.skin.textField);
-
-        // https://forum.unity.com/threads/change-gui-box-color.174609/#post-1194616
-        // NOTE not working - needed for custom border
-        //GUIStyle myTextStyle = new GUIStyle(GUI.skin.box);
-        //myTextStyle.normal.background = MakeTex(2, 2, new Color(186, 218, 85)); // #bada55, BADASS!
-        //myTextStyle.border = new RectOffset(2, 2, 2, 2);
         myTextStyle.fontSize = 50;
         myTextStyle.richText = true;
         myTextStyle.alignment = TextAnchor.MiddleCenter;
@@ -145,9 +127,6 @@ public class GroundPlaneGUI : DefaultObserverEventHandler // MonoBehaviour
                 btnLogoHeight),
             LogoTexture);
 
-        // skipped screenshot functionality for now on android
-        //if (Application.platform != RuntimePlatform.Android)
-        //{
         // Screenshot button, right upper corner
         Rect captureScreenshotBtnRect = new Rect(
             nativeWidth - btnWidth - btnPadding,
@@ -158,12 +137,11 @@ public class GroundPlaneGUI : DefaultObserverEventHandler // MonoBehaviour
         if (!isScreenshotProcessing)
         {
             var text = "Screenshot";
-            //#if UNITY_ANDROID
+
             if (Application.platform == RuntimePlatform.Android)
             {
                 text = "Share";
             }
-            //#endif
             var captureScreenshot = GUI.Button(captureScreenshotBtnRect, $"<b>{text}</b>", myTextStyle);
 
             if (captureScreenshot)
@@ -171,7 +149,6 @@ public class GroundPlaneGUI : DefaultObserverEventHandler // MonoBehaviour
                 OnShareButtonClick();
             }
         }
-        //}
 
         // reset button, middle lower
         Rect resetFurnitureListBtnRect = new Rect(
@@ -241,21 +218,9 @@ public class GroundPlaneGUI : DefaultObserverEventHandler // MonoBehaviour
 
     public void OnResetFurnitureList()
     {
-        // TODO Hr. Anthes fragen: reset von bisher platzieren objekten?
-        // ground plane wird duplicated, alles bis auf die erste instanz destroyen?
         Debug.Log("ResetFurnitureList fired");
-        //var groundPlane = GameObject.Find("GroundPlaneStage");
-        //foreach (Transform child in groundPlane.transform)
-        //{
-        //    // TODO skip default model "groundPlaneModel";
-        //    if (child.gameObject.name != "groundPlaneModel")
-        //    {
-        //        GameObject.Destroy(child.gameObject);
-        //    }
-        //}
 
         var tags = GameObject.FindGameObjectsWithTag("GroundPlaneTag");
-        // TODO TEST find all gameobjects with tag "GroundPlaneTag" and delete all but first 
         if (tags.Length > 0)
         {
             foreach (var gameobject in tags[1..])
@@ -339,11 +304,6 @@ public class GroundPlaneGUI : DefaultObserverEventHandler // MonoBehaviour
             AndroidJavaClass intentClass = new AndroidJavaClass("android.content.Intent");
             AndroidJavaObject intentObject = new AndroidJavaObject("android.content.Intent");
             intentObject.Call<AndroidJavaObject>("setAction", intentClass.GetStatic<string>("ACTION_SEND"));
-
-            //old code which is not allowed in Android 8 or above
-            //create image URI to add it to the intent
-            //AndroidJavaClass uriClass = new AndroidJavaClass ("android.net.Uri");
-            //AndroidJavaObject uriObject = uriClass.CallStatic<AndroidJavaObject> ("parse", "file://" + screenShotPath);
 
             //create file object of the screenshot captured
             AndroidJavaObject fileObject = new AndroidJavaObject("java.io.File", screenShotPath);

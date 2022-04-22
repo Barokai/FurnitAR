@@ -27,8 +27,6 @@ public class MaterialTargetGUI : MonoBehaviour
     /// </summary>
     void Start()
     {
-        //base_material = Resources.Load($"Material/{nameof(base_material)}", typeof(Material)) as Material;
-        //base_material2 = Resources.Load($"Material/{nameof(base_material2)}", typeof(Material)) as Material;
         cloth_1 = Resources.Load($"Material/{nameof(cloth_1)}", typeof(Material)) as Material;
         cloth_2 = Resources.Load($"Material/{nameof(cloth_2)}", typeof(Material)) as Material;
         cloth_3 = Resources.Load($"Material/{nameof(cloth_3)}", typeof(Material)) as Material;
@@ -39,8 +37,6 @@ public class MaterialTargetGUI : MonoBehaviour
         wood_3 = Resources.Load($"Material/{nameof(wood_3)}", typeof(Material)) as Material;
         riffelblech = Resources.Load($"Material/{nameof(riffelblech)}", typeof(Material)) as Material;
 
-        //materialList.Add(base_material);
-        //materialList.Add(base_material2);
         materialList.Add(cloth_1);
         materialList.Add(cloth_2);
         materialList.Add(cloth_3);
