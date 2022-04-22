@@ -1,3 +1,8 @@
+# Welcome to FurnitAR
+
+## First idea and feedback
+
+_Feedback_
 >Lieber Herr Knittl-Frank,
 >
 >von der Idee her passt das soweit, Sie könnten auch z.B. mit mehreren Katalogen arbeiten und dort Varianten triggern z.B. über die Nähe oder Virtual Buttons. Z.B. eine Holztabelle oder Katalog in Kombination mit einem Möbelkatalog. Wichtig ist, dass sie auf die entsprechenden LoC kommen.
@@ -8,6 +13,7 @@
 >Christoph Anthes
 
 -----------------------------------------------------------------------
+_Projektidee_
 >>Guten Tag Herr Anthes,
 >>
 >>wie gewünscht eine kurze Beschreibung meiner Projektidee für AUG:
@@ -21,26 +27,19 @@
 >>Beste Grüße,
 >>Peter
 
-# Setup (probably solved with using git lfs for this file)
-
-Download vuforia package and place it in /Packages/ folder
-
-- vuforia 10.6.3
-<https://1drv.ms/u/s!AufoJNRhqarVo_ZK56pDWrkrjs9q2g?e=bc7O3B>
-
-# Huge thanks
-
-to <https://assetstore.unity.com/packages/3d/props/furniture/big-furniture-pack-7717>
-
-# Feature list
+## Final Feature list
 
 1) Previewing models via rotation on imagetarget
 1) Choosing models via imagetarget
 1) Choosing materials via imagetarget
 1) Placing chosen model (with chosen material) on ground plane via plane finder (plane finder?)
-1) (optional) Repeat steps 1-4 and place other models or the same with different material - it's up to you
+1) _(optional)_ Repeat steps 1-4 and place other models or the same with different material - it's up to you
 1) Check your placed models
 1) Share a screenshot if wanted
+
+### Huge thanks
+
+to <https://assetstore.unity.com/packages/3d/props/furniture/big-furniture-pack-7717>
 
 ## TODO new
 

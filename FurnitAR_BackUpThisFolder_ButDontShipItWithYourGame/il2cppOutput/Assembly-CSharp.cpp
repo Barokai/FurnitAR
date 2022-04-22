@@ -305,6 +305,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral783FBDDE653822786840CF19B6E348FCA2490290
 IL2CPP_EXTERN_C String_t* _stringLiteral7E37906060192577E35641F55999BEFF0C7F8AF3;
 IL2CPP_EXTERN_C String_t* _stringLiteral7F6EFBDE8FB3AA4CBD7DAB142F40C2256964141A;
 IL2CPP_EXTERN_C String_t* _stringLiteral80D13F6CC025680F549E2797E71CD566269A086C;
+IL2CPP_EXTERN_C String_t* _stringLiteral812621A9F57650A8BB2FF4E04D79772C673387F2;
 IL2CPP_EXTERN_C String_t* _stringLiteral8142A9D41574CC521DEF66F646B327C0D17E2711;
 IL2CPP_EXTERN_C String_t* _stringLiteral86BBAACC00198DBB3046818AD3FC2AA10AE48DE1;
 IL2CPP_EXTERN_C String_t* _stringLiteral8916798EFABCD9C2273C85A610FA72D529955F5F;
@@ -314,7 +315,6 @@ IL2CPP_EXTERN_C String_t* _stringLiteral90525FA74F5D2D0E74F8CA7F33444CA7DBA2DF52
 IL2CPP_EXTERN_C String_t* _stringLiteral9FE1252E0C99589986A3FD06B642DC25085790D2;
 IL2CPP_EXTERN_C String_t* _stringLiteralA0F9E0F3189D65CE5DF86443E1C0F66DDEB5497B;
 IL2CPP_EXTERN_C String_t* _stringLiteralA3D6803561A09802D8D2944BFE037F492ABC8118;
-IL2CPP_EXTERN_C String_t* _stringLiteralA58142DE8D5B2F94669DFEAFF883CF0970531A4B;
 IL2CPP_EXTERN_C String_t* _stringLiteralA9F4E96B09222DD5A5FE4B706FE5B13E4A93D5A2;
 IL2CPP_EXTERN_C String_t* _stringLiteralABD1A5066AD876BBA7B4C0BF57BA82BAB5878D3B;
 IL2CPP_EXTERN_C String_t* _stringLiteralB094BFC20326EA8706B700E846DAACC35FE59C68;
@@ -3631,7 +3631,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GroundPlaneGUI_Update_mFC042249F6622B625
 
 IL_001c:
 	{
-		// if (!isScreenshotProcessing && !String.IsNullOrEmpty(GameManager.ChooseFurnitureHint + GameManager.ChooseMaterialHint))
+		// if (!isScreenshotProcessing &&
+		//     !String.IsNullOrEmpty(GameManager.ChooseFurnitureHint + GameManager.ChooseMaterialHint))
 		bool L_4 = __this->___isScreenshotProcessing_27;
 		if (L_4)
 		{
@@ -3670,7 +3671,8 @@ IL_001c:
 		ArrayElementTypeCheck (L_12, L_13);
 		(L_12)->SetAt(static_cast<il2cpp_array_size_t>(1), (String_t*)L_13);
 		V_0 = L_12;
-		// GameObject.Find("TopText").GetComponent<Text>().text = $"Please {String.Join(" & ", choose.Where(s => !String.IsNullOrEmpty(s)))}";
+		// GameObject.Find("TopText").GetComponent<Text>().text =
+		//     $"Please {String.Join(" & ", choose.Where(s => !String.IsNullOrEmpty(s)))}";
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_14;
 		L_14 = GameObject_Find_mFF1D6C65A7E2CD82443F4DCE4C53472FB30B7F51(_stringLiteral6ED9655B0BFFB39E26780EB1C72661804E1F935F, NULL);
 		NullCheck(L_14);
@@ -4022,7 +4024,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GroundPlaneGUI_OnGUI_mA19BA82FFE9ED47C6F
 		L_2 = Screen_get_height_m624DD2D53F34087064E3B9D09AC2207DB4E86CA8(NULL);
 		float L_3 = __this->___nativeHeight_15;
 		V_1 = ((float)(((float)L_2)/L_3));
-		// GUI.matrix = Matrix4x4.TRS(new Vector3(0, 0, 0), Quaternion.identity, new Vector3(rx, ry, 1));
+		// GUI.matrix = Matrix4x4.TRS(
+		//     new Vector3(0, 0, 0),
+		//     Quaternion.identity,
+		//     new Vector3(rx, ry, 1));
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4;
 		memset((&L_4), 0, sizeof(L_4));
 		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_4), (0.0f), (0.0f), (0.0f), /*hidden argument*/NULL);
@@ -4653,7 +4658,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GroundPlaneGUI__cctor_m2940E2BDA64010221
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GroundPlaneGUI_U3CShareScreenshotInAnroidU3Eb__29_0_mEF32AB7D546BF0024A46C47959CAD9BD9C5C8132 (GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337* __this, const RuntimeMethod* method) 
 {
 	{
-		// 
+		// yield return new WaitUntil(() => isFocus);
 		bool L_0 = __this->___isFocus_26;
 		return L_0;
 	}
@@ -4696,7 +4701,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m29074B3073EC8C29C6D86664C
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3CUpdateU3Eb__18_0_mD2628891F7A8D5D7C60BA232E9F9D8588AB5DFE9 (U3CU3Ec_t75339C2C4313B1573D9EFC29A872F8E3578739F5* __this, String_t* ___s0, const RuntimeMethod* method) 
 {
 	{
-		// GameObject.Find("TopText").GetComponent<Text>().text = $"Please {String.Join(" & ", choose.Where(s => !String.IsNullOrEmpty(s)))}";
+		// $"Please {String.Join(" & ", choose.Where(s => !String.IsNullOrEmpty(s)))}";
 		String_t* L_0 = ___s0;
 		bool L_1;
 		L_1 = String_IsNullOrEmpty_m54CF0907E7C4F3AFB2E796A13DC751ECBB8DB64A(L_0, NULL);
@@ -4790,9 +4795,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CShareScreenshotInAnroidU3Ed__29_MoveN
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral6CB60CD0F517BE0AB5DBF3CCB647F6428F1FA6D1);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral75E05143EB132AAA8A22B48813DB8E6047380821);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral76C41506C48C50491E7B491CC16239D496B8C6CA);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral812621A9F57650A8BB2FF4E04D79772C673387F2);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral86BBAACC00198DBB3046818AD3FC2AA10AE48DE1);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral9FE1252E0C99589986A3FD06B642DC25085790D2);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralA58142DE8D5B2F94669DFEAFF883CF0970531A4B);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralC5E7F48ACAC428EC5EA35E9BBED10A0E23CBE728);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralC74B0F15A2662CC825BC2B89AA59B0EAA7AD813E);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralC9ADF473A30BA80282FCBE6EF8685B62B5E4AF76);
@@ -4843,11 +4848,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CShareScreenshotInAnroidU3Ed__29_MoveN
 IL_0026:
 	{
 		__this->___U3CU3E1__state_0 = (-1);
-		// /// (also custom android plugin provided)
+		// isScreenshotProcessing = true;
 		GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337* L_3 = V_1;
 		NullCheck(L_3);
 		L_3->___isScreenshotProcessing_27 = (bool)1;
-		// /// <returns></returns>
+		// yield return new WaitForEndOfFrame();
 		WaitForEndOfFrame_tE38D80923E3F8380069B423968C25ABE50A46663* L_4 = (WaitForEndOfFrame_tE38D80923E3F8380069B423968C25ABE50A46663*)il2cpp_codegen_object_new(WaitForEndOfFrame_tE38D80923E3F8380069B423968C25ABE50A46663_il2cpp_TypeInfo_var);
 		NullCheck(L_4);
 		WaitForEndOfFrame__ctor_m4AF7E576C01E6B04443BB898B1AE5D645F7D45AB(L_4, NULL);
@@ -4860,7 +4865,7 @@ IL_0026:
 IL_0048:
 	{
 		__this->___U3CU3E1__state_0 = (-1);
-		// {
+		// string screenShotPath = Application.persistentDataPath + "/" + screenshotName;
 		String_t* L_5;
 		L_5 = Application_get_persistentDataPath_m787EBC9B0862E7617DCD6CABD2147E61717EAC17(NULL);
 		GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337* L_6 = V_1;
@@ -4870,12 +4875,12 @@ IL_0048:
 		L_8 = String_Concat_m9B13B47FCB3DF61144D9647DDA05F527377251B0(L_5, _stringLiteral86BBAACC00198DBB3046818AD3FC2AA10AE48DE1, L_7, NULL);
 		__this->___U3CscreenShotPathU3E5__2_3 = L_8;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CscreenShotPathU3E5__2_3), (void*)L_8);
-		// isScreenshotProcessing = true;
+		// ScreenCapture.CaptureScreenshot(screenshotName, 1);
 		GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337* L_9 = V_1;
 		NullCheck(L_9);
 		String_t* L_10 = L_9->___screenshotName_28;
 		ScreenCapture_CaptureScreenshot_m6E774804276C74577E82CD2200A4FC9972CA0505(L_10, 1, NULL);
-		// // wait for graphics to render
+		// yield return new WaitForSeconds(0.5f);
 		WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* L_11 = (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3*)il2cpp_codegen_object_new(WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
 		NullCheck(L_11);
 		WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC(L_11, (0.5f), NULL);
@@ -4888,7 +4893,7 @@ IL_0048:
 IL_008f:
 	{
 		__this->___U3CU3E1__state_0 = (-1);
-		// 
+		// if (!Application.isEditor)
 		bool L_12;
 		L_12 = Application_get_isEditor_m0377DB707B566C8E21DA3CD99963210F6D57D234(NULL);
 		if (L_12)
@@ -4897,28 +4902,28 @@ IL_008f:
 		}
 	}
 	{
-		// yield return new WaitForSeconds(0.5f);
+		// AndroidJavaClass unity = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
 		AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03* L_13 = (AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03*)il2cpp_codegen_object_new(AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03_il2cpp_TypeInfo_var);
 		NullCheck(L_13);
 		AndroidJavaClass__ctor_mB5466169E1151B8CC44C8FED234D79984B431389(L_13, _stringLiteral4D613657609485AE586A3379BA0E3FC13C1E1078, NULL);
-		// 
+		// AndroidJavaObject currentActivity = unity.GetStatic<AndroidJavaObject>("currentActivity");
 		NullCheck(L_13);
 		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_14;
 		L_14 = AndroidJavaObject_GetStatic_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_mD7D192A35EB2B2DA3775FAB081958B72088251DD(L_13, _stringLiteralFB4AE4F77150C3A8E8E4F8B23E734E0C7277B7D9, AndroidJavaObject_GetStatic_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_mD7D192A35EB2B2DA3775FAB081958B72088251DD_RuntimeMethod_var);
 		V_2 = L_14;
-		// //current activity context
+		// AndroidJavaClass intentClass = new AndroidJavaClass("android.content.Intent");
 		AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03* L_15 = (AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03*)il2cpp_codegen_object_new(AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03_il2cpp_TypeInfo_var);
 		NullCheck(L_15);
 		AndroidJavaClass__ctor_mB5466169E1151B8CC44C8FED234D79984B431389(L_15, _stringLiteralC5E7F48ACAC428EC5EA35E9BBED10A0E23CBE728, NULL);
 		V_3 = L_15;
-		// AndroidJavaClass unity = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+		// AndroidJavaObject intentObject = new AndroidJavaObject("android.content.Intent");
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_16;
 		L_16 = Array_Empty_TisRuntimeObject_m55011E8360A8199FB239A5787BA8631CDD6116FC_inline(Array_Empty_TisRuntimeObject_m55011E8360A8199FB239A5787BA8631CDD6116FC_RuntimeMethod_var);
 		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_17 = (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0*)il2cpp_codegen_object_new(AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_il2cpp_TypeInfo_var);
 		NullCheck(L_17);
 		AndroidJavaObject__ctor_m5A65B5D325C2CEFAC4097A0D3813F8E158178DD7(L_17, _stringLiteralC5E7F48ACAC428EC5EA35E9BBED10A0E23CBE728, L_16, NULL);
 		V_4 = L_17;
-		// AndroidJavaObject currentActivity = unity.GetStatic<AndroidJavaObject>("currentActivity");
+		// intentObject.Call<AndroidJavaObject>("setAction", intentClass.GetStatic<string>("ACTION_SEND"));
 		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_18 = V_4;
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_19 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)1);
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_20 = L_19;
@@ -4932,7 +4937,7 @@ IL_008f:
 		NullCheck(L_18);
 		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_23;
 		L_23 = AndroidJavaObject_Call_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_m020246E0988293B6126B690BD6CE4D894276AA3D(L_18, _stringLiteralF2465BB6789DD1B3A37EEA353A2ADE8B9F4E9E37, L_20, AndroidJavaObject_Call_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_m020246E0988293B6126B690BD6CE4D894276AA3D_RuntimeMethod_var);
-		// //create image URI to add it to the intent
+		// AndroidJavaObject fileObject = new AndroidJavaObject("java.io.File", screenShotPath);
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_24 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)1);
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_25 = L_24;
 		String_t* L_26 = __this->___U3CscreenShotPathU3E5__2_3;
@@ -4943,37 +4948,37 @@ IL_008f:
 		NullCheck(L_27);
 		AndroidJavaObject__ctor_m5A65B5D325C2CEFAC4097A0D3813F8E158178DD7(L_27, _stringLiteral2E2B2D6CB38C0397F583E9010A9EDE7051872293, L_25, NULL);
 		V_5 = L_27;
-		// 
+		// AndroidJavaClass fileProviderClass = new AndroidJavaClass("android.support.v4.content.FileProvider");
 		AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03* L_28 = (AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03*)il2cpp_codegen_object_new(AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03_il2cpp_TypeInfo_var);
 		NullCheck(L_28);
 		AndroidJavaClass__ctor_mB5466169E1151B8CC44C8FED234D79984B431389(L_28, _stringLiteral18CF398013A096D0A740F5FCB8A7F1E21415CE4F, NULL);
-		// AndroidJavaObject fileObject = new AndroidJavaObject("java.io.File", screenShotPath);
+		// object[] providerParams = new object[3];
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_29 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)3);
 		V_6 = L_29;
-		// 
+		// providerParams[0] = currentActivity;
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_30 = V_6;
 		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_31 = V_2;
 		NullCheck(L_30);
 		ArrayElementTypeCheck (L_30, L_31);
 		(L_30)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject*)L_31);
-		// //create FileProvider class object
+		// providerParams[1] = "xyz.lab404.FurnitAR.provider";
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_32 = V_6;
 		NullCheck(L_32);
-		ArrayElementTypeCheck (L_32, _stringLiteralA58142DE8D5B2F94669DFEAFF883CF0970531A4B);
-		(L_32)->SetAt(static_cast<il2cpp_array_size_t>(1), (RuntimeObject*)_stringLiteralA58142DE8D5B2F94669DFEAFF883CF0970531A4B);
-		// AndroidJavaClass fileProviderClass = new AndroidJavaClass("android.support.v4.content.FileProvider");
+		ArrayElementTypeCheck (L_32, _stringLiteral812621A9F57650A8BB2FF4E04D79772C673387F2);
+		(L_32)->SetAt(static_cast<il2cpp_array_size_t>(1), (RuntimeObject*)_stringLiteral812621A9F57650A8BB2FF4E04D79772C673387F2);
+		// providerParams[2] = fileObject;
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_33 = V_6;
 		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_34 = V_5;
 		NullCheck(L_33);
 		ArrayElementTypeCheck (L_33, L_34);
 		(L_33)->SetAt(static_cast<il2cpp_array_size_t>(2), (RuntimeObject*)L_34);
-		// providerParams[0] = currentActivity;
+		// AndroidJavaObject uriObject = fileProviderClass.CallStatic<AndroidJavaObject>("getUriForFile", providerParams);
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_35 = V_6;
 		NullCheck(L_28);
 		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_36;
 		L_36 = AndroidJavaObject_CallStatic_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_m398EA96C1DE1BB885F2B1DD0E00E8BBA86B49E63(L_28, _stringLiteral144F0867A7EEEB1D50286F7F43404E58A479576E, L_35, AndroidJavaObject_CallStatic_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_m398EA96C1DE1BB885F2B1DD0E00E8BBA86B49E63_RuntimeMethod_var);
 		V_7 = L_36;
-		// 
+		// intentObject.Call<AndroidJavaObject>("putExtra", intentClass.GetStatic<string>("EXTRA_STREAM"), uriObject);
 		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_37 = V_4;
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_38 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)2);
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_39 = L_38;
@@ -4992,7 +4997,7 @@ IL_008f:
 		NullCheck(L_37);
 		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_44;
 		L_44 = AndroidJavaObject_Call_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_m020246E0988293B6126B690BD6CE4D894276AA3D(L_37, _stringLiteralF0DFD88B71BA2D095018DE492D01EDE1C32D4BD4, L_42, AndroidJavaObject_Call_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_m020246E0988293B6126B690BD6CE4D894276AA3D_RuntimeMethod_var);
-		// //instead of parsing the uri, will get the uri from file using FileProvider
+		// intentObject.Call<AndroidJavaObject>("setType", "image/png");
 		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_45 = V_4;
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_46 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)1);
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_47 = L_46;
@@ -5002,7 +5007,7 @@ IL_008f:
 		NullCheck(L_45);
 		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_48;
 		L_48 = AndroidJavaObject_Call_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_m020246E0988293B6126B690BD6CE4D894276AA3D(L_45, _stringLiteral76C41506C48C50491E7B491CC16239D496B8C6CA, L_47, AndroidJavaObject_Call_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_m020246E0988293B6126B690BD6CE4D894276AA3D_RuntimeMethod_var);
-		// AndroidJavaObject uriObject = fileProviderClass.CallStatic<AndroidJavaObject>("getUriForFile", providerParams);
+		// intentObject.Call<AndroidJavaObject>("putExtra", intentClass.GetStatic<string>("EXTRA_SUBJECT"), shareSubject);
 		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_49 = V_4;
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_50 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)2);
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_51 = L_50;
@@ -5023,7 +5028,7 @@ IL_008f:
 		NullCheck(L_49);
 		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_57;
 		L_57 = AndroidJavaObject_Call_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_m020246E0988293B6126B690BD6CE4D894276AA3D(L_49, _stringLiteralF0DFD88B71BA2D095018DE492D01EDE1C32D4BD4, L_54, AndroidJavaObject_Call_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_m020246E0988293B6126B690BD6CE4D894276AA3D_RuntimeMethod_var);
-		// 
+		// intentObject.Call<AndroidJavaObject>("putExtra", intentClass.GetStatic<string>("EXTRA_TEXT"), shareMessage);
 		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_58 = V_4;
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_59 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)2);
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_60 = L_59;
@@ -5044,7 +5049,7 @@ IL_008f:
 		NullCheck(L_58);
 		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_66;
 		L_66 = AndroidJavaObject_Call_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_m020246E0988293B6126B690BD6CE4D894276AA3D(L_58, _stringLiteralF0DFD88B71BA2D095018DE492D01EDE1C32D4BD4, L_63, AndroidJavaObject_Call_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_m020246E0988293B6126B690BD6CE4D894276AA3D_RuntimeMethod_var);
-		// intentObject.Call<AndroidJavaObject>("setType", "image/png");
+		// intentObject.Call<AndroidJavaObject>("addFlags", intentClass.GetStatic<int>("FLAG_GRANT_READ_URI_PERMISSION"));
 		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_67 = V_4;
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_68 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)1);
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_69 = L_68;
@@ -5060,7 +5065,7 @@ IL_008f:
 		NullCheck(L_67);
 		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_74;
 		L_74 = AndroidJavaObject_Call_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_m020246E0988293B6126B690BD6CE4D894276AA3D(L_67, _stringLiteral14A1F08B9468B94A6EE15FA8DC6830C240CE99F4, L_69, AndroidJavaObject_Call_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_m020246E0988293B6126B690BD6CE4D894276AA3D_RuntimeMethod_var);
-		// intentObject.Call<AndroidJavaObject>("putExtra", intentClass.GetStatic<string>("EXTRA_TEXT"), shareMessage);
+		// AndroidJavaObject chooser = intentClass.CallStatic<AndroidJavaObject>("createChooser", intentObject, "Share your high score");
 		AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03* L_75 = V_3;
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_76 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)2);
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_77 = L_76;
@@ -5076,7 +5081,7 @@ IL_008f:
 		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_80;
 		L_80 = AndroidJavaObject_CallStatic_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_m398EA96C1DE1BB885F2B1DD0E00E8BBA86B49E63(L_75, _stringLiteral54E9884C2A8A9804F2757FB402718D03522F4946, L_79, AndroidJavaObject_CallStatic_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_m398EA96C1DE1BB885F2B1DD0E00E8BBA86B49E63_RuntimeMethod_var);
 		V_8 = L_80;
-		// 
+		// currentActivity.Call("startActivity", chooser);
 		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_81 = V_2;
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_82 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)1);
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_83 = L_82;
@@ -5090,7 +5095,7 @@ IL_008f:
 
 IL_0232:
 	{
-		// 
+		// yield return new WaitUntil(() => isFocus);
 		GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337* L_85 = V_1;
 		Func_1_t2BE7F58348C9CC544A8973B3A9E55541DE43C457* L_86 = (Func_1_t2BE7F58348C9CC544A8973B3A9E55541DE43C457*)il2cpp_codegen_object_new(Func_1_t2BE7F58348C9CC544A8973B3A9E55541DE43C457_il2cpp_TypeInfo_var);
 		NullCheck(L_86);
@@ -5107,11 +5112,11 @@ IL_0232:
 IL_0252:
 	{
 		__this->___U3CU3E1__state_0 = (-1);
-		// AndroidJavaObject chooser = intentClass.CallStatic<AndroidJavaObject>("createChooser", intentObject, "Share your high score");
+		// isScreenshotProcessing = false;
 		GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337* L_88 = V_1;
 		NullCheck(L_88);
 		L_88->___isScreenshotProcessing_27 = (bool)0;
-		// currentActivity.Call("startActivity", chooser);
+		// }
 		return (bool)0;
 	}
 }

@@ -50,10 +50,12 @@ public class GroundPlaneGUI : DefaultObserverEventHandler // MonoBehaviour
             totalAmount = GameManager.TotalAmount;
         }
 
-        if (!isScreenshotProcessing && !String.IsNullOrEmpty(GameManager.ChooseFurnitureHint + GameManager.ChooseMaterialHint))
+        if (!isScreenshotProcessing &&
+            !String.IsNullOrEmpty(GameManager.ChooseFurnitureHint + GameManager.ChooseMaterialHint))
         {
             var choose = new[] { GameManager.ChooseMaterialHint, GameManager.ChooseFurnitureHint };
-            GameObject.Find("TopText").GetComponent<Text>().text = $"Please {String.Join(" & ", choose.Where(s => !String.IsNullOrEmpty(s)))}";
+            GameObject.Find("TopText").GetComponent<Text>().text =
+                $"Please {String.Join(" & ", choose.Where(s => !String.IsNullOrEmpty(s)))}";
         }
         else
         {
@@ -113,7 +115,10 @@ public class GroundPlaneGUI : DefaultObserverEventHandler // MonoBehaviour
         float rx = Screen.width / nativeWidth;
         float ry = Screen.height / nativeHeight;
 
-        GUI.matrix = Matrix4x4.TRS(new Vector3(0, 0, 0), Quaternion.identity, new Vector3(rx, ry, 1));
+        GUI.matrix = Matrix4x4.TRS(
+            new Vector3(0, 0, 0),
+            Quaternion.identity,
+            new Vector3(rx, ry, 1));
 
         GUIStyle myTextStyle = new GUIStyle(GUI.skin.textField);
 
@@ -143,29 +148,29 @@ public class GroundPlaneGUI : DefaultObserverEventHandler // MonoBehaviour
         // skipped screenshot functionality for now on android
         //if (Application.platform != RuntimePlatform.Android)
         //{
-            // Screenshot button, right upper corner
-            Rect captureScreenshotBtnRect = new Rect(
-                nativeWidth - btnWidth - btnPadding,
-                btnPadding,
-                btnWidth,
-                btnTextHeight);
+        // Screenshot button, right upper corner
+        Rect captureScreenshotBtnRect = new Rect(
+            nativeWidth - btnWidth - btnPadding,
+            btnPadding,
+            btnWidth,
+            btnTextHeight);
 
-            if (!isScreenshotProcessing)
+        if (!isScreenshotProcessing)
+        {
+            var text = "Screenshot";
+            //#if UNITY_ANDROID
+            if (Application.platform == RuntimePlatform.Android)
             {
-                var text = "Screenshot";
-                //#if UNITY_ANDROID
-                if (Application.platform == RuntimePlatform.Android)
-                {
-                    text = "Share";
-                }
-                //#endif
-                var captureScreenshot = GUI.Button(captureScreenshotBtnRect, $"<b>{text}</b>", myTextStyle);
-
-                if (captureScreenshot)
-                {
-                    OnShareButtonClick();
-                }
+                text = "Share";
             }
+            //#endif
+            var captureScreenshot = GUI.Button(captureScreenshotBtnRect, $"<b>{text}</b>", myTextStyle);
+
+            if (captureScreenshot)
+            {
+                OnShareButtonClick();
+            }
+        }
         //}
 
         // reset button, middle lower
@@ -348,7 +353,7 @@ public class GroundPlaneGUI : DefaultObserverEventHandler // MonoBehaviour
 
             object[] providerParams = new object[3];
             providerParams[0] = currentActivity;
-            providerParams[1] = "com.agrawalsuneet.unityclient.provider";
+            providerParams[1] = "xyz.lab404.FurnitAR.provider";
             providerParams[2] = fileObject;
 
             //instead of parsing the uri, will get the uri from file using FileProvider
