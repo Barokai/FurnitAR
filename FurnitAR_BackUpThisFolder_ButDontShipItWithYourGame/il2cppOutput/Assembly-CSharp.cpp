@@ -1688,20 +1688,20 @@ struct GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337  : public Defaul
 	float ___nativeWidth_14;
 	// System.Single GroundPlaneGUI::nativeHeight
 	float ___nativeHeight_15;
-	// UnityEngine.Texture GroundPlaneGUI::LogoTexture
-	Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700* ___LogoTexture_16;
-	// UnityEngine.Texture GroundPlaneGUI::RightButtonTexture
-	Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700* ___RightButtonTexture_17;
-	// System.Decimal GroundPlaneGUI::totalAmount
-	Decimal_tDA6C877282B2D789CF97C0949661CC11D643969F ___totalAmount_18;
-	// System.String GroundPlaneGUI::topLeftButtonText
-	String_t* ___topLeftButtonText_19;
 	// System.Single GroundPlaneGUI::btnWidth
-	float ___btnWidth_20;
+	float ___btnWidth_16;
 	// System.Single GroundPlaneGUI::btnTextHeight
-	float ___btnTextHeight_21;
+	float ___btnTextHeight_17;
 	// System.Single GroundPlaneGUI::btnPadding
-	float ___btnPadding_22;
+	float ___btnPadding_18;
+	// UnityEngine.Texture GroundPlaneGUI::LogoTexture
+	Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700* ___LogoTexture_22;
+	// UnityEngine.Texture GroundPlaneGUI::RightButtonTexture
+	Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700* ___RightButtonTexture_23;
+	// System.Decimal GroundPlaneGUI::totalAmount
+	Decimal_tDA6C877282B2D789CF97C0949661CC11D643969F ___totalAmount_24;
+	// System.String GroundPlaneGUI::topLeftButtonText
+	String_t* ___topLeftButtonText_25;
 	// System.Boolean GroundPlaneGUI::isFocus
 	bool ___isFocus_26;
 	// System.Boolean GroundPlaneGUI::isScreenshotProcessing
@@ -1717,11 +1717,11 @@ struct GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337  : public Defaul
 struct GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_StaticFields
 {
 	// System.Single GroundPlaneGUI::btnLogoHeight
-	float ___btnLogoHeight_23;
+	float ___btnLogoHeight_19;
 	// System.Single GroundPlaneGUI::btnLogoWidth
-	float ___btnLogoWidth_24;
+	float ___btnLogoWidth_20;
 	// UnityEngine.Color GroundPlaneGUI::textColor
-	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___textColor_25;
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___textColor_21;
 };
 
 // Vuforia.ObserverBehaviour
@@ -3626,7 +3626,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GroundPlaneGUI_Update_mFC042249F6622B625
 		// totalAmount = GameManager.TotalAmount;
 		il2cpp_codegen_runtime_class_init_inline(GameManager_t5FF4777C335671A034821DF9A4E0A9B230D98E09_il2cpp_TypeInfo_var);
 		Decimal_tDA6C877282B2D789CF97C0949661CC11D643969F L_3 = ((GameManager_t5FF4777C335671A034821DF9A4E0A9B230D98E09_StaticFields*)il2cpp_codegen_static_fields_for(GameManager_t5FF4777C335671A034821DF9A4E0A9B230D98E09_il2cpp_TypeInfo_var))->___TotalAmount_6;
-		__this->___totalAmount_18 = L_3;
+		__this->___totalAmount_24 = L_3;
 	}
 
 IL_001c:
@@ -4070,11 +4070,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GroundPlaneGUI_OnGUI_mA19BA82FFE9ED47C6F
 		GUIStyleState_t7A948723D9DCDFD8EE4F418B6EC909C18E023F95* L_17;
 		L_17 = GUIStyle_get_normal_mDEA2808FBD692E505784BD9E521738B4321BCA8F(L_16, NULL);
 		il2cpp_codegen_runtime_class_init_inline(GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_il2cpp_TypeInfo_var);
-		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_18 = ((GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_StaticFields*)il2cpp_codegen_static_fields_for(GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_il2cpp_TypeInfo_var))->___textColor_25;
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_18 = ((GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_StaticFields*)il2cpp_codegen_static_fields_for(GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_il2cpp_TypeInfo_var))->___textColor_21;
 		NullCheck(L_17);
 		GUIStyleState_set_textColor_m5868D12858E6402247953BCCDDA7A543BE6084F1(L_17, L_18, NULL);
 		// if (!LogoTexture)
-		Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700* L_19 = __this->___LogoTexture_16;
+		Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700* L_19 = __this->___LogoTexture_22;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_20;
 		L_20 = Object_op_Implicit_m18E1885C296CC868AC918101523697CFE6413C79(L_19, NULL);
@@ -4099,17 +4099,17 @@ IL_0099:
 		//         btnLogoWidth,
 		//         btnLogoHeight),
 		//     LogoTexture);
-		float L_21 = __this->___btnPadding_22;
+		float L_21 = __this->___btnPadding_18;
 		float L_22 = __this->___nativeHeight_15;
 		il2cpp_codegen_runtime_class_init_inline(GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_il2cpp_TypeInfo_var);
-		float L_23 = ((GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_StaticFields*)il2cpp_codegen_static_fields_for(GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_il2cpp_TypeInfo_var))->___btnLogoHeight_23;
-		float L_24 = __this->___btnPadding_22;
-		float L_25 = ((GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_StaticFields*)il2cpp_codegen_static_fields_for(GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_il2cpp_TypeInfo_var))->___btnLogoWidth_24;
-		float L_26 = ((GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_StaticFields*)il2cpp_codegen_static_fields_for(GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_il2cpp_TypeInfo_var))->___btnLogoHeight_23;
+		float L_23 = ((GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_StaticFields*)il2cpp_codegen_static_fields_for(GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_il2cpp_TypeInfo_var))->___btnLogoHeight_19;
+		float L_24 = __this->___btnPadding_18;
+		float L_25 = ((GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_StaticFields*)il2cpp_codegen_static_fields_for(GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_il2cpp_TypeInfo_var))->___btnLogoWidth_20;
+		float L_26 = ((GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_StaticFields*)il2cpp_codegen_static_fields_for(GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_il2cpp_TypeInfo_var))->___btnLogoHeight_19;
 		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_27;
 		memset((&L_27), 0, sizeof(L_27));
 		Rect__ctor_m18C3033D135097BEE424AAA68D91C706D2647F23((&L_27), L_21, ((float)il2cpp_codegen_subtract(((float)il2cpp_codegen_subtract(L_22, L_23)), L_24)), L_25, L_26, /*hidden argument*/NULL);
-		Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700* L_28 = __this->___LogoTexture_16;
+		Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700* L_28 = __this->___LogoTexture_22;
 		il2cpp_codegen_runtime_class_init_inline(GUI_tA9CDB3D69DB13D51AD83ABDB587EF95947EC2D2A_il2cpp_TypeInfo_var);
 		GUI_DrawTexture_m4DC8E4DE66E5B806D6C71E9BFC8B122DB2A51F09(L_27, L_28, NULL);
 		// Rect captureScreenshotBtnRect = new Rect(
@@ -4118,11 +4118,11 @@ IL_0099:
 		//     btnWidth,
 		//     btnTextHeight);
 		float L_29 = __this->___nativeWidth_14;
-		float L_30 = __this->___btnWidth_20;
-		float L_31 = __this->___btnPadding_22;
-		float L_32 = __this->___btnPadding_22;
-		float L_33 = __this->___btnWidth_20;
-		float L_34 = __this->___btnTextHeight_21;
+		float L_30 = __this->___btnWidth_16;
+		float L_31 = __this->___btnPadding_18;
+		float L_32 = __this->___btnPadding_18;
+		float L_33 = __this->___btnWidth_16;
+		float L_34 = __this->___btnTextHeight_17;
 		Rect__ctor_m18C3033D135097BEE424AAA68D91C706D2647F23((&V_3), ((float)il2cpp_codegen_subtract(((float)il2cpp_codegen_subtract(L_29, L_30)), L_31)), L_32, L_33, L_34, NULL);
 		// if (!isScreenshotProcessing)
 		bool L_35 = __this->___isScreenshotProcessing_27;
@@ -4177,12 +4177,12 @@ IL_0138:
 		//     btnWidth,
 		//     btnTextHeight);
 		float L_42 = __this->___nativeWidth_14;
-		float L_43 = __this->___btnWidth_20;
+		float L_43 = __this->___btnWidth_16;
 		float L_44 = __this->___nativeHeight_15;
-		float L_45 = __this->___btnTextHeight_21;
-		float L_46 = __this->___btnPadding_22;
-		float L_47 = __this->___btnWidth_20;
-		float L_48 = __this->___btnTextHeight_21;
+		float L_45 = __this->___btnTextHeight_17;
+		float L_46 = __this->___btnPadding_18;
+		float L_47 = __this->___btnWidth_16;
+		float L_48 = __this->___btnTextHeight_17;
 		Rect__ctor_m18C3033D135097BEE424AAA68D91C706D2647F23((&V_4), ((float)il2cpp_codegen_subtract(((float)(L_42/(2.0f))), ((float)(L_43/(2.0f))))), ((float)il2cpp_codegen_subtract(((float)il2cpp_codegen_subtract(L_44, L_45)), L_46)), L_47, L_48, NULL);
 		// if (!isScreenshotProcessing &&
 		//     !(Application.platform == RuntimePlatform.Android))
@@ -4241,15 +4241,15 @@ IL_019e:
 		V_6 = L_57;
 		// RightButtonTexture = test;
 		Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700* L_58 = V_6;
-		__this->___RightButtonTexture_17 = L_58;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___RightButtonTexture_17), (void*)L_58);
+		__this->___RightButtonTexture_23 = L_58;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___RightButtonTexture_23), (void*)L_58);
 		goto IL_01d8;
 	}
 
 IL_01c0:
 	{
 		// else if (!RightButtonTexture)
-		Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700* L_59 = __this->___RightButtonTexture_17;
+		Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700* L_59 = __this->___RightButtonTexture_23;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_60;
 		L_60 = Object_op_Implicit_m18E1885C296CC868AC918101523697CFE6413C79(L_59, NULL);
@@ -4297,17 +4297,17 @@ IL_01ec:
 		// RightButtonTexture);
 		float L_64 = __this->___nativeWidth_14;
 		il2cpp_codegen_runtime_class_init_inline(GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_il2cpp_TypeInfo_var);
-		float L_65 = ((GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_StaticFields*)il2cpp_codegen_static_fields_for(GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_il2cpp_TypeInfo_var))->___btnLogoWidth_24;
-		float L_66 = __this->___btnPadding_22;
+		float L_65 = ((GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_StaticFields*)il2cpp_codegen_static_fields_for(GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_il2cpp_TypeInfo_var))->___btnLogoWidth_20;
+		float L_66 = __this->___btnPadding_18;
 		float L_67 = __this->___nativeHeight_15;
-		float L_68 = ((GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_StaticFields*)il2cpp_codegen_static_fields_for(GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_il2cpp_TypeInfo_var))->___btnLogoHeight_23;
-		float L_69 = __this->___btnPadding_22;
-		float L_70 = ((GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_StaticFields*)il2cpp_codegen_static_fields_for(GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_il2cpp_TypeInfo_var))->___btnLogoWidth_24;
-		float L_71 = ((GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_StaticFields*)il2cpp_codegen_static_fields_for(GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_il2cpp_TypeInfo_var))->___btnLogoHeight_23;
+		float L_68 = ((GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_StaticFields*)il2cpp_codegen_static_fields_for(GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_il2cpp_TypeInfo_var))->___btnLogoHeight_19;
+		float L_69 = __this->___btnPadding_18;
+		float L_70 = ((GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_StaticFields*)il2cpp_codegen_static_fields_for(GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_il2cpp_TypeInfo_var))->___btnLogoWidth_20;
+		float L_71 = ((GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_StaticFields*)il2cpp_codegen_static_fields_for(GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_il2cpp_TypeInfo_var))->___btnLogoHeight_19;
 		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_72;
 		memset((&L_72), 0, sizeof(L_72));
 		Rect__ctor_m18C3033D135097BEE424AAA68D91C706D2647F23((&L_72), ((float)il2cpp_codegen_subtract(((float)il2cpp_codegen_subtract(L_64, L_65)), L_66)), ((float)il2cpp_codegen_subtract(((float)il2cpp_codegen_subtract(L_67, L_68)), L_69)), L_70, L_71, /*hidden argument*/NULL);
-		Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700* L_73 = __this->___RightButtonTexture_17;
+		Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700* L_73 = __this->___RightButtonTexture_23;
 		il2cpp_codegen_runtime_class_init_inline(GUI_tA9CDB3D69DB13D51AD83ABDB587EF95947EC2D2A_il2cpp_TypeInfo_var);
 		GUI_DrawTexture_m4DC8E4DE66E5B806D6C71E9BFC8B122DB2A51F09(L_72, L_73, NULL);
 	}
@@ -4336,13 +4336,13 @@ IL_022c:
 	}
 	{
 		// topLeftButtonText = $"{totalAmount} ?";
-		Decimal_tDA6C877282B2D789CF97C0949661CC11D643969F L_78 = __this->___totalAmount_18;
+		Decimal_tDA6C877282B2D789CF97C0949661CC11D643969F L_78 = __this->___totalAmount_24;
 		Decimal_tDA6C877282B2D789CF97C0949661CC11D643969F L_79 = L_78;
 		RuntimeObject* L_80 = Box(Decimal_tDA6C877282B2D789CF97C0949661CC11D643969F_il2cpp_TypeInfo_var, &L_79);
 		String_t* L_81;
 		L_81 = String_Format_m8C122B26BC5AA10E2550AECA16E57DAE10F07E30(_stringLiteral2659CBBFCB2710CD85725B69BCDAB40CA4AC204C, L_80, NULL);
-		__this->___topLeftButtonText_19 = L_81;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___topLeftButtonText_19), (void*)L_81);
+		__this->___topLeftButtonText_25 = L_81;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___topLeftButtonText_25), (void*)L_81);
 	}
 
 IL_0260:
@@ -4355,14 +4355,14 @@ IL_0260:
 		//         btnTextHeight),
 		//     $"<b>{topLeftButtonText}</b>",
 		//     myTextStyle);
-		float L_82 = __this->___btnPadding_22;
-		float L_83 = __this->___btnPadding_22;
-		float L_84 = __this->___btnWidth_20;
-		float L_85 = __this->___btnTextHeight_21;
+		float L_82 = __this->___btnPadding_18;
+		float L_83 = __this->___btnPadding_18;
+		float L_84 = __this->___btnWidth_16;
+		float L_85 = __this->___btnTextHeight_17;
 		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_86;
 		memset((&L_86), 0, sizeof(L_86));
 		Rect__ctor_m18C3033D135097BEE424AAA68D91C706D2647F23((&L_86), L_82, L_83, L_84, L_85, /*hidden argument*/NULL);
-		String_t* L_87 = __this->___topLeftButtonText_19;
+		String_t* L_87 = __this->___topLeftButtonText_25;
 		String_t* L_88;
 		L_88 = String_Concat_m9B13B47FCB3DF61144D9647DDA05F527377251B0(_stringLiteral116273CD5D8FA85B2B09F79802D1EDD0C11FFC66, L_87, _stringLiteral3371C9C28E563AFD0A683CA126F078F3F07B7306, NULL);
 		GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* L_89 = V_2;
@@ -4614,19 +4614,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GroundPlaneGUI__ctor_m8331C5C445794538AA
 		__this->___nativeWidth_14 = (1920.0f);
 		// private readonly float nativeHeight = 1080f;
 		__this->___nativeHeight_15 = (1080.0f);
+		// private readonly float btnWidth = 350;
+		__this->___btnWidth_16 = (350.0f);
+		// private readonly float btnTextHeight = 70;
+		__this->___btnTextHeight_17 = (70.0f);
+		// private readonly float btnPadding = 5;
+		__this->___btnPadding_18 = (5.0f);
 		// public decimal totalAmount = GameManager.TotalAmount;
 		il2cpp_codegen_runtime_class_init_inline(GameManager_t5FF4777C335671A034821DF9A4E0A9B230D98E09_il2cpp_TypeInfo_var);
 		Decimal_tDA6C877282B2D789CF97C0949661CC11D643969F L_0 = ((GameManager_t5FF4777C335671A034821DF9A4E0A9B230D98E09_StaticFields*)il2cpp_codegen_static_fields_for(GameManager_t5FF4777C335671A034821DF9A4E0A9B230D98E09_il2cpp_TypeInfo_var))->___TotalAmount_6;
-		__this->___totalAmount_18 = L_0;
+		__this->___totalAmount_24 = L_0;
 		// public string topLeftButtonText = "Please choose and place";
-		__this->___topLeftButtonText_19 = _stringLiteral2F566FBA243ACB3E075EB5F736CCED25A83BFEDF;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___topLeftButtonText_19), (void*)_stringLiteral2F566FBA243ACB3E075EB5F736CCED25A83BFEDF);
-		// private readonly float btnWidth = 350;
-		__this->___btnWidth_20 = (350.0f);
-		// private readonly float btnTextHeight = 70;
-		__this->___btnTextHeight_21 = (70.0f);
-		// private readonly float btnPadding = 5;
-		__this->___btnPadding_22 = (5.0f);
+		__this->___topLeftButtonText_25 = _stringLiteral2F566FBA243ACB3E075EB5F736CCED25A83BFEDF;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___topLeftButtonText_25), (void*)_stringLiteral2F566FBA243ACB3E075EB5F736CCED25A83BFEDF);
 		DefaultObserverEventHandler__ctor_mE40FCAD19043225054C315C22018F5780217E9DC(__this, NULL);
 		return;
 	}
@@ -4642,15 +4642,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GroundPlaneGUI__cctor_m2940E2BDA64010221
 	}
 	{
 		// private static readonly float btnLogoHeight = 100;
-		((GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_StaticFields*)il2cpp_codegen_static_fields_for(GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_il2cpp_TypeInfo_var))->___btnLogoHeight_23 = (100.0f);
+		((GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_StaticFields*)il2cpp_codegen_static_fields_for(GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_il2cpp_TypeInfo_var))->___btnLogoHeight_19 = (100.0f);
 		// private static readonly float btnLogoWidth = btnLogoHeight;
-		float L_0 = ((GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_StaticFields*)il2cpp_codegen_static_fields_for(GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_il2cpp_TypeInfo_var))->___btnLogoHeight_23;
-		((GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_StaticFields*)il2cpp_codegen_static_fields_for(GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_il2cpp_TypeInfo_var))->___btnLogoWidth_24 = L_0;
+		float L_0 = ((GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_StaticFields*)il2cpp_codegen_static_fields_for(GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_il2cpp_TypeInfo_var))->___btnLogoHeight_19;
+		((GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_StaticFields*)il2cpp_codegen_static_fields_for(GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_il2cpp_TypeInfo_var))->___btnLogoWidth_20 = L_0;
 		// private static readonly Color textColor = new Color(26, 26, 26); // #1a1a1a = LALALA
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1;
 		memset((&L_1), 0, sizeof(L_1));
 		Color__ctor_mCD6889CDE39F18704CD6EA8E2EFBFA48BA3E13B0_inline((&L_1), (26.0f), (26.0f), (26.0f), /*hidden argument*/NULL);
-		((GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_StaticFields*)il2cpp_codegen_static_fields_for(GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_il2cpp_TypeInfo_var))->___textColor_25 = L_1;
+		((GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_StaticFields*)il2cpp_codegen_static_fields_for(GroundPlaneGUI_tD5DB76CCE24B5EC340EE54FB5C372B5ADD4C5337_il2cpp_TypeInfo_var))->___textColor_21 = L_1;
 		return;
 	}
 }
