@@ -1,10 +1,9 @@
 ---
 layout: default
 ---
-
-[FunitAR title image](/assets/images/ImageTargets-Furniture-24bit-rgb.png)
-
 # FurnitAR - Furniture placement in AR on Android (with Vuforia)
+
+![FunitAR title image](/assets/images/ImageTargets-Furniture-24bit-rgb.png)
 
 ## Abstract
 
