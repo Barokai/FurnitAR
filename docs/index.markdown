@@ -6,6 +6,11 @@ layout: default
 
 # FurnitAR - Furniture placement in AR on Android (with Vuforia)
 
+## Abstract
+
+Augmented reality aids people with visual effects that relate to the environment of the space and with this concept people can view the furniture in the room without actually moving or placing physical objects in the area. The users interactively chooses material and furniture model and places it in the room without needed to do this manually with a real piece of furniture. This interactive process enables the user to check how a piece of furniture looks in the room, also with different materials used as the models texture.
+A system has been developed which allows to choose and rotate models for preview, change the material and place the model textured with the chosen material in life-size on the ground. Thus, the user
+can experience different furniture arrangements and share his/her creations via the application
 ## Introduction
 
 This paper describes technical backgrounds and logic of FurnitAR, which features are implemented and how they work and what can be done for in future development.
@@ -18,15 +23,16 @@ This paper describes technical backgrounds and logic of FurnitAR, which features
 
 - An AR project has to be developed by each person
 - The following APIs can be used
-  - Unity, Vuforia, ARCore, ARKit
+- Unity, Vuforia, ARCore, ARKit
 - Additional libraries can as well be added
 - Your own code should contain at least 650 LOC (per person)
 - Has to be
-  - Interactive, real-time, and run on a smart phone, tablet, Magic Leap, HoloLens, no PC based applications – it has to be mobile
+- Interactive, real-time, and run on a smart phone, tablet, Magic Leap, HoloLens, no PC based applications – it has to be mobile
 - Focus on
-  - Interactivity, usability, design, visual quality, stability
+- Interactivity, usability, design, visual quality, stability
 
 **Features**
+
 Based on the given requirements, it has been decided on following features:
 
 Image target 1 (Furniture)
@@ -57,6 +63,7 @@ User interface
 - Simple steps to do in top bar
 
 **Requirements Hardware**
+
 To detect the ground plane correctly, hardware requirements like ARCore support have to be met. If no compatible device is present, Vuforia provides and target image to emulate ground plane detection. For a list of supported Android devices check ARCore supported devices at [developers.google.com](https://developers.google.com/ar/devices).
 
 ### Usage
@@ -90,9 +97,9 @@ Based on the best practices [vuforia.com](https://library.vuforia.com/objects/be
 
 The created image targets don't follow all these practices, therefor their rating is 1 out of 5 and 2 out of 5 in terms of a rating called "Augmentable". This rating is based on the features found in an image, to visualize this, here are some images:
 
-  Augmentable rating 1 out of 5
+Augmentable rating 1 out of 5
 ![Image target furniture](/assets/images/ImageTargets-Furniture-Features.png)
-  Augmentable rating 2 out of 5
+Augmentable rating 2 out of 5
 ![Image target materials](/assets/images/ImageTargets-Material-Features.png)
 
 As long as the lighting conditions are stable (and not too bright or dark) and the user avoids glare and dark shadows, the image target recognition still works. sometimes it could take longer. Replacing those two targets could be a future improvement. For details on how to improve image targets, check the best practices by Vuforia [Vuforia](https://library.vuforia.com/objects/best-practices-designing-and-developing-image-based-targets).
@@ -110,7 +117,7 @@ Code example for rotating left on the image target:
 
 ```c
 currentModel.transform.Rotate(
-  Vector3.back * rotationSpeed * Time.deltaTime);
+Vector3.back * rotationSpeed * Time.deltaTime);
 ```
 
 This line shows how rotation of the currently visible model on the image target can be done with just a single line of code.
@@ -132,6 +139,7 @@ When a model and material has been chosen, the user is able to place it on the g
 Rotation of the placed model was set before based on the chosen model from image target 2. Mind that the rotation is dependent on the location and rotation of the device in the world space.
 
 **Resetting the ground plane**
+
 Every model placed on the ground plane clones the ground plane and the model on it - the plane is the parent object. The user is able to reset all placed model by touching the reset button. When touched, all GameObjects tagged with "GroundPlaneTag" are found and all besides the first are destroyed. This also resets the instruction hints on the top bar, also chosen model, chosen material and costs.
 
 ### User interaction besides targets and ground plane
