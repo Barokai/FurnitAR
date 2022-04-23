@@ -21,9 +21,19 @@
 title: FurnitAR
 email: p.knittl.frank@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Augmented reality aids people with visual effects that relate to
+the environment of the space and with this concept people can
+view the furniture in the room without actually moving or placing
+physical objects in the area. The users interactively chooses material
+and furniture model and places it in the room without needed to
+do this manually with a real piece of furniture. This interactive
+process enables the user to check how a piece of furniture looks in
+the room, also with different materials used as the models texture.
+A system has been developed which allows to choose and rotate
+models for preview, change the material and place the model textured
+with the chosen material in life-size on the ground. Thus, the user
+can experience different furniture arrangements and share his/her
+creations via the application
 baseurl: "/FurnitAR" # the subpath of your site, e.g. /blog
 url: "https://barokai.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 domain: "barokai.github.io"
@@ -40,12 +50,13 @@ repository: Barokai/FurnitAR
 
 
 github:
-  zip_url: /assets/images/logo.png
+  zip_url: /assets/FurnitAR.zip
   docu: /assets/FurnitAR_documentation_Knittl_Frank_Peter.pdf
   targets: /assets/ImageTargets.pdf
   apk: /assets/FurnitAR.apk
-  screenshots: /assets/images/logo.png
-  slides: /assets/images/logo.png
+  screenshot1: /assets/FurnitAR_screenshot1.jpg
+  screenshot2: /assets/FurnitAR_screenshot2.jpg
+  slides: /assets/slides/index.html
 
 # Build settings
 # theme: minima

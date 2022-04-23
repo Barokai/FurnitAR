@@ -2,9 +2,14 @@
 layout: default
 ---
 
+![Branching](/assets/images/ImageTargets-Furniture-24bit-rgb.png)
+
+
+# About FurnitAR
+
+
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
-[Link to another page](./another-page.html).
 
 There should be whitespace between paragraphs.
 
@@ -96,9 +101,6 @@ end
 
 ![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
 
-### Large image
-
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
 
 ### Definition lists can be used with HTML syntax
 
@@ -120,3 +122,11 @@ Long, single-line code blocks should not wrap. They should horizontally scroll i
 ```
 The final element.
 ```
+
+### Huge thanks to
+
+<https://assetstore.unity.com/packages/3d/props/furniture/big-furniture-pack-7717>
+
+&
+
+<https://agrawalsuneet.github.io/blogs/native-android-image-sharing-in-unity-using-fileprovider/>
