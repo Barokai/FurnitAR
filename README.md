@@ -41,7 +41,6 @@ _Projektidee_
 ## TODO new
 
 - presentation (reveal.js?)
-- screenshots
 - probably not
   - setup github actions to build project automatically <https://game.ci/docs/github/getting-started>
   - editorconfig? <https://github.com/zaikman/unity-editorconfig>
