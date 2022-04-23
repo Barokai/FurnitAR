@@ -10,6 +10,7 @@ layout: default
 Augmented reality aids people with visual effects that relate to the environment of the space and with this concept people can view the furniture in the room without actually moving or placing physical objects in the area. The users interactively chooses material and furniture model and places it in the room without needed to do this manually with a real piece of furniture. This interactive process enables the user to check how a piece of furniture looks in the room, also with different materials used as the models texture.
 A system has been developed which allows to choose and rotate models for preview, change the material and place the model textured with the chosen material in life-size on the ground. Thus, the user
 can experience different furniture arrangements and share his/her creations via the application
+
 ## Introduction
 
 This paper describes technical backgrounds and logic of FurnitAR, which features are implemented and how they work and what can be done for in future development.

@@ -1,6 +1,7 @@
 # Welcome to FurnitAR
 
 Find documentation and details on the github page: [FurnitAR](https://barokai.github.io/FurnitAR/index.html)
+
 ## First idea and feedback
 
 _Feedback_

@@ -14,15 +14,15 @@ favicon: true
 repository: Barokai/FurnitAR
 
 github:
-  zip_url: /assets/FurnitAR.zip
-  docu: /assets/FurnitAR_documentation_Knittl_Frank_Peter.pdf
-  targets: /assets/ImageTargets.pdf
-  apk: /assets/FurnitAR.apk
-  screenshots: /assets/FurnitAR_screenshots.zip
-  screenshot1: /assets/FurnitAR_screenshot1.png
-  screenshot2: /assets/FurnitAR_screenshot2.png
-  screenshot3: /assets/FurnitAR_screenshot3.png
-  slides: /slides/index.html
+  zip_url: /FurnitAR/assets/FurnitAR.zip
+  docu: /FurnitAR/assets/FurnitAR_documentation_Knittl_Frank_Peter.pdf
+  targets: /FurnitAR/assets/ImageTargets.pdf
+  apk: /FurnitAR/assets/FurnitAR.apk
+  screenshots: /FurnitAR/assets/FurnitAR_screenshots.zip
+  screenshot1: /FurnitAR/assets/FurnitAR_screenshot1.png
+  screenshot2: /FurnitAR/assets/FurnitAR_screenshot2.png
+  screenshot3: /FurnitAR/assets/FurnitAR_screenshot3.png
+  slides: /FurnitAR/slides/index.html
 
 color-scheme: "auto-default-dark"
 remote_theme: "godalming123/minimal"
