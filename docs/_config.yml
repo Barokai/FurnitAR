@@ -41,9 +41,9 @@ repository: Barokai/FurnitAR
 
 github:
   zip_url: /assets/images/logo.png
-  docu: /assets/images/logo.png
-  targets: /assets/images/logo.png
-  apk: /assets/images/logo.png
+  docu: /assets/FurnitAR_documentation_Knittl_Frank_Peter.pdf
+  targets: /assets/ImageTargets.pdf
+  apk: /assets/FurnitAR.apk
   screenshots: /assets/images/logo.png
   slides: /assets/images/logo.png
 
