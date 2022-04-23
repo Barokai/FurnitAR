@@ -42,21 +42,21 @@ github_username:  barokai
 
 logo: /assets/images/logo.png
 show_downloads: true
-
 favicon: true
 
 # custom settings (for cloudflare build)
 repository: Barokai/FurnitAR
-
 
 github:
   zip_url: /assets/FurnitAR.zip
   docu: /assets/FurnitAR_documentation_Knittl_Frank_Peter.pdf
   targets: /assets/ImageTargets.pdf
   apk: /assets/FurnitAR.apk
-  screenshot1: /assets/FurnitAR_screenshot1.jpg
-  screenshot2: /assets/FurnitAR_screenshot2.jpg
-  slides: /assets/slides/index.html
+  screenshots: /assets/FurnitAR_screenshots.zip
+  screenshot1: /assets/FurnitAR_screenshot1.png
+  screenshot2: /assets/FurnitAR_screenshot2.png
+  screenshot3: /assets/FurnitAR_screenshot3.png
+  slides: /slides/index.html
 
 # Build settings
 # theme: minima
