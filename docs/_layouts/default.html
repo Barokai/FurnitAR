@@ -27,7 +27,7 @@
 <body>
   <div class="wrapper">
     <header>
-      <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
+      <!-- <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1> -->
 
       {% if site.logo %}
       <img src="{{site.logo | relative_url}}" alt="Logo" />
@@ -67,9 +67,8 @@
       {% if site.github.is_project_page %}
       <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
       {% endif %}
-      <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small>
-        <p>Dark theme adpations by godalming123 <a href="https://github.com/godalming123/minimal">minimal</a></p>
-      </p>
+      <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      <p><small>Dark theme adpations by godalming123 <a href="https://github.com/godalming123/minimal">minimal</a></small></p>
     </footer>
   </div>
   <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
