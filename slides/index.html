@@ -18,42 +18,140 @@
 <body>
 	<div class="reveal">
 		<div class="slides">
-			<section>
-				Slide 1
-				<h1>FurnitAR</h1>
+			<section data-background="assets/images/ImageTargets-Furniture-24bit-rgb.png">
 				<!-- <img src="https://barokai.github.io/FurnitAR/assets/images/logo.png" /> -->
-				<img class="r-stretch" src="assets/images/ImageTargets-Furniture-24bit-rgb.png" />
+				<!-- <img class="r-stretch" src="assets/images/ImageTargets-Furniture-24bit-rgb.png" /> -->
 			</section>
 
-			<section>Slide 2
+			<section
+				data-background="https://media3.giphy.com/media/JGdbbSyi3wM9uBKv8p/giphy.gif?cid=ecf05e47or083ciy2s0auveqf8oqu5qze4nqbwcvn47r53yu&rid=giphy.gif&ct=g">
+				<h1 style="color: #bada55">Can't decide?</h1>
+			</section>
+
+			<section data-markdown>
+				# Try FurnitAR
+
+				### Runs on Android 8+
+
+				(ARCore support required)
+
+				### Developed
+
+				- on Windows 11
+				- Unity 2021.3.0f1 Personal (current recommended version)
+				- Vuforia Engine 10.6.3 (latest version)
+				- Visual Studio 2022 Community Edition (latest)
+				- Google Pixel 6 (Android 12)
+			</section>
+
+			<section>
+				<h1>Features</h1>
 				<section data-markdown>
 					<textarea data-template>
-							```c# [1-2|3|4-6]
-							var modelCount = furnitureList.Count;
-							var nextModel = FurnitureIndex + 1;
-							if (nextModel == modelCount)
-							{
-									nextModel = nextModel % modelCount;
-							}
-							```
-						</textarea>
+					## (1/3)
+
+					Image target 1 (Furniture)
+					- Previewing models via rotation
+					- Choosing models via image target
+					Image target 2 (Material)
+					- Choosing materials via image target
+					- When chosen, also model in image target 1 will be updated to
+					use new material.
+				</textarea>
+
 				</section>
+
 				<section data-markdown>
 					<textarea data-template>
-							```js [1-2|3|4]
-							let a = 1;
-							let b = 2;
-							let c = x => 1 + 2 + x;
-							c(3);
-							```
-						</textarea>
+					## (2/3)
+
+					Ground plane object placement
+					- Placing chosen model (with chosen material) on ground plane
+					via plane finder
+					- Target position visualized by plane indicator
+					Optional
+					- Repeat steps done with Image targets and ground plane to
+					choose and place other models or the same with different
+					material
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+					## (3/3)
+
+					- Check your placed models and share a screenshot if wanted
+					User interface
+					- Resetting models placed on ground plane
+					- Showing current price (sum over of all placed models)
+					- Preview image of chosen material
+					- Simple steps to do in top bar
+				</textarea>
 				</section>
 			</section>
 
 			<section>
-				<section data-background="https://media.giphy.com/media/3oKIPmDhXaieiJE3Sg/giphy.gif">
-					<h2>Full Screen Background</h2>
+				<h1>Vuforia</h1>
+				<section data-markdown>
+					<textarea data-template>
+						## Image targets
+
+						- For choosing and previewing furniture model and material
+						- Chosen material is reflected on the furniture image target
+						- Chosen material+model used for placement on groundplane
+					</textarea>
 				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## Ground plane
+
+						- Used for placing the model in augmented reality
+						- Possibility to destroy placed elements
+					</textarea>
+				</section>
+			</section>
+			<section>
+				<h1>Code example</h1>
+				<section data-markdown>
+					<textarea data-template>
+						## Rotating the model
+
+						- Rotation action triggerd via virtual button
+						- Basically a single line of code
+						- Making use of Unity's built in ``Rotate`` method and shorthand writings for rotating back and forth
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## Rotating left
+						```c#
+						currentModel.transform.Rotate(
+					Vector3.back * rotationSpeed * Time.deltaTime);
+						```
+						**Vector3.back**
+
+						_Shorthand for writing Vector3(0, 0, -1)_
+
+						Rotation is then also used for model placement on ground plane
+					</textarea>
+				</section>
+			</section>
+
+			<section data-markdown>
+				# UI minimal
+				- 2 Buttons
+				- Reset
+				- Sharing
+				- Hints for the User
+				- Total amount
+				- Logo
+				- Material Preview
+			</section>
+
+			<section data-markdown>
+				# Demo Time
+				![logo](https://barokai.github.io/FurnitAR/assets/images/logo.png)
+				<!-- <img src="https://barokai.github.io/FurnitAR/assets/images/logo.png" /> -->
 			</section>
 		</div>
 	</div>
