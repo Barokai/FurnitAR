@@ -14,7 +14,7 @@ favicon: true
 repository: Barokai/FurnitAR
 
 github:
-  zip_url: /FurnitAR/assets/FurnitAR.zip
+  zip_url: https://1drv.ms/u/s!AufoJNRhqarVpJN1GxdemRS7c-ln1w?e=00xRj1
   docu: /FurnitAR/assets/FurnitAR_documentation_Knittl_Frank_Peter.pdf
   targets: /FurnitAR/assets/ImageTargets.pdf
   apk: /FurnitAR/assets/FurnitAR.apk
