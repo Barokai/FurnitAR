@@ -13,7 +13,7 @@ can experience different furniture arrangements and share his/her creations via 
 
 ## Introduction
 
-This paper describes technical backgrounds and logic of FurnitAR, which features are implemented and how they work and what can be done for in future development.
+This paper describes technical backgrounds and logic of FurnitAR, which features are implemented, how they work and what can be done for in the future.
 
 ## Design
 
@@ -43,7 +43,7 @@ Image target 1 (Furniture)
 Image target 2 (Material)
 
 - Choosing materials via image target
-- When chosen, also model in image target 1 will be updated to use new material.
+- When chosen, also model in image target 1 will be updated to use the new material.
 
 Ground plane object placement
 
@@ -52,7 +52,7 @@ Ground plane object placement
 
 Optional
 
-- Repeat steps done with Image targets and ground plane to choose and place other models or the same with different material
+- Repeat steps done with image targets and ground plane to choose and place other models or the same with different material
 - Check your placed models and share a screenshot if wanted
 
 User interface
@@ -64,12 +64,12 @@ User interface
 
 **Requirements Hardware**
 
-To detect the ground plane correctly, hardware requirements like ARCore support have to be met. If no compatible device is present, Vuforia provides and target image to emulate ground plane detection. For a list of supported Android devices check ARCore supported devices at [developers.google.com](https://developers.google.com/ar/devices).
+To detect the ground plane correctly, hardware requirements like ARCore support have to be met. If no compatible device is present, Vuforia provides an target image to emulate ground plane detection. For a list of supported Android devices check ARCore supported devices at [developers.google.com](https://developers.google.com/ar/devices).
 
 ### Usage
 
-Install the application, the installation package for Android (Android 8+) can be found on github, see on the left.
-To be able to use the application properly, the user has to download and print the image targets which can be found on github, see on the left. Image targets can be printed in gray scale too, but using colored images is recommended.
+Install the application with the installation package for Android (Android 8+), see "Download apk" on the left.
+To be able to use the application properly, the user has to download and print the image targets which can also been found on the left. Image targets can be printed in gray scale too, but using colored images is recommended.
 Start the application, allow the camera to be used and point the camera onto one of the image targets. The targets with pieces of furniture printed on allows the user to choose between different models and allows to rotate them. The model has to be chosen with the middle virtual button to be able to place it later on the ground plane. During this process, the top bar shows hints what has still to be done. When a material has been chosen, also the material of the model previewed on the furniture image target will be updated.
 After choosing both, the user can place the model on the ground, where is shown via the plane indicator.
 Choosing a model and material can be done again as often as wanted, also placing the chosen model. If wanted, a sharing functionality is built in - can be found in the upper right corner.
@@ -81,14 +81,13 @@ This section covers more in-detail information on how the features were implemen
 
 ### Technical details
 
-Environments and Hardware used
-As there are many different versions of Unity and Vuforia and the online documentation changes regularly, here are the versions used to create this version. Also the used test device is mentioned because of the previously mentioned ARCore compatibility.
+As there are many different versions of Unity & Vuforia and the online documentation changes regularly, here are the versions used to create this application. Also the used test device is mentioned because of the previously mentioned ARCore compatibility.
 
 - 2021.3.0f1 Personal
 - Visual Studio 2022 Community Edition
 - Google Pixel 6 (Android 12)
 
-**About Image targets and features**
+**About image targets and features**
 
 Vuforia about image targets
 > Image Targets represent images that Vuforia Engine can detect and track. The Engine detects and tracks the image by comparing extracted natural features from the camera image against a known target resource database. Once the Image Target is detected, Vuforia Engine will track the image and augment your content, [vuforia.com](https://library.vuforia.com/objects/image-targets).
@@ -102,7 +101,7 @@ Augmentable rating 1 out of 5
 Augmentable rating 2 out of 5
 ![Image target materials](/assets/images/ImageTargets-Material-Features.png)
 
-As long as the lighting conditions are stable (and not too bright or dark) and the user avoids glare and dark shadows, the image target recognition still works. sometimes it could take longer. Replacing those two targets could be a future improvement. For details on how to improve image targets, check the best practices by Vuforia [Vuforia](https://library.vuforia.com/objects/best-practices-designing-and-developing-image-based-targets).
+As long as the lighting conditions are stable (and not too bright or dark) and the user avoids glare and dark shadows, the image target recognition still works. Sometimes it could take longer. Replacing those two targets could be a future improvement. For details on how to improve image targets, check the best practices by Vuforia [Vuforia](https://library.vuforia.com/objects/best-practices-designing-and-developing-image-based-targets).
 
 ### Choosing a model
 
@@ -125,7 +124,7 @@ The current rotation set when choosing the model is then taken as reference to i
 
 ### Choosing material
 
-Choosing the material works very similar to Choosing a model. In comparison to it, it just uses a single model (a Unity model called Quad) which is always the same. When the user moves to the next or previous material, the Quads material reflects the currently chosen material. The quad works a preview how the material will look like. When the model was chosen with the middle virtual button, also its price is stored.
+Choosing the material works very similar to Choosing a model. In comparison to it, it just uses a single model (a Unity model called Quad) which is always the same. When the user moves to the next or previous material, the Quads material reflects the currently chosen material. The Quad works as a preview how the material will look like. When the model was chosen with the middle virtual button, also its price is stored.
 
 ### Connection between model and material
 
@@ -144,7 +143,7 @@ Every model placed on the ground plane clones the ground plane and the model on 
 
 ### User interaction besides targets and ground plane
 
-Besides the previously mentioned reset functionality, the user is also able to create a screenshot and share it directly with Androids built in share functionality. This is triggered by touching the share button on the upper right corner.
+Besides the previously mentioned reset functionality, the user is also able to create a screenshot and share it directly with Androids built-in share functionality. This is triggered by touching the share button on the upper right corner.
 
 ## Future work and ideas
 
