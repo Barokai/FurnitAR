@@ -23,13 +23,13 @@ This paper describes technical backgrounds and logic of FurnitAR, which features
 
 - An AR project has to be developed by each person
 - The following APIs can be used
-- Unity, Vuforia, ARCore, ARKit
+  - Unity, Vuforia, ARCore, ARKit
 - Additional libraries can as well be added
 - Your own code should contain at least 650 LOC (per person)
 - Has to be
-- Interactive, real-time, and run on a smart phone, tablet, Magic Leap, HoloLens, no PC based applications – it has to be mobile
+  - Interactive, real-time, and run on a smart phone, tablet, Magic Leap, HoloLens, no PC based applications – it has to be mobile
 - Focus on
-- Interactivity, usability, design, visual quality, stability
+  - Interactivity, usability, design, visual quality, stability
 
 **Features**
 
