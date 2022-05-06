@@ -7,7 +7,7 @@ layout: default
 
 ## Abstract
 
-Augmented reality aids people with visual effects that relate to the environment of the space and with this concept people can view the furniture in the room without actually moving or placing physical objects in the area. The users interactively chooses material and furniture model and places it in the room without needed to do this manually with a real piece of furniture. This interactive process enables the user to check how a piece of furniture looks in the room, also with different materials used as the models texture.
+Augmented reality aids people with visual effects that relate to the environment of the space and with this concept people can view the furniture in the room without actually moving or placing physical objects in the area. The user interactively chooses material and furniture model and places it in the room without the need to do this manually with a real piece of furniture. This interactive process enables the user to check how a piece of furniture looks in the room, also with different materials used as the models texture.
 A system has been developed which allows to choose and rotate models for preview, change the material and place the model textured with the chosen material in life-size on the ground. Thus, the user
 can experience different furniture arrangements and share his/her creations via the application
 
@@ -90,9 +90,9 @@ As there are many different versions of Unity & Vuforia and the online documenta
 **About image targets and features**
 
 Vuforia about image targets
-> Image Targets represent images that Vuforia Engine can detect and track. The Engine detects and tracks the image by comparing extracted natural features from the camera image against a known target resource database. Once the Image Target is detected, Vuforia Engine will track the image and augment your content, [vuforia.com](https://library.vuforia.com/objects/image-targets).
+> Image Targets represent images that Vuforia Engine can detect and track. The Engine detects and tracks the image by comparing extracted natural features from the camera image against a known target resource database. Once the Image Target is detected, Vuforia Engine will track the image and augment your content. Source: [vuforia.com](https://library.vuforia.com/objects/image-targets).
 
-Based on the best practices [vuforia.com](https://library.vuforia.com/objects/best-practices-designing-and-developing-image-based-targets), image targets should be rich in detail, have good contrast, shouldn't have repetitive patterns and have to have a certain format (8- or 24-bit PNG or JPG, must be RGB).
+Based on the best practices available at [vuforia.com](https://library.vuforia.com/objects/best-practices-designing-and-developing-image-based-targets), image targets should be rich in detail, have good contrast, shouldn't have repetitive patterns and have to have a certain format (8- or 24-bit PNG or JPG, must be RGB).
 
 The created image targets don't follow all these practices, therefor their rating is 1 out of 5 and 2 out of 5 in terms of a rating called "Augmentable". This rating is based on the features found in an image, to visualize this, here are some images:
 
@@ -101,7 +101,7 @@ Augmentable rating 1 out of 5
 Augmentable rating 2 out of 5
 ![Image target materials](/assets/images/ImageTargets-Material-Features.png)
 
-As long as the lighting conditions are stable (and not too bright or dark) and the user avoids glare and dark shadows, the image target recognition still works. Sometimes it could take longer. Replacing those two targets could be a future improvement. For details on how to improve image targets, check the best practices by Vuforia [Vuforia](https://library.vuforia.com/objects/best-practices-designing-and-developing-image-based-targets).
+As long as the lighting conditions are stable (and not too bright or dark) and the user avoids glare and dark shadows, the image target recognition still works. Sometimes it could take longer. Replacing those two targets could be a future improvement. For details on how to improve image targets, check the best practices by [Vuforia](https://library.vuforia.com/objects/best-practices-designing-and-developing-image-based-targets).
 
 ### Choosing a model
 
@@ -132,7 +132,7 @@ When a material has been chosen on image target 2, the material on the model pla
 
 ### Detecting ground plane and placing models
 
-Vuforia Ground Plane enables digital content to be placed on horizontal surfaces in the environment, such as floors and tabletops. It supports the detection and tracking of horizontal surfaces, and also enables you to place content in mid-air using Anchor Points [(vuforia.com)](https://library.vuforia.com/environments/ground-plane).
+Vuforia Ground Plane enables digital content to be placed on horizontal surfaces in the environment, such as floors and tabletops. It supports the detection and tracking of horizontal surfaces, and also enables you to place content in mid-air using  [Anchor Points (vuforia.com)](https://library.vuforia.com/environments/ground-plane).
 FurnitAR makes use of the detection of horizontal surfaces to place models to anchor points.
 When a model and material has been chosen, the user is able to place it on the ground plane, target location is indicated by a plane indicator. Placing the model is done by touching the screen.
 Rotation of the placed model was set before based on the chosen model from image target 2. Mind that the rotation is dependent on the location and rotation of the device in the world space.
