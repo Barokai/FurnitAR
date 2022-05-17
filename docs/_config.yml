@@ -17,7 +17,7 @@ github:
   zip_url: https://1drv.ms/u/s!AufoJNRhqarVpJN1GxdemRS7c-ln1w?e=00xRj1
   docu: /FurnitAR/assets/FurnitAR_documentation_Knittl_Frank_Peter.pdf
   targets: /FurnitAR/assets/ImageTargets.pdf
-  apk: /FurnitAR/assets/FurnitAR.apk
+  apk: https://github.com/Barokai/FurnitAR/releases/download/v0.3-abgabe/FurnitAR.apk
   screenshots: /FurnitAR/assets/FurnitAR_screenshots.zip
   screenshot1: /FurnitAR/assets/FurnitAR_screenshot1.png
   screenshot2: /FurnitAR/assets/FurnitAR_screenshot2.png

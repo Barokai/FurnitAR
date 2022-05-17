@@ -2,6 +2,13 @@
 
 Find documentation and details on the github page: [FurnitAR](https://barokai.github.io/FurnitAR/index.html)
 
+## Setup (needed to be able to build in Unity)
+
+Download vuforia package and place it in /Packages/ folder
+
+- vuforia 10.6.3
+<https://1drv.ms/u/s!AufoJNRhqarVo_ZK56pDWrkrjs9q2g?e=bc7O3B>
+
 ## First idea and feedback
 
 _Feedback_
@@ -41,7 +48,6 @@ _Projektidee_
 
 ## TODO new
 
-- presentation (reveal.js?)
-- probably not
+- someday in the future
   - setup github actions to build project automatically <https://game.ci/docs/github/getting-started>
   - editorconfig? <https://github.com/zaikman/unity-editorconfig>
