@@ -245,6 +245,7 @@ public class GroundPlaneGUI : DefaultObserverEventHandler
         GameManager.ChosenFurnitureCost = 0m;
         GameManager.TotalAmount = 0m;
         GameManager.FunitureWithPrices.Clear();
+        totalAmount = GameManager.TotalAmount;
     }
 
     void OnApplicationFocus(bool focus)
